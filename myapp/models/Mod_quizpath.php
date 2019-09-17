@@ -37,7 +37,7 @@ class Mod_quizpath extends CI_Model {
         $this->canonical_relative_slash = $this->canonical_relative==='' ? '' : ($this->canonical_relative . '/');
 
         // Verify that this is a directory, if required
-        if ($must_be_dir && !is_dir($this->canonical_absolute)) 
+        if ($must_be_dir && !is_dir($this->canonical_absolute))
             throw new DataException(sprintf($this->lang->line('not_a_folder'), $path));
 
         // Verify that we have access to this directory
@@ -63,7 +63,7 @@ class Mod_quizpath extends CI_Model {
         return $this->canonical_relative;
     }
 
-    
+
     public function dirlist(bool $doing_test) {
         $this->load->helper('directory');
         $this->load->helper(array('xmlhandler','quiztemplate'));
@@ -152,7 +152,7 @@ class Mod_quizpath extends CI_Model {
         else
             return 0;
     }
-    
+
     // Adds owner information to all file names in $files
     private function get_excercise_owners(array &$files) {
         // Collect all owner IDs
@@ -233,7 +233,7 @@ class Mod_quizpath extends CI_Model {
         $res = @rmdir("$this->canonical_absolute/$dir");
         if (!$res)
             throw new DataException(sprintf($this->lang->line('cannot_delete_folder'), $dir));
-        
+
         $this->load->model('mod_classdir');
         $this->mod_classdir->rmdir($relativedir);
     }
