@@ -21,6 +21,7 @@ if (!$this->mod_users->is_logged_in_noaccept()) {
     $head[] = $this->lang->line('text_and_exercises');
     $content[$ix][] = make_anchor2('text/select_text', 'display_text');
     $content[$ix][] = make_anchor2('text/select_quiz', 'exercises');
+    $content[$ix][] = make_anchor2('text/select_exam', 'exams');
 }
 
 if ($this->mod_users->is_logged_in()) {

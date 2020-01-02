@@ -25,3 +25,5 @@ $lang['translate_interface'] = "Translate interface";
 $lang['translate_lexicon'] = "Translate lexicon";
 $lang['users'] = "Users";
 $lang['user_access'] = "User Access";
+// MRCN for the exams
+$lang['exams'] = "Exams";

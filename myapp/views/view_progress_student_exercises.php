@@ -34,7 +34,7 @@
   <div class="card-body">
     <?= form_open("statistics/student_exercise",array('method'=>'get')) ?>
       <input type="hidden" name="userid" value="<?= $userid ?>">
-       
+
       <p><?= $this->lang->line('specify_period') ?></p>
       <table>
         <tr>
@@ -46,7 +46,7 @@
           <td style="padding-left:5px"><input type="text" name="end_date" value="<?= $end_date ?>"></td>
         </tr>
       </table>
-       
+
       <div class="row">
         <div class="form-group col">
           <label for="nongraded" class="col-form-label"><?= $this->lang->line('show_non_graded_prompt') ?></label>
@@ -56,10 +56,10 @@
           <span><?= $may_see_nongraded ? '' : '(Permission not granted)' ?></span>
         </div>
       </div>
-             
+
       <input type="hidden" name="templ" value="<?= $quiz ?>">
       <input type="hidden" name="userid" value="<?= $userid ?>">
-       
+
       <p><input class="btn btn-primary" style="margin-top:10px;" type="submit" name="submit" value="<?= $this->lang->line('OK_button') ?>"></p>
   </form>
   </div>
@@ -112,7 +112,7 @@
 
       $featname = array();
       $featpct = array();
-       
+
       foreach ($resfeat as $rf) {
           // Localize if possible, otherwise just retain the symbolic feature name
           $featname[] = "'" . (isset($featloc->{$rf->rfname}) ? $featloc->{$rf->rfname} : $rf->rfname)   . "'";
@@ -125,7 +125,7 @@
       [No canvas support]
     </canvas>
 
-    <hr style="margin-top:20px">          
+    <hr style="margin-top:20px">
     <h2><?= $this->lang->line('speed_by_date') ?></h2>
     <canvas style="background:#f8f8f8; display:inline-block; vertical-align:top;" id="cvsspf" width="800" height="500">
       [No canvas support]
@@ -157,7 +157,7 @@
 
 
 
-          
+
     <hr style="margin-top:10px">
     <h2><?= $this->lang->line('pct_correct_by_feature') ?></h2>
     <canvas style="background:#f8f8f8; display:inline-block; vertical-align:top;" id="featcanvas" width="800" height="<?= $canvasheight ?>">
@@ -185,7 +185,7 @@
     </div>
 
 
-          
+
 
     <script>
       $(function() {
@@ -212,7 +212,7 @@
                   $('#hide2').show();
 
                   $("html, body").animate({ scrollTop: $(document).height() }, 1000); // Scroll to bottom
-                  
+
                   return false;
               }
               );
@@ -224,7 +224,7 @@
                   return false;
               }
               );
-          
+
           var xlabels = [<?php
                            $numxticks = 0;
                            if ($showweek) {
@@ -251,14 +251,14 @@
                                    echo '"',Statistics_timeperiod::format_date($ut),'",';
                              ?>];
           <?php endif; ?>
-              
+
           var scatterdata = make_scatterconfig('cvs', <?= $resx ?>, <?= $scale_start ?>, <?= $scale_end ?>,
                                              '%', '<?= $this->lang->line('correct') ?>', '<?= $showweek ? $this->lang->line('iso_week_no') : $this->lang->line('date') ?>',
                                              xlabels, <?= $numxticks ?>);
           var scatterdataspf = make_scatterconfig('cvsspf',<?= $resxspf ?>, <?= $scale_start ?>, <?= $scale_end ?>,
                                                   null, '<?= $this->lang->line('question_items_per_min') ?>', '<?= $showweek ? $this->lang->line('iso_week_no') : $this->lang->line('date') ?>',
                                                   xlabels, <?= $numxticks ?>);
-          
+
           scatterdataspf.options.ymax = null;
           scatterdataspf.options.scaleDecimals = 1;
 

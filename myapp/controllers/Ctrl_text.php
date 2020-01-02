@@ -189,7 +189,7 @@ class Ctrl_text extends MY_Controller {
 			print "Usage: php index.php text convert_quiz <filename>\n";
 			die;
 		}
-        
+
         $filename = $this->uri->segment(3);
         for ($i=4; $i<=$this->uri->total_segments(); ++$i)
             $filename .= '/' . $this->uri->segment($i);
@@ -318,14 +318,14 @@ class Ctrl_text extends MY_Controller {
     }
 
 	public function add_universe_level() {
-        // $_GET is typically array("rangelow"=>"7032", "rangehigh"=>"7323", "ref"=>"Genesis:16", 
+        // $_GET is typically array("rangelow"=>"7032", "rangehigh"=>"7323", "ref"=>"Genesis:16",
         //                          "lev"=>"3", "db"=>"ETCBC4", "prop"=>"BHS4")
 
         // MODEL:
         $this->load->model('mod_askemdros');
         $this->mod_askemdros->setup($_GET['db'], $_GET['prop']);
         $this->loc = json_decode($this->db_config->l10n_json);
-        
+
         $this->load->library('universe_tree');
         $res = $this->universe_tree->expand_level(intval($_GET['rangelow']), intval($_GET['rangehigh']),
                                                   $_GET['ref'], intval($_GET['lev']));
@@ -346,7 +346,7 @@ class Ctrl_text extends MY_Controller {
             $this->load->model('mod_localize');
 
             $this->mod_quizpath->init($_GET['quiz'], false, false);
-            
+
             $this->mod_askemdros->edit_quiz();
 
             $this->loc = json_decode($this->db_config->l10n_json);
@@ -542,7 +542,7 @@ class Ctrl_text extends MY_Controller {
             $this->load->model('mod_askemdros');
 
             $this->mod_quizpath->init(rawurldecode($_POST['dir']) . '/' . rawurldecode($_POST['quiz']) . '.3et', false, false, false);
-            
+
             // Protect against malicious posting:
             if ($this->mod_quizpath->file_exists()) {
                 $owner = $this->mod_quizpath->get_excercise_owner();
@@ -559,5 +559,36 @@ class Ctrl_text extends MY_Controller {
         catch (DataException $e) {
             $this->error_view($e->getMessage(), $this->lang->line('edit_quiz'));
         }
+    }
+    // Show the list of availiable exams.
+    public function select_exam() {
+      try {
+        // MODEL:
+        $this->load->model('mod_exampath');
+        $this->load->helper('varset');
+        // $this->mod_exampath->init(set_or_default($_GET['dir'],''), true, true);
+        // TODO: For now, not checking access.  Fix it later...
+        $this->mod_exampath->init(set_or_default($_GET['dir'],''), true, false, false);
+
+        $dirlist = $this->mod_exampath->dirlist(true);
+
+        // VIEW:
+        $this->load->view('view_top1', array('title' => $this->lang->line('List_of_Exams_Tab_Title')));
+        $this->load->view('view_top2');
+        $this->load->view('view_menu_bar', array('langselect' => true));
+        $center_text = $this->load->view('view_examdir',
+        array('dirlist' => $dirlist,
+        'curdir' => set_or_default($_GET['dir'],''),
+        'is_logged_in' => $this->mod_users->is_logged_in()),
+        true);
+        $this->load->view('view_main_page', array('left_title' => $this->lang->line('select_exam'),
+        'left' => $this->lang->line('click_exam'),
+        'center' => $center_text));
+        $this->load->view('view_bottom');
+
+      }
+      catch (DataException $e) {
+        $this->error_view($e->getMessage(), $this->lang->line('exam_directory`'));
+      }
     }
 }

@@ -9,7 +9,7 @@
       <a id="showsel" class="badge badge-primary" href="#"><?= $this->lang->line('show_selector') ?></a>
       <a id="hidesel" class="badge badge-primary" style="display:none" href="#"><?= $this->lang->line('hide_selector') ?></a>
     </p>
-     
+
     <script>
         $(function() {
             $('#showsel').click(
@@ -17,9 +17,9 @@
                     $('#selector').show();
                     $('#showsel').hide();
                     $('#hidesel').show();
-     
+
                     legend_adjust($('#leftpanel'), $('#centerpanel'));
-     
+
                     return false;
                 }
             );
@@ -28,9 +28,9 @@
                     $('#selector').hide();
                     $('#showsel').show();
                     $('#hidesel').hide();
-     
+
                     legend_adjust($('#leftpanel'), $('#centerpanel'));
-     
+
                     return false;
                 }
             );
@@ -39,12 +39,12 @@
 <?php else: ?>
     <h1><?= sprintf($this->lang->line('stat_for_class'), htmlspecialchars($classname)) ?></h1>
 <?php endif; ?>
-    
+
 <div class="card mb-3" id="selector" <?= $status==2 ? '' : 'style="display:none"' ?>>
   <div class="card-body">
     <?= form_open("statistics/teacher_exercises",array('method'=>'get')) ?>
       <input type="hidden" name="classid" value="<?= $classid ?>">
-       
+
       <p><?= $this->lang->line('specify_period') ?></p>
       <table>
         <tr>
@@ -56,7 +56,7 @@
           <td style="padding-left:5px"><input type="text" name="end_date" value="<?= $end_date ?>"></td>
         </tr>
       </table>
-       
+
       <p>&nbsp;</p>
       <div>
         <span style="font-weight:bold"><?= $this->lang->line('exercise_prompt') ?></span>
@@ -68,14 +68,14 @@
           <?php endforeach; ?>
         </select>
       </div>
-       
+
       <div class="row">
         <div class="form-group col">
           <label for="nongraded" class="col-form-label"><?= $this->lang->line('show_non_graded_prompt') ?></label>
           <input class="checkbox" id="nongraded" name="nongraded" value="on" type="checkbox" <?= set_checkbox('nongraded','on') ?>>
         </div>
       </div>
-       
+
       <p><input class="btn btn-primary" style="margin-top:10px;" type="submit" name="submit" value="<?= $this->lang->line('OK_button') ?>"></p>
     </form>
   </div>
@@ -169,13 +169,13 @@
       }
     ?>
 
-    <h2><?= $this->lang->line('pct_correct_by_date') ?></h2>
+    <h2><?= $this->lang->line('hgst_pct_correct_by_date') ?></h2>
     <canvas style="background:#f8f8f8; display:inline-block; vertical-align:top;" id="cvs" width="800" height="500">
       [No canvas support]
     </canvas>
 
-    <hr style="margin-top:20px">          
-    <h2><?= $this->lang->line('speed_by_date') ?></h2>
+    <hr style="margin-top:20px">
+    <h2><?= $this->lang->line('hgst_speed_by_date') ?></h2>
     <canvas style="background:#f8f8f8; display:inline-block; vertical-align:top;" id="cvsspf" width="800" height="500">
       [No canvas support]
     </canvas>
@@ -192,8 +192,8 @@
           <th><?= $this->lang->line('student') ?></th>
           <th class="text-center"><?= $this->lang->line('date') ?></th>
           <th class="text-center"><?= $this->lang->line('correct') ?></th>
-          <th class="text-center"><?= $this->lang->line('question_count') ?></th>
-          <th class="text-center"><?= $this->lang->line('qi_per_min') ?></th>
+          <th class="text-center"><?= $this->lang->line('hgst_grade') ?></th>
+          <th class="text-center"><?= $this->lang->line('hgst_avr_per_qi') ?></th>
         </tr>
         <?php reset($students);
               $st = current($students); ?>
@@ -203,8 +203,9 @@
           <td><?= $st ?></td>
           <td class="text-center"><?= Statistics_timeperiod::format_date($time) ?></td>
           <td class="text-center"><?= round($result['percentage']) ?>%</td>
-          <td class="text-center"><?= $result['count'] ?></td>
-          <td class="text-center"><?= sprintf("%.1f",$result['featpermin']) ?></td>
+          <td class="text-center"><?= round($result['percentage']/10,1) ?></td>
+          <!-- <td class="text-center"><?= $result['count'] ?></td> -->
+          <td class="text-center"><?= sprintf("%.1f",round(60/$result['featpermin'])) ?></td>
         </tr>
         <?php endforeach; ?>
         <?php $st = next($students); ?>
@@ -254,7 +255,7 @@
 
 
 
-    
+
     <script>
       function set_config(config,on,data,colors) {
           config.data = [];
@@ -264,7 +265,7 @@
           no_of_students = data.length==0 ? 0 : data[0].length;
           if (no_of_students<2)
               $('#allkey').hide();
-    
+
           for (s=0; s<no_of_students; ++s)
               if (on[s])
                   config.options.colors.push(colors[s]);
@@ -281,7 +282,7 @@
           <?php if (count($students)<2): ?>
             $('#allkey').hide();
           <?php endif; ?>
-                
+
           $('#show1').click(
               function() {
                   $('#table1').show();
@@ -347,7 +348,7 @@
                                }
                            }
                          ?>];
-          
+
           <?php if ($showweek): ?>
             var weekdates = [<?php
                                for ($ut=$scale_start; $ut<$scale_end; $ut += Statistics_timeperiod::SECS_PER_WEEK)
@@ -389,19 +390,19 @@
                             '#ff8','#f8f','#8ff','#888'];
           var hbaron = [<?php for ($i=0; $i<count($student_captions); ++$i) echo 'true,'; ?>];
           var hbardata = <?= $featdata ?>;
-          
+
           var hbarconfig = make_hbarconfig('featcanvas', null, [<?= implode(",", $featname) ?>], '<?= $this->lang->line('correct') ?>', <?= $canvasheight-10 ?>);
           hbarconfig.options.vmarginGrouped = 1;
           hbarconfig.options.vmargin = 5;
-          
+
           set_config(hbarconfig,hbaron,hbardata,hbarcolors);
           new RGraph.HBar(hbarconfig).draw();
-          
+
           RGraph.HTML.Key('mykey', {
               'colors': scatter.Get('colors'),
               'labels': [<?= implode(",", $student_captions) ?> ]
               });
-          
+
           var users_elem = $('input[name="users"]');
           var selectall_elem = $('input[name="selectall"]');
 

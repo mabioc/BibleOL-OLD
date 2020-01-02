@@ -299,4 +299,3 @@ $use_textarea['total_time_spent'] = false;
 $comment['wrong'] = "";
 $format['wrong'] = "";
 $use_textarea['wrong'] = false;
-

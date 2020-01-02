@@ -77,3 +77,17 @@ $lang['time_per_week'] = "Time spent per week";
 $lang['total'] = "Total";
 $lang['total_time_spent'] = "Total time spent: %d hours %d minutes";
 $lang['wrong'] = "Wrong";
+
+// MRCN for New grading
+$lang['hgst_pct_correct_by_date'] = "Highest % of correct answers by date";
+// $format['hgst_pct_correct_by_date'] = "";
+// $use_textarea['hgst_pct_correct_by_date'] = false;
+
+$lang['hgst_speed_by_date'] = "Highest answering speed by date";
+// $format['hgst_speed_by_date'] = "";
+// $use_textarea['hgst_speed_by_date'] = false;
+
+$lang['hgst_exercise_by_student_caption'] = "Highest daily results for each studen";
+$lang['hgst_correct'] = "Highest %";
+$lang['hgst_grade'] = "Highest Grade";
+$lang['hgst_avr_per_qi'] = "Highest average time/question (s)";
