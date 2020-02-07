@@ -18,5 +18,5 @@ RGraph/big-libraries
 node_modules/
 package-lock.json
 =======
-myapp/logs/
->>>>>>> gitignore updates
+exam
+>>>>>>> Change gitignore to ignore exam directory.
