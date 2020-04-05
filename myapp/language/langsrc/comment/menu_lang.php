@@ -44,6 +44,10 @@ $comment['logout'] = "";
 $format['logout'] = "";
 $use_textarea['logout'] = false;
 
+$comment['manage_exams'] = "";
+$format['manage_exams'] = "";
+$use_textarea['manage_exams'] = false;
+
 $comment['manage_exercises'] = "";
 $format['manage_exercises'] = "";
 $use_textarea['manage_exercises'] = false;
@@ -99,4 +103,3 @@ $use_textarea['users'] = false;
 $comment['user_access'] = "";
 $format['user_access'] = "";
 $use_textarea['user_access'] = false;
-
