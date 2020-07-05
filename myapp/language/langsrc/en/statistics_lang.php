@@ -91,3 +91,4 @@ $lang['hgst_exercise_by_student_caption'] = "Highest daily results for each stud
 $lang['hgst_correct'] = "Highest %";
 $lang['hgst_grade'] = "Highest Grade";
 $lang['hgst_avr_per_qi'] = "Highest average time/question (s)";
+$lang['grades_per_class_heading'] = "Grades per Class";

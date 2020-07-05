@@ -37,6 +37,10 @@ if ($this->mod_users->is_logged_in()) {
     if ($this->mod_users->is_teacher())
         $content[$ix][] = make_anchor2('statistics/teacher_progress', 'students_progress');
 
+    if ($this->mod_users->is_teacher()) {
+      $content[$ix][] = make_anchor2('grades/teacher_grades', 'grades_quizzes');
+    }
+
     if ($this->config->item('lj_enabled')) {
         $this->load->helper('lj_menu_helper');
         lj_menu_add($head, $content);
