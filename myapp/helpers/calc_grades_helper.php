@@ -204,7 +204,7 @@ function calculateGrade($schemaID, $percentage) {
   switch ($gradeSystem["SchemeType"]) {
     case 'P':
       // return the raw percentage
-      return $percentage;
+      return round($percentage)."%";
       break;
     case 'D':
       // return the decimal equivalent

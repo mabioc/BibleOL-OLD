@@ -430,7 +430,7 @@ class Mod_grades extends CI_Model {
         // TODO:  Fix this later: hack to get just the fhighest counted.
         $int_counter=0;
         foreach ($query->result() as $row) {
-          // TODO: MRCN part of the // HACK: Get just the first/highest result 
+          // TODO: MRCN part of the // HACK: Get just the first/highest result
             if ($int_counter>0 && $calculate_percentages) {
               break;
             }
@@ -445,6 +445,78 @@ class Mod_grades extends CI_Model {
             $perdate[$day]['count'] += $row->cnt;
             // TODO: MRCN part of the // HACK:
             $int_counter +=1;
+        }
+
+        foreach ($perdate as $k => &$v) {
+            $v['percentage'] = 100*$v['correct'] / $v['count'];
+            $v['featpermin'] = 60*$v['count'] / $v['duration'];
+        }
+
+        return $perdate;
+    }
+
+    // Gets data grouped by user each item). The index will be noon on the relevant day
+    public function get_score_by_user_templ(int $uid,array $templids,int $period_start,int $period_end, bool $nongraded, $calculate_percentages = false) {
+        if (empty($templids))
+            return array();
+
+        // Get results per quiz
+        if ($calculate_percentages) {
+          $query = $this->db
+          ->from('sta_quiz q')
+          //
+          ->select('q.id,`start`,`end`-`start` `duration`,sum(`rf`.`correct`) `correct`,count(*) `cnt`, sum(`rf`.`correct`)/count(*)*100 `perc`',false)
+          ->join('sta_question quest','quizid=q.id')
+          ->join('sta_requestfeature rf','quest.id=rf.questid')
+          ->where('rf.userid',$uid);
+        } else {
+          $query = $this->db
+          ->from('sta_quiz q')
+          ->select('q.id,`start`,`end`-`start` `duration`,sum(`rf`.`correct`) `correct`,count(*) `cnt`, sum(`rf`.`correct`)/count(*)*100 `perc`',false)
+          ->join('sta_question quest','quizid=q.id')
+          ->join('sta_requestfeature rf','quest.id=rf.questid')
+          ->where('rf.userid',$uid);
+        }
+
+        if (!$nongraded)
+            $query = $query->where('(grading is null OR grading=1)');
+
+        $query = $query
+            ->where_in('q.templid',$templids)
+            ->where('q.start >=',$period_start)
+            ->where('q.start <=',$period_end)
+            ->where('end IS NOT NULL')
+            ->where('valid',1)
+            ->group_by('q.id');
+            // TODO: MRCN
+            if ($calculate_percentages) {
+              $query = $query->order_by('perc desc');
+            }
+            /////////////////////////////
+            $query = $query->get();
+
+        // Consolidate by date
+        $perdate = array();
+        // TODO: MRCN
+        // TODO:  Fix this later: hack to get just the fhighest counted.
+        $int_counter=0;
+        foreach ($query->result() as $row) {
+          // // TODO: MRCN part of the // HACK: Get just the first/highest result
+          //   if ($int_counter>0 && $calculate_percentages) {
+          //     break;
+          //   }
+
+            $day = Statistics_timeperiod::round_to_noon((int)$row->start);
+            $day = $row->start;
+            if (!isset($perdate[$day]))
+                $perdate[$day] = array('duration' => 0,
+                                             'correct' => 0,
+                                             'count' => 0);
+            $perdate[$day]['duration'] += $row->duration;
+            $perdate[$day]['correct'] += $row->correct;
+            $perdate[$day]['count'] += $row->cnt;
+            // // TODO: MRCN part of the // HACK:
+            // $int_counter +=1;
         }
 
         foreach ($perdate as $k => &$v) {

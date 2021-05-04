@@ -26,4 +26,7 @@ $lang['translate_lexicon'] = "Translate lexicon";
 $lang['users'] = "Users";
 $lang['user_access'] = "User Access";
 // MRCN for the exams
+$lang['detail'] = "Details";
+$lang['hide_detail'] = "Hide Det.";
 $lang['exams'] = "Exams";
+$lang['grades_quizzes'] = "Grade Quizzes";

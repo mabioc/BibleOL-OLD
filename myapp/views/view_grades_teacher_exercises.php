@@ -79,7 +79,7 @@
       <div>
         <span style="font-weight:bold"><?= $this->lang->line('grade_system_prompt') ?></span>
         <select name="grade_system">
-          <option value="" <?= set_select('grade_system', '', true) ?>></option>
+          <!-- <option value="" <?= set_select('grade_system', '', true) ?>></option> -->
           <?php foreach($arrayOfGradeSchemes as $gs => $gs_array): ?>
             <?php $gs2 = htmlspecialchars($gs);
             $gs_name = htmlspecialchars($gs_array["SchemeName"]); ?>
@@ -208,19 +208,20 @@
 
 
     <p style="margin-top:10px">
-          <a id="show1" class="badge badge-primary" href="#"><?= $this->lang->line('show_table') ?></a>
-          <a id="hide1" class="badge badge-primary" style="display:none" href="#"><?= $this->lang->line('hide_table') ?></a>
+          <a id="show1" class="badge badge-primary" style="display:none" href="#"><?= $this->lang->line('show_table') ?></a>
+          <a id="hide1" class="badge badge-primary" href="#"><?= $this->lang->line('hide_table') ?></a>
     </p>
-    <div class="table-responsive" id="table1" style="display:none">
+    <div class="table-responsive" id="table1" style="display:block">
       <table class="type2 table table-striped autowidth">
         <caption><?= $this->lang->line('exercise_by_student_caption') ?></caption>
         <tr>
           <th><?= $this->lang->line('student') ?></th>
           <th class="text-center"><?= $this->lang->line('date') ?></th>
           <th class="text-center"><?= $this->lang->line('correct') ?></th>
-          <th class="text-center"><?= $this->lang->line('hgst_grade') ?></th>
+          <th class="text-center"><?= $this->lang->line('quiz_grade') ?></th>
           <th class="text-center"><?= $this->lang->line('best_total_time') ?></th>
           <th class="text-center"><?= $this->lang->line('hgst_avr_per_qi') ?></th>
+          <th></th>
         </tr>
         <?php reset($students);
               $st = current($students);
@@ -228,16 +229,32 @@
                 $max_time = 3600; // Sets to 1h, which virtually disables the feature
               }
               ?>
-        <?php foreach ($resscoreall as $ra): ?>
+        <?php $hiddenStyles = array();
+        foreach ($resscoreall_ind as $ra): ?>
+          <?PHP $lineId = 0; $stk = str_replace(" ", "__", $st); $hiddenStyles["$stk"] = ".{$stk}_hiddenDetails {
+           display: none;
+          }
+          "?>
         <?php foreach ($ra as $time => $result): ?>
-        <tr>
-          <td><?= $st ?></td>
-          <td class="text-center"><?= Statistics_timeperiod::format_date($time) ?></td>
+        <tr class="<?php echo $lineId==0?'headerDet':"{$stk}_hiddenDetails";  ?>">
+          <td><?= $lineId==0?$st . " (" . $this->lang->line('hgst_grade') .")":$st ?></td>
+          <!-- <td class="text-center"><?= Statistics_timeperiod::format_date($time) ?></td> -->
+          <td class="text-center"><?= Statistics_timeperiod::format_time($time) ?></td>
           <td class="text-center"><?= round($result['percentage']) ?>%</td>
           <td class="text-center"><?= (round(60/$result['featpermin'])<=$max_time)?calculateGrade($grade_system, $result['percentage']):calculateGrade($grade_system, 0) ?></td>
           <!-- <td class="text-center"><?= $result['count'] ?></td> -->
           <td class="text-center"><?= $result["duration"] ?></td>
           <td class="text-center"><?= sprintf("%.1f",round(60/$result['featpermin'])) ?></td>
+          <td class="text-center">
+            <!-- <a id="show1" class="badge badge-primary" style="display:none" href="#"><?= $this->lang->line('show_table') ?></a> -->
+            <!-- <a id="hide1" class="badge badge-primary" href="#"><?= $this->lang->line('hide_table') ?></a> -->
+            <?php if ($lineId == 0) {
+            ?>
+              <a id="det_<?php echo $stk;?>" class="badge badge-primary" href="#"><?= $this->lang->line('detail') ?></a>
+            <?php }
+            $lineId +=1;
+            ?>
+          </td>
         </tr>
         <?php endforeach; ?>
         <?php $st = next($students); ?>
@@ -247,6 +264,13 @@
         <p><?= $this->lang->line('students_marked_star') ?></p>
       <?php endif; ?>
     </div>
+    <style>
+    <?php foreach ($hiddenStyles as $key => $value) {
+      // print each style
+      echo $value;
+    }
+    ?>
+    </style>
 
 
     <hr style="margin-top:10px">
@@ -314,6 +338,31 @@
           <?php if (count($students)<2): ?>
             $('#allkey').hide();
           <?php endif; ?>
+
+          <?php
+          // one function for each button
+          foreach ($hiddenStyles as $key => $value) {
+            // print each style
+            echo "
+            $('#det_" . $key . "').click(
+              function() {
+                if ($('." . $key . "_hiddenDetails').is(':visible')) {
+                  $('." . $key . "_hiddenDetails').hide();
+                  $('#det_" . $key . "').text('" . $this->lang->line('detail') . "')
+                }
+                else {
+                  $('." . $key . "_hiddenDetails').show();
+                  $('#det_" . $key . "').text('" . $this->lang->line('hide_detail') . "')
+                }
+
+                //legend_adjust($('#leftpanel'), $('#centerpanel'));
+
+                return false;
+              }
+            );
+            ";
+          }
+          ?>
 
           $('#show1').click(
               function() {

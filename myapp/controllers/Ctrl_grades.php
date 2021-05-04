@@ -382,6 +382,7 @@ class Ctrl_grades extends MY_Controller {
                     $status = 2; // 2=Initial display
                     $real_students = null;
                     $resall = null;
+                    $resall_ind = null;
                     $resfeatall = null;
                     $featloc = null;
                 }
@@ -390,6 +391,7 @@ class Ctrl_grades extends MY_Controller {
                     $users_and_templs = $this->mod_grades->get_users_and_templ($ex);
 
                     $resall = array();
+                    $resall_ind = array();
                     $resfeatall = array();
                     $real_students = array(); // Will be used as a set
 
@@ -397,6 +399,12 @@ class Ctrl_grades extends MY_Controller {
                         $see_nongraded = $nongraded && $this->mod_grades->may_see_nongraded($uid, $ex);
 
                         $res = $this->mod_grades->get_score_by_date_user_templ($uid,
+                                                                                   $templs,
+                                                                                   $this->statistics_timeperiod->start_timestamp(),
+                                                                                   $this->statistics_timeperiod->end_timestamp(),
+                                                                                   $see_nongraded,$calculate_percentages=true);
+
+                        $res_ind = $this->mod_grades->get_score_by_user_templ($uid,
                                                                                    $templs,
                                                                                    $this->statistics_timeperiod->start_timestamp(),
                                                                                    $this->statistics_timeperiod->end_timestamp(),
@@ -411,6 +419,7 @@ class Ctrl_grades extends MY_Controller {
                         if (empty($res))
                             continue;
                         $resall[] = $res;
+                        $resall_ind[] = $res_ind;
                         $resfeatall[] = $resfeat;
                         $real_students[$uid] = $see_nongraded;
                     }
@@ -442,6 +451,7 @@ class Ctrl_grades extends MY_Controller {
                 $status = 2; // 2=Initial display
                 $real_students = null;
                 $resall = null;
+                $resall_ind = null;
                 $resfeatall = null;
                 $featloc = null;
             }
@@ -465,6 +475,7 @@ class Ctrl_grades extends MY_Controller {
                                                                                       'classname' => $class->classname,
                                                                                       'students' => $real_students,
                                                                                       'resscoreall' => $resall,
+                                                                                      'resscoreall_ind' => $resall_ind,
                                                                                       'resfeatall' => $resfeatall,
                                                                                       'featloc' => $featloc,
                                                                                       'status' => $status,

@@ -91,7 +91,8 @@ $lang['hgst_speed_by_date'] = "Highest answering speed by date";
 
 $lang['hgst_exercise_by_student_caption'] = "Highest daily results for each studen";
 $lang['hgst_correct'] = "Highest %";
-$lang['hgst_grade'] = "Best Run's Grade";
+$lang['hgst_grade'] = "Best Run";
+$lang['quiz_grade'] = "Grade";
 $lang['hgst_avr_per_qi'] = "Avrg. time/question (s)";
 $lang['best_total_time'] = "Total time (s)";
 $lang['grades_per_class_heading'] = "Grades per Class";
