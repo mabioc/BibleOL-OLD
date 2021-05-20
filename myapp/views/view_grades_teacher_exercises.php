@@ -213,7 +213,7 @@
     </p>
     <div class="table-responsive" id="table1" style="display:block">
       <table class="type2 table table-striped autowidth">
-        <caption><?= $this->lang->line('exercise_by_student_caption') ?></caption>
+        <caption><?= $this->lang->line('grds_exercise_by_student_caption') ?></caption>
         <tr>
           <th><?= $this->lang->line('student') ?></th>
           <th class="text-center"><?= $this->lang->line('date') ?></th>
