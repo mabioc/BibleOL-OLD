@@ -176,9 +176,10 @@ class Mod_grades extends CI_Model {
             }
         }
 
-        // Set end time and grading for quiz
+        // Set end time and grading for quiz (MRCN: and the total number of questions)
         $query = $this->db->where('id',$quizid)->update('sta_quiz',array('end' => $time,
-                                                                         'grading' => $this->input->post('grading')=='true' ? 1 : 0));
+                                                                         'grading' => $this->input->post('grading')=='true' ? 1 : 0,
+                                                                         'tot_questions' => $this->input->post('question_count') ));
     }
 
     // Get all templates with finished quizzes for user $user_id
@@ -394,14 +395,14 @@ class Mod_grades extends CI_Model {
           $query = $this->db
           ->from('sta_quiz q')
           //
-          ->select('q.id,`start`,`end`-`start` `duration`,sum(`rf`.`correct`) `correct`,count(*) `cnt`, sum(`rf`.`correct`)/count(*)*100 `perc`',false)
+          ->select('q.id,`start`,`end`-`start` `duration`,sum(`rf`.`correct`) `correct`,q.tot_questions `cnt`, sum(`rf`.`correct`)/q.tot_questions*100 `perc`',false)
           ->join('sta_question quest','quizid=q.id')
           ->join('sta_requestfeature rf','quest.id=rf.questid')
           ->where('rf.userid',$uid);
         } else {
           $query = $this->db
           ->from('sta_quiz q')
-          ->select('q.id,`start`,`end`-`start` `duration`,sum(`rf`.`correct`) `correct`,count(*) `cnt`, sum(`rf`.`correct`)/count(*)*100 `perc`',false)
+          ->select('q.id,`start`,`end`-`start` `duration`,sum(`rf`.`correct`) `correct`,q.tot_questions `cnt`, sum(`rf`.`correct`)/q.tot_questions*100 `perc`',false)
           ->join('sta_question quest','quizid=q.id')
           ->join('sta_requestfeature rf','quest.id=rf.questid')
           ->where('rf.userid',$uid);
@@ -465,14 +466,14 @@ class Mod_grades extends CI_Model {
           $query = $this->db
           ->from('sta_quiz q')
           //
-          ->select('q.id,`start`,`end`-`start` `duration`,sum(`rf`.`correct`) `correct`,count(*) `cnt`, sum(`rf`.`correct`)/count(*)*100 `perc`',false)
+          ->select('q.id,`start`,`end`-`start` `duration`,sum(`rf`.`correct`) `correct`,q.tot_questions `cnt`, sum(`rf`.`correct`)/q.tot_questions*100 `perc`',false)
           ->join('sta_question quest','quizid=q.id')
           ->join('sta_requestfeature rf','quest.id=rf.questid')
           ->where('rf.userid',$uid);
         } else {
           $query = $this->db
           ->from('sta_quiz q')
-          ->select('q.id,`start`,`end`-`start` `duration`,sum(`rf`.`correct`) `correct`,count(*) `cnt`, sum(`rf`.`correct`)/count(*)*100 `perc`',false)
+          ->select('q.id,`start`,`end`-`start` `duration`,sum(`rf`.`correct`) `correct`,q.tot_questions `cnt`, sum(`rf`.`correct`)/q.tot_questions*100 `perc`',false)
           ->join('sta_question quest','quizid=q.id')
           ->join('sta_requestfeature rf','quest.id=rf.questid')
           ->where('rf.userid',$uid);

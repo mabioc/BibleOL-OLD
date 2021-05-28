@@ -253,6 +253,7 @@ CREATE TABLE `bol_sta_quiz` (
   `end` int(11) DEFAULT NULL,
   `valid` tinyint(1) NOT NULL,
   `grading` tinyint(4) DEFAULT NULL,
+  `tot_questions` int(11) DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `ui` (`userid`),
   CONSTRAINT `bol_sta_quiz_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `bol_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
