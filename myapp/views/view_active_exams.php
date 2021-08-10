@@ -78,7 +78,6 @@
         <tr>
           <th><?= $this->lang->line('class_name') ?></th>
           <th><?= $this->lang->line('exam_name') ?></th>
-          <th><?= $this->lang->line('start_date') ?></th>
           <th><?= $this->lang->line('start_time') ?></th>
           <th><?= $this->lang->line('duration') ?></th>
           <th><?= $this->lang->line('user_operations') ?></th>
@@ -87,8 +86,7 @@
           <tr>
             <td class="leftalign"><?= $exam->class_id ?></td>
             <td class="leftalign"><?= $exam->exam_name ?></td>
-            <td class="leftalign"><?= $exam->exam_start_date ?></td>
-            <td class="leftalign"><?= $exam->exam_start_time ?></td>
+            <td class="leftalign"><?= date("m-d-Y H:i", $exam->exam_end_time) ?></td>
             <td class="leftalign"><?= $exam->exam_length ?></td>
             <td class="leftalign">
               <a class="badge badge-primary" href="#">Hi</a>

@@ -67,10 +67,10 @@ class Mod_users extends CI_Model {
         $this->load->database();
 
         $user_id = intval($this->session->userdata('ol_user'));  // Sets $user_id to 0 if userdata('ol_user') is not set
-        
+
         $query = $this->db->where('id',$user_id)->get('user');
 		$this->me = $query->row();
-        
+
 		if (is_null($this->me))
             $this->me = make_dummy_user();
     }
@@ -99,11 +99,12 @@ class Mod_users extends CI_Model {
         $query = $this->db->select('first_name,last_name,family_name_first')->where('id',$uid)->get('user');
         $user = $query->row();
         if (!$user)
-            throw new DataException($this->lang->line('illegal_user_id'));
+          // return "Foo";
+          throw new DataException($this->lang->line('illegal_user_id'));
 
         return make_full_name($user);
     }
-    
+
     public function get_me() {
         return $this->me;
     }
@@ -246,7 +247,7 @@ class Mod_users extends CI_Model {
             $query = $this->db->where('username',$username)->where('oauth2_login',null)->get('user'); //TODO: Test this
             return $query->row();
         }
-        
+
         $query = $this->db->where('email',$email)->where('oauth2_login',null)->get('user'); //TODO: Test this
         $count = $query->num_rows();
 
@@ -288,7 +289,7 @@ class Mod_users extends CI_Model {
         return $query;
     }
 
-    
+
     public function delete_user(int $userid) {
         $this->db->where('id', $userid)->delete('user');
         if ($this->db->affected_rows()==0)
@@ -347,7 +348,7 @@ class Mod_users extends CI_Model {
 			$this->me->prefvariant = empty($_SESSION['variant']) ? 'none' :  $_SESSION['variant'];
 
             $query = $this->db->insert('user', $this->me);
-      
+
             $this->me->id = $this->db->insert_id();
 
             return true;
@@ -376,7 +377,7 @@ class Mod_users extends CI_Model {
             $query = $this->db->where('last_login <',$now-$time)->where('last_login >',0)
                 ->get('user');
             $users = $query->result();
-   
+
             foreach ($users as $u)
                 $this->delete_user(intval($u->id));
         }
@@ -400,7 +401,7 @@ class Mod_users extends CI_Model {
         return $this->me->acc_code;
     }
 
-    
+
     // Returns true if accept code is correct, otherwise returns null.
     // If $set_me is true, this function sets $this->me and updates the database.
     // $policy_lang is not used if $set_me==false
@@ -432,9 +433,9 @@ class Mod_users extends CI_Model {
             );
         $context  = stream_context_create($options);
         $result = @file_get_contents($url, false, $context);
-            
+
         $items = explode(' ',$http_response_header[0]);
         return $items[1]; // $items[1] is the HTTP error code
     }
-    
+
   }

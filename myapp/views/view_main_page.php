@@ -5,8 +5,8 @@ function show_intro(&$center, &$landingpage) {
   if (!isset($landingpage))
       return;
 
-    echo <<<EOD
-    <div class="row" id="landing-row">
+    //echo <<<EOD
+    echo '<div class="row" id="landing-row">
       <div class="col-md-8" id="landingpanel">
         <img class="graphic-element" src="/images/dadel/DaDEL_ID_graphic_element_RGB.png">
         <div id="landingtext">
@@ -28,9 +28,8 @@ function show_intro(&$center, &$landingpage) {
         <form action="/text/select_quiz">
           <button class="btn btn-outline-dark">Try an exercise</button>
         </form>
-        </form>
-
-    EOD;
+        </form>';
+    // EOD;
 }
 
 /* Optionally shows a panel title and text */
@@ -76,7 +75,7 @@ function logos() {
 
 
 
-<?php 
+<?php
   show_intro($center, $landingpage);
 ?>
 

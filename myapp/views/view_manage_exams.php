@@ -58,7 +58,6 @@ on the page.
     }
 ?>
 
-
 <div class="table-responsive">
   <table class="type2 table table-striped">
       <tr>
@@ -79,7 +78,6 @@ on the page.
       <?php endforeach; ?>
   </table>
 </div>
-
 
 <!--
 This button redirects to the exam creation page.

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<exam>
+  <examname>test_exam</examname>
+  <teacher_id>1</teacher_id>
+  <description>caeasdf</description>
+  <exercise>
+    <exercisename>ETCBC4/demo/gender.3et</exercisename>
+    <numq>3</numq>
+    <weight>4</weight>
+    <order>3</order>
+  </exercise>
+  <exercise>
+    <exercisename>ETCBC4/demo/id_suffix-translit.3et</exercisename>
+    <numq>2</numq>
+    <weight>3</weight>
+    <order>4</order>
+  </exercise>
+  <exercise>
+    <exercisename>ETCBC4/demo/make_suffix.3et</exercisename>
+    <numq>0</numq>
+    <weight>1</weight>
+    <order>3</order>
+  </exercise>
+</exam>

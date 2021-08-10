@@ -490,6 +490,7 @@ class Ctrl_exams extends MY_Controller
         $name_owned_classes = $this->mod_classes->get_named_classes_owned(false);
 
         $this->load->view('view_top1', array('title' => $this->lang->line('exam_mgmt')));
+
         $this->load->view('view_top2');
         $this->load->view('view_menu_bar', array('langselect' => true));
         $this->load->view('view_confirm_dialog');
@@ -576,11 +577,13 @@ class Ctrl_exams extends MY_Controller
         $this->mod_users->is_logged_in();
 
 
-
-        $query = $this->db->get_where('bol_exam', array('exam_name' => $_GET['exam']));
+        $query = $this->db->get_where('bol_exam_active', array('id' => $_GET['exam']));
         $row = $query->row();
-        $examcode = $row->examcode;
-        $exam_id = $row->id;
+        $exam_id = $row->exam_id;
+
+        $query2 = $this->db->get_where('bol_exam', array('id' => $exam_id));
+        $row2 = $query2->row();
+        $examcode = $row2->examcode;
         $xml = simplexml_load_string($examcode);
 
         $exercise_parameters = array();
