@@ -6,7 +6,7 @@ require_once('include/typeinfo.inc.php');
 class database_file {
     public $emdros_db;  ///< The name of the Emdros database file
     public $dbinfo;     ///< The name of the file containing database information (dbinfo) for the Emdros database
-    public $propertiesName; 
+    public $propertiesName;
     public $typeinfo;   ///< The name of the file containing type information for the Emdros database
     public $bookorder;  ///< The order of the books in the Emdros database
     private $subsetOf;  ///< The name of an Emdros database, if any, that is a superset of this one
@@ -52,7 +52,7 @@ class Db_config {
 	public $emdros_db;          ///< The name of the Emdros database file!
     private $src_lang;			///< Array of names of source language lexicons (Hebrew, Aramaic, greek)
 	private $glosslang;			///< Array of gloss languages
-    
+
     /// Utility function which checks if one string ends with another string.
     /// @param $haystack String in which to search.
     /// @param $needle String to search for.
@@ -99,7 +99,7 @@ class Db_config {
             if (!isset($this->allfiles[$superset])) {   // A superset does not exits...
                 $this->allfiles_enumerate[$pr] = $dbf;  // ...therefore we may enumerate this database
                 if (!is_null($superset))                // The superset could have existed
-                    $add_to_allfiles[$superset] = $dbf; // ...therefore we make the superset point to the subset 
+                    $add_to_allfiles[$superset] = $dbf; // ...therefore we make the superset point to the subset
             }
         }
 
@@ -180,7 +180,7 @@ class Db_config {
             }
             return $variant_grammar_table;
         }
-        else 
+        else
             return null;
     }
 
@@ -201,7 +201,7 @@ class Db_config {
         $this->dbinfo_json = $this->read_or_throw($dbf->dbinfo);
         $this->dbinfo = json_decode($this->dbinfo_json);
         $this->addgloss_dbinfo();
-        
+
         $CI =& get_instance();
         $query = $CI->db->select('json')->where('db',$dbf->propertiesName)->where('lang',$language)->get('db_localize');
         $this->l10n_json = $query->row()->json;
@@ -234,7 +234,7 @@ class Db_config {
         $this->typeinfo = new TypeInfo($this->typeinfo_json);
 
         $this->bookorder = $this->read_bookorder_file($dbf->bookorder);
-         
+
         $this->emdros_db = $dbf->emdros_db;
     }
 
@@ -251,7 +251,7 @@ class Db_config {
                     foreach ($this->src_lang as $src_l)
                         create_lexicon_table($src_l, $gl->abb, $_SESSION['variant'], true);
                 }
-            
+
                 $langname = $gl->internal;
                 $fsetting->$langname = clone $fsetting->gloss;
                 $fsetting->$langname->sql_command = str_replace('LANG',$gl->abb,$fsetting->gloss->sql_command);
@@ -267,13 +267,13 @@ class Db_config {
                 // Non-Chinese glosses must be displayed with a smaller fontsize
                 if ($gl->abb!='zh-Hans' && $gl->abb!='zh-Hant')
                     $fsetting->$langname->fontsize = "tenpoint";
-                
+
                 $fsetting->$langname->isGloss = true;  // Extra feature
             }
             unset($fsetting->gloss);
 
             // Replace 'GrammarGroupGlosses.glosses' with 'GrammarGroup.english', 'GrammarGroup.german' etc.
-            
+
             foreach ($this->dbinfo->sentencegrammar as $sgo) {
                 if ($sgo->objType===$this->dbinfo->objHasSurface) {
                     foreach ($sgo->items as $it) {
@@ -290,14 +290,14 @@ class Db_config {
                 }
             }
         }
-        
+
         $this->dbinfo_json = json_encode($this->dbinfo);
     }
 
     // Extends the typeinfo variable with information for various gloss languages
     private function addgloss_typeinfo_json() {
         $typinf = json_decode($this->typeinfo_json);
-        
+
         $osetting = $typinf->obj2feat->{$this->dbinfo->objHasSurface};
 
         foreach ($this->glosslang as $gl)
@@ -312,14 +312,14 @@ class Db_config {
         $CI->lang->load('users', $language);
 
         $l10n = json_decode($this->l10n_json);
-        
+
         $wsetting = $l10n->emdrosobject->{$this->dbinfo->objHasSurface};
 
         foreach ($this->glosslang as $gl) {
             $langname = $gl->internal;
             $wsetting->$langname = $CI->lang->line($langname);
         }
-        
+
         $this->l10n_json = json_encode($l10n);
     }
 

@@ -23,10 +23,6 @@ body {
 p {
   font-size: 12pt;
 }
-ul li {
-  padding: 0 !important;
-  margin: 0 !important;
-}
 h1 {
   font-weight: bold;
 }
@@ -117,11 +113,11 @@ div.dropdown-menu .dropdown-item {
 div.dropdown-menu .dropdown-item:hover {
   font-weight: bold;
   background-color: #f2f2f2;
-  border: 0 !important;
 }
 div.dropdown-menu .dropdown-item.active {
   font-weight: bold;
-  border-radius: 0;
+  background-color: #43B02A;
+  color: white;
 }
 a.nav-link {
   font-size: 11pt;
@@ -131,32 +127,13 @@ a.nav-link {
 a.nav-link:hover {
   font-weight: bold;
 }
-ul.navtabs a {
-  margin-bottom: -1px !important;
-}
-ul.navtabs a.nav-item {
-  text-transform: uppercase;
-  font-size: 12pt;
-}
-ul.navtabs a.nav-link {
-  color: #43B02A !important;
-  text-transform: uppercase;
-}
-ul.navtabs a:hover {
-  font-weight: bold;
-  background-color: #f2f2f2;
-  border: solid 1px #adadad !important;
-  border-radius: 0 !important;
-}
-ul.navtabs a.active {
-  border: solid 1px #adadad !important;
-  border-radius: 0 !important;
-  font-weight: bold;
-}
 .heb-default {
-  font-family: "Ezra SIL Webfont";
-  font-size: 100%;
-  color: #002A3A;
+  font-family: "Ezra SIL Webfont" !important;
+  font-size: 120% !important;
+}
+.greek-default {
+  font-family: "Gentium Plus Webfont" !important;
+  font-size: 120% !important;
 }
 div.hr-replacement {
   background-color: #adadad;
@@ -183,35 +160,25 @@ div.hr-replacement {
   vertical-align: bottom;
   text-align: center;
 }
-.textdisplay.hebrew {
-  line-height: 45px;
-}
-.textdisplay.greek {
-  line-height: 35px;
-}
 .rtl .textdisplay {
-  margin-left: 0;
+  margin-left: 0.5em;
   margin-right: 0;
 }
 .ltr .textdisplay {
   margin-left: 0;
-  margin-right: 0;
+  margin-right: 0.5em;
 }
 .textblock {
   display: inline;
   vertical-align: text-top;
   text-align: center;
-  margin-top: 0px !important;
-  margin-bottom: 7px !important;
-  margin-right: 0px !important;
-  margin-left: 0px !important;
+  margin-top: 8px;
 }
 .textblock.inline {
   display: inline;
 }
 .textblock.inlineblock {
   display: inline-block;
-  max-width: 120px;
 }
 .leftalign {
   text-align: left !important;
@@ -296,7 +263,7 @@ span.verse {
   margin-left: 0.25em;
 }
 .indentation {
-  font-family: 'titillium', courier, monospace;
+  font-family: courier, monospace;
 }
 #testwidth {
   position: absolute;
@@ -311,7 +278,6 @@ span.verse {
 .wordspace {
   display: inline-block;
   /* Allows line breaks at this point */
-  width: 0.75em;
 }
 .dontshowit {
   display: none;
@@ -371,22 +337,8 @@ div.grammargroup {
 div.grammarborder {
   border: solid 1px #adadad;
 }
-div.grammarinnerborder {
-  background: #f2f2f2;
-}
 div#gramtabs {
-  display: block;
-  float: none !important;
-  text-align: left;
   border: solid 1em white;
-  border-radius: 0;
-  margin: 0 !important;
-}
-div.grammarselector {
-  font-size: 8pt;
-  display: block;
-  margin-bottom: -1px;
-  border-radius: 0px;
 }
 div#myview {
   background: #f2f2f2;
@@ -432,7 +384,7 @@ div#grammargroup {
   height: 79px;
   border: 0;
 }
-#myview > #tabs-background h2 {
+#myview > #tabs-background div.selectbutton {
   font-family: 'titillium';
   text-transform: uppercase;
   font-size: 24px;
@@ -545,7 +497,7 @@ div.selectbutton input[type="checkbox"]:checked {
 }
 div.selectbutton input[type="checkbox"]:checked + label {
   border-color: #002A3A;
-  background-color: white;
+  background-color: #b3b3b3;
   color: #002A3A;
 }
 div.selectbutton input[type="radio"]:checked {
@@ -553,7 +505,7 @@ div.selectbutton input[type="radio"]:checked {
 }
 div.selectbutton input[type="radio"]:checked + label {
   border-color: #002A3A;
-  background-color: #f2f2f2;
+  background-color: #b3b3b3;
   color: #002A3A;
 }
 div#textinput {
@@ -755,7 +707,6 @@ div.quizcard table th {
 }
 div.quizcard table td {
   font-size: 12pt;
-  display: block;
   text-align: center;
   padding-top: 2px;
   padding-bottom: 3px;
@@ -771,13 +722,13 @@ div.quizcard table td input[type=text] {
   padding-top: 2px;
   padding-bottom: 2px;
 }
-div.quizcard table td.combobox {
+div.quizcard table td.qbox {
   display: flex;
   white-space: normal;
   padding-top: 4px;
   padding-bottom: 4px;
 }
-div.quizcard table td.combobox img {
+div.quizcard table td.qbox img {
   width: 20px;
   height: 20px;
   padding-right: 5px;
@@ -798,29 +749,34 @@ div.quizitem {
   padding-right: 1vw;
 }
 .letterinput {
-  display: flexbox;
   padding: 13px;
   padding-right: 3px;
   text-align: center;
 }
-.letterinput .selectbutton {
+.letterinput .delbutton,
+.letterinput .inputbutton {
+  color: #727272;
+  border: solid 1px #adadad;
+  background-color: white;
+  margin-left: 7px;
+  margin-bottom: 0.5rem;
   float: left;
-  display: inline-flex;
-}
-.letterinput .selectbutton.delbutton label {
   width: 50px;
   text-align: center;
   font-weight: normal;
-  height: 40px;
-  font-family: 'titillium';
-  font-size: 14pt;
-}
-.letterinput .selectbutton.inputbutton label {
-  width: 50px;
   height: 50px;
-  text-align: center;
-  font-weight: normal;
+  line-height: 50px;
   font-size: 18pt;
+}
+.letterinput .delbutton:hover,
+.letterinput .inputbutton:hover {
+  border-color: #002A3A;
+  background-color: #e5e5e5;
+  color: #002A3A;
+}
+.letterinput .delbutton {
+  font-family: 'titillium';
+  font-weight: 600;
 }
 input.hebrew {
   font-family: Ezra SIL Webfont, Times New Roman, Serif !important;
@@ -924,11 +880,17 @@ div.logo {
 img {
   border-style: none;
 }
-#logincenter,
+#logincenter {
+  margin-top: 20px;
+}
 #errorcenter {
-  max-width: 300px;
   margin-top: 20px;
   margin-bottom: 25px;
+  max-width: 300px;
+}
+#logincenterextra {
+  margin-top: 0;
+  max-width: 300px;
 }
 #rejectcenter {
   max-width: 600px;
@@ -1148,9 +1110,15 @@ label {
   border: #002A3A 1px;
   margin: 0px;
 }
+.gloss-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+.gloss-wrapitem {
+  flex-basis: 7.5em;
+  margin: 1px;
+}
 .btn {
-  padding-left: 3rem;
-  padding-right: 3rem;
   margin-left: 7px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -1189,6 +1157,18 @@ label {
   color: white !important;
   border: solid 2px #43B02A !important;
   border-radius: 20px;
+}
+.btn.btn-gloss-selector {
+  margin: 0;
+  border: solid 2px #43B02A;
+  color: #43B02A;
+  background-color: white;
+}
+.btn.btn-gloss-selector-active {
+  margin: 0;
+  border: solid 2px #43B02A;
+  color: white;
+  background-color: #43B02A;
 }
 .btn.btn-quiz {
   border: solid 1px #43B02A;
