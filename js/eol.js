@@ -721,13 +721,13 @@ var DisplaySingleMonadObject = (function (_super) {
         var refs = null;
         var urls = null;
         if (uhSize != 0) {
-            if (uhSize != smo.sameAsPrev.length)
-                throw 'BAD2';
-            if (uhSize != smo.sameAsNext.length)
-                throw 'BAD3';
             if (!this.inQuiz) {
+                if (uhSize != smo.sameAsPrev.length)
+                    throw 'BAD2';
+                if (uhSize != smo.sameAsNext.length)
+                    throw 'BAD3';
                 document.title = l10n.universe['book'][smo.bcv[0]] + ' ' + smo.bcv[1];
-                $('#textcontainer h1').html(document.title);
+                $('#tabs-background h2').html(document.title);
                 for (var i = 0; i < uhSize; ++i) {
                     if (!smo.sameAsPrev[i]) {
                         if (i == 1) {
