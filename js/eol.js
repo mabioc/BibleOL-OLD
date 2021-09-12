@@ -1,7 +1,10 @@
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -390,6 +393,8 @@ function getSentenceGrammarFor(oType) {
 var GrammarSelectionBox = (function () {
     function GrammarSelectionBox() {
         this.checkboxes = '';
+        this.subgroupgrammartabs = '';
+        this.subgroupgrammardivs = '';
         this.addBr = new util.AddBetween('<br>');
         this.borderBoxes = [];
         this.separateLinesBoxes = [];
@@ -398,8 +403,8 @@ var GrammarSelectionBox = (function () {
         $(".showborder.lev" + level).each(function (index) {
             $(this).css('width', 'auto');
             var w = $(this).find('> .gram').width();
-            if ($(this).width() < w)
-                $(this).width(w);
+            if ($(this).width() < w + 10)
+                $(this).width(w + 10);
         });
     };
     GrammarSelectionBox.prototype.generatorCallback = function (whattype, objType, origObjType, featName, featNameLoc, sgiObj) {
@@ -407,54 +412,75 @@ var GrammarSelectionBox = (function () {
             case WHAT.groupstart:
                 if (!this.hasSeenGrammarGroup) {
                     this.hasSeenGrammarGroup = true;
-                    this.checkboxes += '<div class="subgrammargroup">';
+                    this.subgroupgrammartabs += "<div id=\"grammargroup\"><ul>";
                 }
-                this.checkboxes += "<div class=\"grammargroup\"><h2>" + featNameLoc + "</h2><div>";
+                this.subgroupgrammartabs += "<li><a class=\"grammargroup\" href=\"#" + getHtmlAttribFriendlyName(featName) + "\"><h3>" + featNameLoc + "</h3></a></li>";
+                this.subgroupgrammardivs += "<div id=\"" + getHtmlAttribFriendlyName(featName) + "\">";
+                this.subgroupgrammardivs += "<div id=\"grammarbuttongroup\">";
                 this.addBr.reset();
                 break;
             case WHAT.groupend:
-                this.checkboxes += '</div></div>';
+                this.subgroupgrammardivs += '</div></div>';
                 break;
             case WHAT.feature:
             case WHAT.metafeature:
                 var disabled = mayShowFeature(objType, origObjType, featName, sgiObj) ? '' : 'disabled';
-                this.checkboxes += this.addBr.getStr() + "<input id=\"" + objType + "_" + featName + "_cb\" type=\"checkbox\" " + disabled + ">" + featNameLoc;
+                if (this.hasSeenGrammarGroup) {
+                    this.subgroupgrammardivs += "<div class=\"selectbutton\"><input id=\"" + objType + "_" + featName + "_cb\" type=\"checkbox\" " + disabled + "><label for=\"" + objType + "_" + featName + "_cb\">" + featNameLoc + "</label></div>";
+                }
+                else {
+                    this.checkboxes += "<div class=\"selectbutton\"><input id=\"" + objType + "_" + featName + "_cb\" type=\"checkbox\" " + disabled + "><label for=\"" + objType + "_" + featName + "_cb\">" + featNameLoc + "</label></div>";
+                }
                 break;
         }
     };
     GrammarSelectionBox.prototype.makeInitCheckBoxForObj = function (level) {
         if (level == 0) {
             if (charset.isHebrew) {
-                return this.addBr.getStr()
-                    + ("<input id=\"ws_cb\" type=\"checkbox\">" + localize('word_spacing') + "</span>");
+                return "<div class=\"selectbutton\"><input id=\"ws_cb\" type=\"checkbox\">" +
+                    ("<label for=\"ws_cb\">" + localize('word_spacing') + "</label></div>");
             }
             else
                 return '';
         }
         else {
-            return this.addBr.getStr()
-                + ("<input id=\"lev" + level + "_seplin_cb\" type=\"checkbox\">" + localize('separate_lines') + "</span>")
-                + '<br>'
-                + ("<input id=\"lev" + level + "_sb_cb\" type=\"checkbox\">" + localize('show_border') + "</span>");
+            return "<div class=\"selectbutton\"><input id=\"lev" + level + "_seplin_cb\" type=\"checkbox\">" +
+                ("<label for=\"lev" + level + "_seplin_cb\">" + localize('separate_lines') + "</label></div>") +
+                ("<div class=\"selectbutton\"><input id=\"lev" + level + "_sb_cb\" type=\"checkbox\">") +
+                ("<label for=\"lev" + level + "_sb_cb\">" + localize('show_border') + "</label></div>");
         }
     };
     GrammarSelectionBox.prototype.generateHtml = function () {
         var _this = this;
+        this.checkboxes += "<ul>";
         for (var level in configuration.sentencegrammar) {
             var leveli = +level;
             if (isNaN(leveli))
                 continue;
             var objType = configuration.sentencegrammar[leveli].objType;
-            this.addBr.reset();
-            this.checkboxes += "<div class=\"objectlevel\"><h1>" + getObjectFriendlyName(objType) + "</h1><div>";
+            this.checkboxes += "<li><a class=\"gramtabs\" href=\"#" + getHtmlAttribFriendlyName(objType) + "\"><h3>" + getObjectFriendlyName(objType) + "</h3></a></li>";
+        }
+        this.checkboxes += "</ul>";
+        for (var level in configuration.sentencegrammar) {
+            var leveli = +level;
+            if (isNaN(leveli))
+                continue;
+            var objType = configuration.sentencegrammar[leveli].objType;
+            this.checkboxes += "<div id=\"" + getHtmlAttribFriendlyName(objType) + "\">";
+            this.checkboxes += "<div class=\"objectlevel\">";
+            this.checkboxes += "<div id=\"grammarbuttongroup\">";
             this.checkboxes += this.makeInitCheckBoxForObj(leveli);
             this.hasSeenGrammarGroup = false;
             configuration.sentencegrammar[leveli]
                 .walkFeatureNames(objType, function (whattype, objType, origObjType, featName, featNameLoc, sgiObj) { return _this.generatorCallback(whattype, objType, origObjType, featName, featNameLoc, sgiObj); });
             if (this.hasSeenGrammarGroup)
                 this.checkboxes += '</div>';
+            this.checkboxes += this.subgroupgrammartabs + '</ul>' + this.subgroupgrammardivs + '</div>';
+            this.subgroupgrammartabs = '';
+            this.subgroupgrammardivs = '';
             this.checkboxes += '</div></div>';
         }
+        this.checkboxes += "<button class=\"btn btn-clear\" id=\"cleargrammar\">" + localize('clear_grammar') + "</button>";
         return this.checkboxes;
     };
     GrammarSelectionBox.prototype.setHandlerCallback = function (whattype, objType, featName, featNameLoc, leveli) {
@@ -578,7 +604,9 @@ var GrammarSelectionBox = (function () {
         }
     };
     GrammarSelectionBox.clearBoxes = function (force) {
-        $('input[type="checkbox"]').prop('checked', false);
+        $('html, body').animate({
+            scrollTop: $('#myview').offset().top - 5
+        }, 50);
         if (!inQuiz) {
             if (force) {
                 for (var i in sessionStorage) {
@@ -596,26 +624,34 @@ var GrammarSelectionBox = (function () {
                 }
             }
         }
+        else {
+            if (force) {
+                var IDs_1 = [];
+                $('#grammarbuttongroup .selectbutton input:checked').each(function () { IDs_1.push($(this).attr('id')); });
+                for (var i in IDs_1) {
+                    $('#' + IDs_1[i]).prop('checked', false);
+                    $('#' + IDs_1[i]).trigger('change');
+                }
+            }
+        }
     };
     GrammarSelectionBox.buildGrammarAccordion = function () {
-        var acc1 = $('#gramselect').accordion({ heightStyle: 'content', collapsible: true, header: 'h1' });
-        var acc2 = $('.subgrammargroup').accordion({ heightStyle: 'content', collapsible: true, header: 'h2' });
-        var max_width = 0;
-        for (var j = 0; j < acc2.find('h2').length; ++j) {
-            acc2.accordion('option', 'active', j);
-            if (acc2.width() > max_width)
-                max_width = acc2.width();
-        }
-        acc2.accordion('option', 'active', false);
-        acc2.width(max_width * 1.05);
-        max_width = 0;
-        for (var j = 0; j < acc1.find('h1').length; ++j) {
-            acc1.accordion('option', 'active', j);
-            if (acc1.width() > max_width)
-                max_width = acc1.width();
-        }
-        acc1.accordion('option', 'active', false);
-        acc1.width(max_width);
+        var tabs1 = $('#myview').tabs({
+            heightStyle: 'content',
+            collapsible: true
+        });
+        var tabs2 = $('#gramtabs').tabs({
+            heightStyle: 'content',
+            collapsible: true
+        });
+        var tabs3 = $('#grammargroup').tabs({
+            heightStyle: 'content',
+            collapsible: true
+        });
+        var max_width = 'auto';
+        tabs1.tabs('option', 'active', false);
+        tabs2.tabs('option', 'active', false);
+        tabs3.tabs('option', 'active', false);
         return max_width;
     };
     return GrammarSelectionBox;
@@ -672,6 +708,16 @@ function getSingleInteger(ms) {
     }
     throw 'MonadSet.ObjNotSingleMonad';
 }
+function containsMonad(ms, monad) {
+    for (var i in ms.segments) {
+        if (isNaN(+i))
+            continue;
+        var mp = ms.segments[+i];
+        if (monad >= mp.low && monad <= mp.high)
+            return true;
+    }
+    return false;
+}
 function getMonadArray(ms) {
     var res = [];
     for (var i in ms.segments) {
@@ -713,7 +759,7 @@ var DisplaySingleMonadObject = (function (_super) {
         _this.mix = 0;
         return _this;
     }
-    DisplaySingleMonadObject.prototype.generateHtml = function (qd, sentenceTextArr) {
+    DisplaySingleMonadObject.prototype.generateHtml = function (qd, sentenceTextArr, quizMonads) {
         var smo = this.displayedMo;
         var uhSize = smo.bcv.length;
         var chapter = null;
@@ -743,15 +789,20 @@ var DisplaySingleMonadObject = (function (_super) {
             }
         }
         var text;
-        if (qd && qd.monad2Id[this.monad]) {
+        var textDisplayClass = '';
+        if (qd && qd.monad2Id[this.monad] && containsMonad(quizMonads, this.monad)) {
             if (qd.quizFeatures.dontShow)
                 text = "(" + ++DisplaySingleMonadObject.itemIndex + ")";
             else
                 text = this.displayedMo.mo.features[configuration.surfaceFeature];
             text = "<em>" + text + "</em>";
+            textDisplayClass = ' text-danger';
         }
-        else
+        else {
             text = this.displayedMo.mo.features[configuration.surfaceFeature];
+            if (!containsMonad(quizMonads, this.monad))
+                textDisplayClass = ' text-muted';
+        }
         var chapterstring = chapter == null ? '' : "<span class=\"chapter\">" + chapter + "</span>&#x200a;";
         var versestring = verse == null ? '' : "<span class=\"verse\">" + verse + "</span>";
         var refstring;
@@ -776,14 +827,10 @@ var DisplaySingleMonadObject = (function (_super) {
                         wordclass = charset.foreignClass;
                     else if (fs.transliteratedText)
                         wordclass = charset.transliteratedClass;
+                    else if (fs.isGloss && featName != 'zh-Hans' && featName != 'zh-Hant')
+                        wordclass = 'tenpoint ltr';
                     else
                         wordclass = 'ltr';
-                    if ((configuration.databaseName == "ETCBC4" && (featName == "english" || featName == "spanish" || featName == "german" || featName == "swahili"))
-                        || (configuration.databaseName == "nestle1904" && featName == "swahili")) {
-                        featValLoc = featValLoc.replace(/(&[gl]t);/, '$1Q')
-                            .replace(/([^,;(]+).*/, '$1')
-                            .replace(/(&[gl]t)Q/, '$1;');
-                    }
                     grammar += "<span class=\"wordgrammar dontshowit " + featName + " " + wordclass + "\">" + featValLoc + "</span>";
                     break;
                 case WHAT.metafeature:
@@ -792,13 +839,12 @@ var DisplaySingleMonadObject = (function (_super) {
             }
         });
         var follow_space = '<span class="wordspace"> </span>';
-        var follow_class = '';
         if (charset.isHebrew) {
             var suffix = smo.mo.features[configuration.suffixFeature];
             text += suffix;
             if (suffix === '' || suffix === '-' || suffix === '\u05be') {
                 follow_space = '';
-                follow_class = suffix === '' ? ' cont cont1' : ' contx cont1';
+                textDisplayClass += suffix === '' ? ' cont cont1' : ' contx cont1';
                 sentenceTextArr[0] += text;
             }
             else
@@ -806,7 +852,7 @@ var DisplaySingleMonadObject = (function (_super) {
         }
         else
             sentenceTextArr[0] += text + ' ';
-        return $("<span class=\"textblock inline\"><span class=\"textdisplay " + (charset.foreignClass + follow_class) + "\" data-idd=\"" + smo.mo.id_d + "\">" + versestring + refstring + urlstring + text + "</span>" + grammar + "</span>" + follow_space);
+        return $("<span class=\"textblock inline\"><span class=\"textdisplay " + (charset.foreignClass + textDisplayClass) + "\" data-idd=\"" + smo.mo.id_d + "\">" + versestring + refstring + urlstring + text + "</span>" + grammar + "</span>" + follow_space);
     };
     return DisplaySingleMonadObject;
 }(DisplayMonadObject));
@@ -835,7 +881,7 @@ var DisplayMultipleMonadObject = (function (_super) {
         }
         return _this;
     }
-    DisplayMultipleMonadObject.prototype.generateHtml = function (qd, sentenceTextArr) {
+    DisplayMultipleMonadObject.prototype.generateHtml = function (qd, sentenceTextArr, quizMonads) {
         var spanclass = "lev" + this.level + " dontshowborder noseplin";
         if (this.hasPredecessor)
             spanclass += ' hasp';
@@ -882,7 +928,7 @@ var DisplayMultipleMonadObject = (function (_super) {
         for (var ch in this.children) {
             if (isNaN(+ch))
                 continue;
-            jq.append(this.children[ch].generateHtml(qd, sentenceTextArr));
+            jq.append(this.children[ch].generateHtml(qd, sentenceTextArr, quizMonads));
         }
         return jq;
     };
@@ -941,6 +987,9 @@ function getFeatureValueOtherFormat(otype, featureName, value) {
             return table[ix].text;
     return '?';
 }
+function getHtmlAttribFriendlyName(str) {
+    return str.split(' ').join('_');
+}
 function localize(s) {
     var str = l10n_js[s];
     return str === undefined ? '??' + s + '??' : str;
@@ -975,6 +1024,7 @@ var Dictionary = (function () {
         this.singleMonads = [];
         this.dispMonadObjects = [];
         this.sentenceSet = dictif.sentenceSets[index];
+        this.sentenceSetQuiz = dictif.sentenceSetsQuiz == null ? this.sentenceSet : dictif.sentenceSetsQuiz[index];
         this.monadObjects1 = dictif.monadObjects[index];
         this.bookTitle = dictif.bookTitle;
         this.hideWord = (qd != null && qd.quizFeatures.dontShow);
@@ -1114,7 +1164,7 @@ var Dictionary = (function () {
     Dictionary.prototype.generateSentenceHtml = function (qd) {
         DisplaySingleMonadObject.itemIndex = 0;
         var sentenceTextArr = [''];
-        $('#textarea').append(this.dispMonadObjects[this.dispMonadObjects.length - 1][0].generateHtml(qd, sentenceTextArr));
+        $('#textarea').append(this.dispMonadObjects[this.dispMonadObjects.length - 1][0].generateHtml(qd, sentenceTextArr, this.sentenceSetQuiz));
         if (configuration.databaseName == 'ETCBC4') {
             var minindent_1;
             var maxindent_1;
@@ -1215,11 +1265,9 @@ var ComponentWithYesNo = (function () {
         this.noneIcon = $("<img src=\"" + site_url + "/images/none.png\" alt=\"None\">");
     }
     ComponentWithYesNo.prototype.getJQuery = function () {
-        var spn = $('<span style="white-space:nowrap;"></span>').append([this.yesIcon, this.noIcon, this.noneIcon, this.elem]);
-        var td = $('<td></td>');
-        td.append(spn);
+        var spn = $('<td class="qbox"></td>').append([this.yesIcon, this.noIcon, this.noneIcon, this.elem]);
         this.setNone();
-        return td;
+        return spn;
     };
     ComponentWithYesNo.prototype.monitorChange = function (elem) {
         clearInterval(ComponentWithYesNo.intervalHandler);
@@ -1250,10 +1298,7 @@ var ComponentWithYesNo = (function () {
         }
     };
     ComponentWithYesNo.prototype.getComp = function () {
-        if (this.elemType === COMPONENT_TYPE.comboBox2)
-            return $(this.elem.children()[0]);
-        else
-            return this.elem;
+        return this.elem;
     };
     ComponentWithYesNo.prototype.getCompType = function () {
         return this.elemType;
@@ -1262,10 +1307,18 @@ var ComponentWithYesNo = (function () {
         if (ComponentWithYesNo.lastMonitored === this.elem.data('kbid'))
             ComponentWithYesNo.monitorOrigVal = this.elem.val();
         if (yes) {
+            $(this.elem).css({
+                "background-color": "rgba(67, 176, 42, 0.1)",
+                "outline": "solid 2px rgba(67, 176, 42, 1.0)"
+            });
             this.yesIcon.show();
             this.noIcon.hide();
         }
         else {
+            $(this.elem).css({
+                "background-color": "rgba(195, 92, 244, 0.1)",
+                "outline": "solid 2px rgba(195, 92, 244, 1.0)"
+            });
             this.yesIcon.hide();
             this.noIcon.show();
         }
@@ -1275,6 +1328,10 @@ var ComponentWithYesNo = (function () {
         this.yesIcon.hide();
         this.noIcon.hide();
         this.noneIcon.show();
+        this.elem.css({
+            "background-color": "",
+            "outline": ""
+        });
     };
     return ComponentWithYesNo;
 }());
@@ -1288,21 +1345,35 @@ var Answer = (function () {
         this.answerString = answerString;
         this.matchRegexp = matchRegexp;
         if (this.cType == COMPONENT_TYPE.checkBoxes) {
-            var aString = answerString.substr(1, answerString.length - 2);
-            this.answerArray = aString.split(',');
+            if (this.answerString[0] == "(") {
+                var aString = answerString.substr(1, answerString.length - 2);
+                this.answerArray = aString.split(',');
+            }
+            else {
+                this.answerArray = new Array(this.answerString);
+            }
         }
     }
     Answer.prototype.showIt = function () {
         switch (this.cType) {
             case COMPONENT_TYPE.textField:
-            case COMPONENT_TYPE.textFieldWithVirtKeyboard:
-                $(this.c).val(this.answerString);
+            case COMPONENT_TYPE.textFieldWithVirtKeyboard: {
+                $(this.c).find('input').val(this.answerString);
                 break;
+            }
             case COMPONENT_TYPE.comboBox1:
-            case COMPONENT_TYPE.comboBox2:
-                $(this.c).val(this.answerSws.getInternal()).prop('selected', true);
+            case COMPONENT_TYPE.comboBox2: {
+                var correctAnswer_1 = this['answerSws']['internal'];
+                var radios = $(this.c).find('input');
+                radios.each(function () {
+                    var value = $(this).attr('value');
+                    if (value === correctAnswer_1) {
+                        $(this).prop('checked', true);
+                    }
+                });
                 break;
-            case COMPONENT_TYPE.checkBoxes:
+            }
+            case COMPONENT_TYPE.checkBoxes: {
                 var inputs = $(this.c).find('input');
                 var xthis_1 = this;
                 inputs.each(function () {
@@ -1310,6 +1381,7 @@ var Answer = (function () {
                     $(this).prop('checked', xthis_1.answerArray.indexOf(value) != -1);
                 });
                 break;
+            }
         }
     };
     Answer.prototype.checkIt = function (fromShowIt) {
@@ -1327,7 +1399,7 @@ var Answer = (function () {
             switch (this.cType) {
                 case COMPONENT_TYPE.textField:
                 case COMPONENT_TYPE.textFieldWithVirtKeyboard:
-                    userAnswer_1 = $(this.c).val().trim()
+                    userAnswer_1 = $(this.c).find('input').val().trim()
                         .replace(/\u03ac/g, '\u1f71')
                         .replace(/\u03ad/g, '\u1f73')
                         .replace(/\u03ae/g, '\u1f75')
@@ -1349,9 +1421,9 @@ var Answer = (function () {
                     break;
                 case COMPONENT_TYPE.comboBox1:
                 case COMPONENT_TYPE.comboBox2:
-                    var selectedOption = $(this.c).find(":selected");
-                    if (selectedOption.attr('value') !== 'NoValueGiven') {
-                        var userAnswerSws = $(this.c).find(":selected").data('sws');
+                    var selectedOption = $(this.c).find("input:checked");
+                    if (selectedOption.attr('value') != null) {
+                        var userAnswerSws = $(this.c).find("input:checked").parent().data('sws');
                         isCorrect_1 = userAnswerSws === this.answerSws;
                         userAnswer_1 = userAnswerSws.getInternal();
                     }
@@ -1370,7 +1442,9 @@ var Answer = (function () {
                         else
                             isCorrect_1 = isCorrect_1 && xthis_2.answerArray.indexOf(value) == -1;
                     });
-                    userAnswer_1 = '(' + userAnswer_1.substr(0, userAnswer_1.length - 1) + ')';
+                    if (userAnswer_1 !== '') {
+                        userAnswer_1 = '(' + userAnswer_1.substr(0, userAnswer_1.length - 1) + ')';
+                    }
                     break;
             }
             if (userAnswer_1 && !this.hasAnswered) {
@@ -1406,8 +1480,9 @@ var PanelQuestion = (function () {
         var _this = this;
         this.vAnswers = [];
         this.question_stat = new QuestionStatistics;
+        this.subQuizIndex = 0;
         this.qd = qd;
-        this.sentence = dict.sentenceSet;
+        this.sentence = dict.sentenceSetQuiz;
         var smo = dict.getSingleMonadObject(getFirst(this.sentence));
         var location_realname = '';
         this.location = smo.bcv_loc;
@@ -1443,39 +1518,49 @@ var PanelQuestion = (function () {
         var showFeatures = qd.quizFeatures.showFeatures;
         var requestFeatures = qd.quizFeatures.requestFeatures;
         var oType = qd.quizFeatures.objectType;
+        var featuresHere = typeinfo.obj2feat[oType];
+        var qoFeatures = this.buildQuizObjectFeatureList();
+        var hasForeignInput = false;
+        var quizItemID = 0;
         this.question_stat.text = dict.generateSentenceHtml(qd);
         this.question_stat.location = location_realname;
-        var colcount = 0;
+        var questionheaders = [];
+        var headInd = 0;
         if (dontShow) {
-            $('#quiztabhead').append('<th>' + localize('item_number') + '</th>');
+            questionheaders.push('<th>' + localize('item_number') + '</th>');
             this.question_stat.show_feat.names.push('item_number');
-            ++colcount;
         }
         for (var sfi in showFeatures) {
             if (isNaN(+sfi))
                 continue;
-            $('#quiztabhead').append('<th>' + getFeatureFriendlyName(oType, showFeatures[sfi]) + '</th>');
+            questionheaders.push('<th>' + getFeatureFriendlyName(oType, showFeatures[sfi]) + '</th>');
             this.question_stat.show_feat.names.push(showFeatures[sfi]);
-            ++colcount;
         }
         for (var sfi in requestFeatures) {
             if (isNaN(+sfi))
                 continue;
-            $('#quiztabhead').append('<th>' + getFeatureFriendlyName(oType, requestFeatures[sfi].name) + '</th>');
+            questionheaders.push('<th>' + getFeatureFriendlyName(oType, requestFeatures[sfi].name) + '</th>');
             this.question_stat.req_feat.names.push(requestFeatures[sfi].name);
-            ++colcount;
         }
-        var featuresHere = typeinfo.obj2feat[oType];
-        var qoFeatures = this.buildQuizObjectFeatureList();
-        var hasForeignInput = false;
-        var firstInput = 'id="firstinput"';
+        var headLen = questionheaders.length;
+        var quizCardNum = qoFeatures.length;
+        var quizContainer = $('div#quizcontainer');
+        this.subQuizMax = quizCardNum;
         for (var qoid in qoFeatures) {
             if (isNaN(+qoid))
                 continue;
-            var currentRow = $('<tr></tr>');
+            if (headInd >= headLen)
+                headInd -= headLen;
+            var quizCard_1 = +qoid === 0
+                ? $('<div class="quizcard" style="display:block"></div>')
+                : $('<div class="quizcard" style="display:none"></div>');
+            var quizTab = $('<table class="quiztab"></table>');
+            quizCard_1.append(quizTab);
+            quizContainer.append(quizCard_1);
             var fvals = qoFeatures[+qoid];
             if (dontShow) {
-                currentRow.append('<td>' + (+qoid + 1) + '</td>');
+                quizTab.append("<tr>" + questionheaders[headInd] + "<td>" + (+qoid + 1) + "</td></tr>");
+                ++headInd;
                 this.question_stat.show_feat.values.push("" + (+qoid + 1));
             }
             for (var sfi in showFeatures) {
@@ -1516,20 +1601,27 @@ var PanelQuestion = (function () {
                 }
                 if (val == null)
                     alert('Unexpected val==null in panelquestion.ts');
-                if (featType === 'string' || featType == 'ascii')
-                    currentRow.append("<td class=\"" + PanelQuestion.charclass(featset) + "\">" + (val === '' ? '-' : val) + "</td>");
-                else
-                    currentRow.append("<td>" + val + "</td>");
+                if (featType === 'string' || featType == 'ascii') {
+                    quizTab.append("<tr>" + questionheaders[headInd]
+                        + ("<td class=\"" + PanelQuestion.charclass(featset) + "\">" + (val === '' ? '-' : val) + "</td></tr>"));
+                    ++headInd;
+                }
+                else {
+                    quizTab.append("<tr>" + questionheaders[headInd] + "<td>" + val + "</td></tr>");
+                    ++headInd;
+                }
             }
             var _loop_2 = function (rfi) {
                 if (isNaN(+rfi))
                     return "continue";
                 var rf = requestFeatures[+rfi].name;
                 var usedropdown = requestFeatures[+rfi].usedropdown;
+                var hideFeatures = requestFeatures[+rfi].hideFeatures;
                 var correctAnswer = fvals[rf];
                 var featType = featuresHere[rf];
                 var featset = getFeatureSetting(oType, rf);
                 var v = null;
+                ++quizItemID;
                 if (correctAnswer == null)
                     alert('Unexpected correctAnswer==null in panelquestion.ts');
                 if (correctAnswer === '')
@@ -1541,52 +1633,291 @@ var PanelQuestion = (function () {
                 if (featset.alternateshowrequestDb != null && usedropdown) {
                     var suggestions = fvals[rf + '!suggest!'];
                     if (suggestions == null)
-                        v = $("<td class=\"" + PanelQuestion.charclass(featset) + "\">" + correctAnswer + "</td>");
+                        v = $("<td class=\"" + PanelQuestion.charclass(featset) + "\">" + correctAnswer + "</td></tr>");
                     else {
-                        var mc_div = $('<div class="styled-select"></div>');
-                        var mc_select_1 = $("<select class=\"" + PanelQuestion.charclass(featset) + "\" style=\"direction:ltr\">");
-                        mc_div.append(mc_select_1);
+                        var quiz_div_1 = $('<div class="quizitem"></div>');
                         var optArray = [];
-                        var cwyn = new ComponentWithYesNo(mc_div, COMPONENT_TYPE.comboBox2);
+                        var cwyn = new ComponentWithYesNo(quiz_div_1, COMPONENT_TYPE.comboBox2);
+                        var charSetClass = configuration.charSet == 'transliterated_hebrew' ? 'hebrew_translit' : configuration.charSet;
                         cwyn.addChangeListener();
-                        mc_select_1.append('<option value="NoValueGiven"></option>');
                         for (var valix in suggestions) {
                             if (isNaN(+valix))
                                 continue;
                             var s = suggestions[+valix];
                             var item = new StringWithSort(s, s);
-                            var option = $("<option value=\"" + s + "\" class=\"" + PanelQuestion.charclass(featset) + "\">" + s + "</option>");
+                            var option = $('<div class="selectbutton multiple_choice">'
+                                + ("<input type=\"radio\" id=\"" + item.getInternal() + "_" + quizItemID + "\" name=\"quizitem_" + quizItemID + "\" value=\"" + item.getInternal() + "\">")
+                                + ("<label class=\"" + charSetClass + "\" for=\"" + item.getInternal() + "_" + quizItemID + "\">" + item.getString() + "</label>")
+                                + '</div>');
                             option.data('sws', item);
                             optArray.push(option);
                             if (s === correctAnswer)
                                 this_2.vAnswers.push(new Answer(cwyn, item, s, null));
                         }
                         optArray.sort(function (a, b) { return StringWithSort.compare(a.data('sws'), b.data('sws')); });
-                        $.each(optArray, function (ix, o) { return mc_select_1.append(o); });
+                        $.each(optArray, function (ix, o) { return quiz_div_1.append(o); });
                         v = cwyn.getJQuery();
                     }
                 }
                 else if (featType === 'string' || featType === 'ascii') {
                     var cwyn = void 0;
-                    if (featset.foreignText || featset.transliteratedText) {
-                        var vf = $("<input " + firstInput + " data-kbid=\"" + PanelQuestion.kbid++ + "\" type=\"text\" size=\"20\""
-                            + (" class=\"" + PanelQuestion.charclass(featset) + "\"")
-                            + (" onfocus=\"$('#virtualkbid').appendTo('#row" + (+qoid + 1) + "');VirtualKeyboard.attachInput(this)\">"));
-                        firstInput = '';
-                        hasForeignInput = true;
-                        cwyn = new ComponentWithYesNo(vf, COMPONENT_TYPE.textFieldWithVirtKeyboard);
-                    }
-                    else {
-                        var vf = $('<input type="text" size="20">');
-                        cwyn = new ComponentWithYesNo(vf, COMPONENT_TYPE.textField);
-                    }
-                    cwyn.addKeypressListener();
-                    v = cwyn.getJQuery();
                     var trimmedAnswer = correctAnswer.trim()
                         .replace(/&lt;/g, '<')
                         .replace(/&gt;/g, '>')
                         .replace(/&quot;/g, '"')
                         .replace(/&amp;/g, '&');
+                    if (featset.foreignText || featset.transliteratedText) {
+                        var answerArray = trimmedAnswer.split("");
+                        var answerLetters_1 = [];
+                        var additionalCons = [];
+                        var additionalVowels = [];
+                        var answerLettersRandom = void 0;
+                        var showLetters_1 = [];
+                        $.each(answerArray, function (i, el) {
+                            if ($.inArray(el, answerLetters_1) === -1)
+                                answerLetters_1.push(el);
+                        });
+                        var shinDot = false;
+                        var sinDot = false;
+                        for (var i = 0; i < answerLetters_1.length; i++) {
+                            if (answerLetters_1[i] === 'ש') {
+                                answerLetters_1.splice(i, 1);
+                                break;
+                            }
+                        }
+                        for (var i = 0; i < answerLetters_1.length; i++) {
+                            if (answerLetters_1[i] === '\u05C1') {
+                                answerLetters_1.splice(i, 1);
+                                shinDot = true;
+                                break;
+                            }
+                        }
+                        for (var i = 0; i < answerLetters_1.length; i++) {
+                            if (answerLetters_1[i] === '\u05C2') {
+                                answerLetters_1.splice(i, 1);
+                                sinDot = true;
+                                break;
+                            }
+                        }
+                        if (shinDot) {
+                            answerLetters_1.push('ש' + '\u05C1');
+                        }
+                        if (sinDot) {
+                            answerLetters_1.push('ש' + '\u05C2');
+                        }
+                        for (var index = 0; index < answerLetters_1.length; index++) {
+                            var l = answerLetters_1[index];
+                            switch (l) {
+                                case 'א':
+                                    additionalCons.push('ע');
+                                    break;
+                                case 'ב':
+                                    additionalCons.push('כ');
+                                    break;
+                                case 'ד':
+                                    additionalCons.push('ר');
+                                    additionalCons.push('ה');
+                                    break;
+                                case 'ח':
+                                    additionalCons.push('ה');
+                                    additionalCons.push('ת');
+                                    break;
+                                case 'ט':
+                                    additionalCons.push('ת');
+                                    break;
+                                case 'ו':
+                                    additionalCons.push('י');
+                                    additionalCons.push('ז');
+                                    break;
+                                case 'י':
+                                    additionalCons.push('ו');
+                                    break;
+                                case 'ק':
+                                    additionalCons.push('כ');
+                                    break;
+                                case 'כ':
+                                    additionalCons.push('ק');
+                                    additionalCons.push('ב');
+                                    break;
+                                case 'ר':
+                                    additionalCons.push('ד');
+                                    additionalCons.push('ה');
+                                    break;
+                                case 'ת':
+                                    additionalCons.push('ט');
+                                    additionalCons.push('ע');
+                                    break;
+                                case 'ך':
+                                    additionalCons.push('כ');
+                                    additionalCons.push('ו');
+                                    additionalVowels.push('\u05B9');
+                                    break;
+                                case 'ף':
+                                    additionalCons.push('פ');
+                                    additionalCons.push('ך');
+                                    break;
+                                case 'ץ':
+                                    additionalCons.push('צ');
+                                    break;
+                                case 'ם':
+                                    additionalCons.push('מ');
+                                    additionalCons.push('ן');
+                                    break;
+                                case 'ן':
+                                    additionalCons.push('נ');
+                                    additionalCons.push('ם');
+                                    break;
+                                case '\u05B8':
+                                    additionalVowels.push('\u05B8');
+                                    additionalVowels.push('\u05B3');
+                                    break;
+                                case '\u05B3':
+                                    additionalVowels.push('\u05B0');
+                                    additionalVowels.push('\u05B8');
+                                    break;
+                                case '\u05B7':
+                                    additionalVowels.push('\u05B8');
+                                    additionalVowels.push('\u05B2');
+                                    break;
+                                case '\u05B2':
+                                    additionalVowels.push('\u05B0');
+                                    additionalVowels.push('\u05B7');
+                                    break;
+                                case '\u05B0':
+                                    additionalVowels.push('\u05B2');
+                                    additionalVowels.push('\u05B1');
+                                    additionalVowels.push('\u05B3');
+                                    break;
+                                case '\u05B5':
+                                    additionalVowels.push('\u05B6');
+                                    break;
+                                case '\u05B6':
+                                    additionalVowels.push('\u05B5');
+                                    additionalVowels.push('\u05B1');
+                                    break;
+                                case '\u05B6':
+                                    additionalVowels.push('\u05B0');
+                                    additionalVowels.push('\u05B6');
+                                    break;
+                                case '\u05B9':
+                                    additionalVowels.push('\u05BB');
+                                    break;
+                                case '\u05BB':
+                                    additionalVowels.push('\u05B9');
+                                    break;
+                                case 'β':
+                                    additionalCons.push('δ');
+                                    break;
+                                case 'γ':
+                                    additionalCons.push('κ');
+                                    break;
+                                case 'δ':
+                                    additionalCons.push('β');
+                                    break;
+                                case 'ζ':
+                                    additionalCons.push('ξ');
+                                    break;
+                                case 'θ':
+                                    additionalCons.push('τ');
+                                    break;
+                                case 'κ':
+                                    additionalCons.push('γ');
+                                    break;
+                                case 'λ':
+                                    additionalCons.push('μ');
+                                    break;
+                                case 'μ':
+                                    additionalCons.push('ν');
+                                    break;
+                                case 'ν':
+                                    additionalCons.push('μ');
+                                    break;
+                                case 'ξ':
+                                    additionalCons.push('ζ');
+                                    break;
+                                case 'π':
+                                    additionalCons.push('ψ');
+                                    break;
+                                case 'ρ':
+                                    additionalCons.push('λ');
+                                    break;
+                                case 'σ':
+                                    additionalCons.push('ς');
+                                    break;
+                                case 'ς':
+                                    additionalCons.push('σ');
+                                    break;
+                                case 'τ':
+                                    additionalCons.push('θ');
+                                    break;
+                                case 'φ':
+                                    additionalCons.push('θ');
+                                    break;
+                                case 'χ':
+                                    break;
+                                case 'ψ':
+                                    additionalCons.push('π');
+                                    break;
+                                case 'α':
+                                    additionalVowels.push('η');
+                                    additionalVowels.push('ε');
+                                    break;
+                                case 'ε':
+                                    additionalVowels.push('ι');
+                                    break;
+                                case 'η':
+                                    additionalVowels.push('ε');
+                                    break;
+                                case 'ι':
+                                    additionalVowels.push('ε');
+                                    break;
+                                case 'υ':
+                                    additionalVowels.push('η');
+                                    break;
+                                case 'ο':
+                                    additionalVowels.push('η');
+                                    additionalVowels.push('ω');
+                                    break;
+                                case 'ω':
+                                    additionalVowels.push('ο');
+                                    break;
+                            }
+                        }
+                        additionalCons = additionalCons.sort(function () {
+                            return .5 - Math.random();
+                        });
+                        additionalVowels = additionalVowels.sort(function () {
+                            return .5 - Math.random();
+                        });
+                        answerLettersRandom = answerLetters_1.concat(additionalCons.slice(0, 3))
+                            .concat(additionalVowels.slice(0, 3));
+                        $.each(answerLettersRandom, function (i, el) {
+                            if ($.inArray(el, showLetters_1) === -1)
+                                showLetters_1.push(el);
+                        });
+                        showLetters_1.sort();
+                        var vf = $("<div class=\"inputquizitem\"><input data-kbid=\"" + PanelQuestion.kbid++ + "\" type=\"text\""
+                            + (" class=\"" + PanelQuestion.charclass(featset) + "\"></div>"));
+                        var letterinput_1 = $('<div class="letterinput"></div>');
+                        vf.append(letterinput_1);
+                        if (charset.isRtl)
+                            letterinput_1.append('<div class="delbutton">&rarr;</div>');
+                        else
+                            letterinput_1.append('<div class="delbutton">&larr;</div>');
+                        showLetters_1.forEach(function (letter, i) {
+                            letterinput_1.append("<div class=\"inputbutton " + PanelQuestion.charclass(featset) + "\">" + letter + "</div>");
+                        });
+                        hasForeignInput = true;
+                        cwyn = new ComponentWithYesNo(vf, COMPONENT_TYPE.textField);
+                        cwyn.addKeypressListener();
+                        v = cwyn.getJQuery();
+                    }
+                    else {
+                        var vf = $('<div class="inputquizitem"><input type="text"></div>');
+                        cwyn = new ComponentWithYesNo(vf, COMPONENT_TYPE.textField);
+                        cwyn.addKeypressListener();
+                        v = cwyn.getJQuery();
+                    }
                     this_2.vAnswers.push(new Answer(cwyn, null, trimmedAnswer, featset.matchregexp));
                 }
                 else if (featType === 'integer') {
@@ -1603,7 +1934,9 @@ var PanelQuestion = (function () {
                     for (var i = 0, len = values.length; i < len; ++i)
                         swsValues.push(new StringWithSort(getFeatureValueFriendlyName(subFeatType, values[i], false, false), values[i]));
                     swsValues.sort(function (a, b) { return StringWithSort.compare(a, b); });
+                    swsValues.push(new StringWithSort("<i>" + localize('none_of_these') + "</i>", 'none_of_these'));
                     var selections = $('<table class="list-of"></table>');
+                    selections.append("<tr><td colspan=\"3\">" + localize('select_1_or_more') + "</td></tr>");
                     var numberOfItems = swsValues.length;
                     var numberOfRows = Math.floor((numberOfItems + 2) / 3);
                     for (var r = 0; r < numberOfRows; ++r) {
@@ -1611,10 +1944,10 @@ var PanelQuestion = (function () {
                         for (var c = 0; c < 3; c++) {
                             var ix = r + c * numberOfRows;
                             if (ix < numberOfItems)
-                                row.append('<td style="text-align:left">'
-                                    + ("<input type=\"checkbox\" value=\"" + swsValues[ix].getInternal() + "\">")
-                                    + swsValues[ix].getString()
-                                    + '</td>');
+                                row.append('<td style="text-align:left"><div class="selectbutton">'
+                                    + ("<input type=\"checkbox\" id=\"" + swsValues[ix].getInternal() + "_" + quizItemID + "\" value=\"" + swsValues[ix].getInternal() + "\">")
+                                    + ("<label for=\"" + swsValues[ix].getInternal() + "_" + quizItemID + "\">" + swsValues[ix].getString() + "</label>")
+                                    + '</div></td>');
                             else
                                 row.append('<td></td>');
                         }
@@ -1623,32 +1956,41 @@ var PanelQuestion = (function () {
                     var cwyn = new ComponentWithYesNo(selections, COMPONENT_TYPE.checkBoxes);
                     cwyn.addChangeListener();
                     v = cwyn.getJQuery();
+                    if (correctAnswer === '()')
+                        correctAnswer = '(none_of_these)';
                     this_2.vAnswers.push(new Answer(cwyn, null, correctAnswer, null));
                 }
                 else {
                     var values = typeinfo.enum2values[featType];
-                    if (values == null)
-                        v = $('<td>QuestionPanel.UnknType</td>');
+                    if (values == null) {
+                        v.append('<tr>'
+                            + questionheaders[headInd]
+                            + '<td>QuestionPanel.UnknType</td></tr>');
+                    }
                     else {
-                        var mc_select_2 = $('<select></select>');
+                        var quiz_div_2 = $('<div class="quizitem"></div>');
                         var optArray = [];
-                        var cwyn = new ComponentWithYesNo(mc_select_2, COMPONENT_TYPE.comboBox1);
+                        var cwyn = new ComponentWithYesNo(quiz_div_2, COMPONENT_TYPE.comboBox1);
                         cwyn.addChangeListener();
-                        mc_select_2.append('<option value="NoValueGiven"></option>');
                         var correctAnswerFriendly = getFeatureValueFriendlyName(featType, correctAnswer, false, false);
                         var hasAddedOther = false;
-                        var correctIsOther = featset.otherValues && featset.otherValues.indexOf(correctAnswer) !== -1;
+                        var correctIsOther = featset.otherValues && featset.otherValues.indexOf(correctAnswer) !== -1 ||
+                            hideFeatures && hideFeatures.indexOf(correctAnswer) !== -1;
                         for (var valix in values) {
                             if (isNaN(+valix))
                                 continue;
                             var s = values[+valix];
                             if (featset.hideValues && featset.hideValues.indexOf(s) !== -1)
                                 continue;
-                            if (featset.otherValues && featset.otherValues.indexOf(s) !== -1) {
+                            if (featset.otherValues && featset.otherValues.indexOf(s) !== -1 ||
+                                hideFeatures && hideFeatures.indexOf(s) !== -1) {
                                 if (!hasAddedOther) {
                                     hasAddedOther = true;
                                     var item = new StringWithSort('#1000 ' + localize('other_value'), 'othervalue');
-                                    var option = $("<option value=\"" + item.getInternal() + "\">" + item.getString() + "</option>");
+                                    var option = $('<div class="selectbutton">'
+                                        + ("<input type=\"radio\" id=\"" + item.getInternal() + "_" + quizItemID + "\" name=\"quizitem_" + quizItemID + "\" value=\"" + item.getInternal() + "\">")
+                                        + ("<label for=\"" + item.getInternal() + "_" + quizItemID + "\">" + item.getString() + "</label>")
+                                        + '</div>');
                                     option.data('sws', item);
                                     optArray.push(option);
                                     if (correctIsOther)
@@ -1658,7 +2000,10 @@ var PanelQuestion = (function () {
                             else {
                                 var sFriendly = getFeatureValueFriendlyName(featType, s, false, false);
                                 var item = new StringWithSort(sFriendly, s);
-                                var option = $("<option value=\"" + item.getInternal() + "\">" + item.getString() + "</option>");
+                                var option = $('<div class="selectbutton">'
+                                    + ("<input type=\"radio\" id=\"" + item.getInternal() + "_" + quizItemID + "\" name=\"quizitem_" + quizItemID + "\" value=\"" + item.getInternal() + "\">")
+                                    + ("<label for=\"" + item.getInternal() + "_" + quizItemID + "\">" + item.getString() + "</label>")
+                                    + '</div>');
                                 option.data('sws', item);
                                 optArray.push(option);
                                 if (sFriendly === correctAnswerFriendly)
@@ -1666,20 +2011,53 @@ var PanelQuestion = (function () {
                             }
                         }
                         optArray.sort(function (a, b) { return StringWithSort.compare(a.data('sws'), b.data('sws')); });
-                        $.each(optArray, function (ix, o) { return mc_select_2.append(o); });
+                        $.each(optArray, function (ix, o) { return quiz_div_2.append(o); });
                         v = cwyn.getJQuery();
                     }
                 }
-                currentRow.append(v);
+                var quizRow = $('<tr></tr>');
+                quizRow.append(questionheaders[headInd]);
+                quizRow.append(v);
+                quizTab.append(quizRow);
+                ++headInd;
             };
             var this_2 = this;
             for (var rfi in requestFeatures) {
                 _loop_2(rfi);
             }
-            $('#quiztab').append(currentRow);
-            if (hasForeignInput)
-                $('#quiztab').append("<tr><td colspan=\"" + colcount + "\" id=\"row" + (+qoid + 1) + "\" style=\"text-align:right;\"></td></tr>");
         }
+        this.subQuizMax = quizCardNum;
+        var quizCard = $('.quizcard');
+        quizCard.append('<div class="buttonlist1">'
+            + ("<button class=\"btn btn-quiz\" id=\"check_answer\" type=\"button\">" + localize('check_answer') + "</button>")
+            + ("<button class=\"btn btn-quiz\" id=\"show_answer\" type=\"button\">" + localize('show_answer') + "</button>")
+            + '</div>');
+        if (quizCardNum > 1) {
+            quizContainer.prepend('<div class="prev-next-btn prev" id="prevsubquiz" style="visibility:hidden;">&#10094;</div>');
+            quizContainer.append('<div class="prev-next-btn next" id="nextsubquiz">&#10095;</div>');
+        }
+        $('div.inputbutton').click(function () {
+            var letter = String($(this).text());
+            $(this)
+                .parent().siblings('input')
+                .val($(this).parent().siblings('input').val() + letter);
+            return false;
+        });
+        $('div.delbutton').click(function () {
+            var value = String($(this).parent().siblings('input').val());
+            $(this)
+                .parent().siblings('input')
+                .val(value.slice(0, -1));
+            return false;
+        });
+        $('#prevsubquiz').off('click');
+        $('#prevsubquiz').on('click', function () {
+            _this.prevNextSubQuestion(-1);
+        });
+        $('#nextsubquiz').off('click');
+        $('#nextsubquiz').on('click', function () {
+            _this.prevNextSubQuestion(1);
+        });
         $('button#check_answer').off('click');
         $('button#check_answer').on('click', function () {
             for (var ai in _this.vAnswers) {
@@ -1688,6 +2066,9 @@ var PanelQuestion = (function () {
                 var a = _this.vAnswers[+ai];
                 a.checkIt(false);
             }
+            $('html, body').animate({
+                scrollTop: $('#myview').offset().top - 5
+            }, 50);
         });
         $('button#show_answer').off('click');
         $('button#show_answer').on('click', function () {
@@ -1698,6 +2079,9 @@ var PanelQuestion = (function () {
                 a.showIt();
                 a.checkIt(true);
             }
+            $('html, body').animate({
+                scrollTop: $('#myview').offset().top - 5
+            }, 50);
         });
         this.question_stat.start_time = Math.round((new Date()).getTime() / 1000);
     }
@@ -1731,6 +2115,39 @@ var PanelQuestion = (function () {
         }
         return qoFeatures;
     };
+    PanelQuestion.prototype.prevNextSubQuestion = function (n) {
+        if (this.subQuizIndex + n >= 0 && this.subQuizIndex + n < this.subQuizMax) {
+            this.subQuizIndex += n;
+        }
+        var i;
+        var slides = $('#quizcontainer').find('.quizcard');
+        if (this.subQuizIndex < 1) {
+            $('#prevsubquiz').css({ "visibility": "hidden" });
+        }
+        ;
+        if (this.subQuizIndex > 0) {
+            $('#prevsubquiz').css({ "visibility": "visible" });
+        }
+        if (this.subQuizIndex < slides.length - 1) {
+            $('#nextsubquiz').css({ "visibility": "visible" });
+        }
+        ;
+        if (this.subQuizIndex === slides.length - 1) {
+            $('#nextsubquiz').css({ "visibility": "hidden" });
+        }
+        ;
+        for (i = 0; i < slides.length; i++) {
+            if (i === this.subQuizIndex) {
+                slides.slice(i).css({ "display": "block" });
+            }
+            else {
+                slides.slice(i).css({ "display": "none" });
+            }
+        }
+        $('html, body').animate({
+            scrollTop: $('#myview').offset().top - 5
+        }, 50);
+    };
     PanelQuestion.kbid = 1;
     return PanelQuestion;
 }());
@@ -1761,6 +2178,10 @@ var StringWithSort = (function () {
     };
     StringWithSort.compare = function (sws1, sws2) {
         if (sws1.sort == -1 || sws2.sort == -1 || sws1.sort == sws2.sort) {
+            if (sws1.internal === 'othervalue')
+                return 1;
+            if (sws2.internal === 'othervalue')
+                return -1;
             var s1 = sws1.str.toLowerCase();
             var s2 = sws2.str.toLowerCase();
             return s1 < s2 ? -1 : s1 > s2 ? 1 : 0;
@@ -1806,15 +2227,17 @@ var Quiz = (function () {
         this.currentDictIx = -1;
         this.currentPanelQuestion = null;
         this.quiz_statistics = new QuizStatistics(qid);
-        $('#quiztab').append('<tr id="quiztabhead"></tr>');
-        $('button#next_question').click(function () { return _this.nextQuestion(); });
-        $('button#finish').click(function () { return _this.finishQuiz(true); });
-        $('button#finishNoStats').click(function () { return _this.finishQuiz(false); });
+        $('button#next_question').on('click', function () { return _this.nextQuestion(); });
+        $('button#finish').on('click', function () { return _this.finishQuiz(true); });
+        $('button#finishNoStats').on('click', function () { return _this.finishQuiz(false); });
     }
     Quiz.prototype.nextQuestion = function () {
         var _this = this;
         var timeBeforeHbOpen = 600000;
         var timeBeforeHbClose = 28000;
+        $('html, body').animate({
+            scrollTop: $('#myview').offset().top - 5
+        }, 50);
         var monitorUser = function () {
             window.clearTimeout(_this.tHbOpen);
             window.clearTimeout(_this.tHbClose);
@@ -1847,11 +2270,14 @@ var Quiz = (function () {
         monitorUser();
         if (this.currentPanelQuestion !== null)
             this.quiz_statistics.questions.push(this.currentPanelQuestion.updateQuestionStat());
+        else if (quizdata.fixedquestions > 0) {
+            $('button#finish').attr('disabled', 'disabled');
+            $('button#finishNoStats').attr('disabled', 'disabled');
+        }
         if (++this.currentDictIx < dictionaries.sentenceSets.length) {
-            $('#virtualkbid').appendTo('#virtualkbcontainer');
             $('#textarea').empty();
-            $('#quiztab').empty();
-            $('#quiztab').append('<tr id="quiztabhead"></tr>');
+            $('#quizcontainer').empty();
+            $('.quizcard').empty();
             var currentDict = new Dictionary(dictionaries, this.currentDictIx, quizdata);
             $('#quizdesc').html(quizdata.desc);
             $('#quizdesc').find('a').attr('target', '_blank');
@@ -1861,18 +2287,16 @@ var Quiz = (function () {
                 $('div#progressbar').progressbar({ value: this.currentDictIx + 1, max: dictionaries.sentenceSets.length });
             $('#progresstext').html((this.currentDictIx + 1) + '/' + dictionaries.sentenceSets.length);
             this.currentPanelQuestion = new PanelQuestion(quizdata, currentDict);
-            if (this.currentDictIx + 1 === dictionaries.sentenceSets.length)
+            if (this.currentDictIx + 1 === dictionaries.sentenceSets.length) {
                 $('button#next_question').attr('disabled', 'disabled');
-            if (quizdata.quizFeatures.useVirtualKeyboard &&
-                (charset.keyboardName === 'IL' || charset.keyboardName === 'GR')) {
-                VirtualKeyboard.setVisibleLayoutCodes([charset.keyboardName]);
-                VirtualKeyboard.toggle('firstinput', 'virtualkbid');
+                $('button#finish').removeAttr('disabled');
+                $('button#finishNoStats').removeAttr('disabled');
             }
         }
         else
             alert('No more questions');
         util.FollowerBox.resetCheckboxCounters();
-        $('.grammarselector input:enabled:checked').trigger('change');
+        $('#grammarbuttongroup input:enabled:checked').trigger('change');
     };
     Quiz.prototype.finishQuiz = function (gradingFlag) {
         if (quizdata.quizid == -1)
@@ -1883,7 +2307,6 @@ var Quiz = (function () {
             else
                 this.quiz_statistics.questions.push(this.currentPanelQuestion.updateQuestionStat());
             this.quiz_statistics.grading = gradingFlag;
-            $('.grammarselector').empty();
             $('#textcontainer').html('<p>' + localize('sending_statistics') + '</p>');
             $.post(site_url + 'statistics/update_stat', this.quiz_statistics)
                 .fail(function (jqXHR, textStatus, errorThrow) {
@@ -1893,24 +2316,23 @@ var Quiz = (function () {
                     .html("<h1>" + localize('error_response') + "</h1><p>" + errorThrow + "</p>");
             });
             $.get(site_url + 'statistics/update_exam_quiz_stat?examid=' + $('#exam_id').html() + '&quizid=' + $('quiz_id') + '&exercise_lst=' + $('#exercise_lst'), this.quiz_statistics)
-                .done(function () {
-                  if($('#exercise_lst').html()){
-                    var exercise_lst = $('#exercise_lst').html().split("~");
-                    var next_quiz = exercise_lst.shift();
-                    return window.location.replace(site_url + 'exams/show_quiz?quiz=' + next_quiz + '&count=10&examid=' + $('#exam_id').html() + '&exercise_lst=' + exercise_lst.join("~"));
-                  }
-                  else {
-                    return window.location.replace(site_url + 'exams/exam_done');
-                  }
-                })
-                .fail(function (jqXHR, textStatus, errorThrow) {
-                $('#textcontainer')
-                    .removeClass('textcontainer-background')
-                    .addClass('alert alert-danger')
-                    .html("<h1>" + localize('error_response') + "</h1><p>" + errorThrow + "</p>");
-            });
+               .done(function () {
+                 if($('#exercise_lst').html()){
+                   var exercise_lst = $('#exercise_lst').html().split("~");
+                   var next_quiz = exercise_lst.shift();
+                   return window.location.replace(site_url + 'exams/show_quiz?quiz=' + next_quiz + '&count=10&examid=' + $('#exam_id').html() + '&exercise_lst=' + exercise_lst.join("~"));
+                 }
+                 else {
+                   return window.location.replace(site_url + 'exams/exam_done');
+                 }
+               })
+               .fail(function (jqXHR, textStatus, errorThrow) {
+               $('#textcontainer')
+                   .removeClass('textcontainer-background')
+                   .addClass('alert alert-danger')
+                   .html("<h1>" + localize('error_response') + "</h1><p>" + errorThrow + "</p>");
+           });
         }
-
     };
     return Quiz;
 }());
@@ -1949,7 +2371,7 @@ var quiz;
 var accordion_width;
 var indentation_width;
 $(function () {
-    inQuiz = $('#quiztab').length > 0;
+    inQuiz = $('#quizcontainer').length > 0;
     var x = document.createElement('progress');
     supportsProgress = x.max != undefined;
     configuration.maxLevels = configuration.sentencegrammar.length + 1;
@@ -1961,22 +2383,24 @@ $(function () {
         addMethodsSgi(configuration.sentencegrammar[+i], configuration.sentencegrammar[+i].objType);
     }
     var generateCheckboxes = new GrammarSelectionBox();
-    $('#gramselect').append(generateCheckboxes.generateHtml());
+    $('#gramtabs').append(generateCheckboxes.generateHtml());
     generateCheckboxes.setHandlers();
     GrammarSelectionBox.clearBoxes(false);
     accordion_width = GrammarSelectionBox.buildGrammarAccordion();
     if (inQuiz) {
+        $('#cleargrammar').on('click', function () { GrammarSelectionBox.clearBoxes(true); });
         if (supportsProgress)
             $('div#progressbar').hide();
         else
             $('progress#progress').hide();
         quiz = new Quiz(quizdata.quizid);
         quiz.nextQuestion();
+        $('#gramtabs .selectbutton input:enabled:checked').trigger('change');
     }
     else {
         $('#cleargrammar').on('click', function () { GrammarSelectionBox.clearBoxes(true); });
         var currentDict = new Dictionary(dictionaries, 0, null);
         currentDict.generateSentenceHtml(null);
-        $('.grammarselector input:enabled:checked').trigger('change');
+        $('#gramtabs .selectbutton input:enabled:checked').trigger('change');
     }
 });

@@ -700,7 +700,7 @@ class Ctrl_exams extends MY_Controller
           $this->load->model('mod_localize');
 
           // VIEW:
-          $javascripts = array('js/ol.js');
+          $javascripts = array('js/eol.js');
           if ($this->quiz_data->quizFeatures->useVirtualKeyboard) {
               switch ($this->db_config->dbinfo->charSet) {
                 case 'hebrew':
