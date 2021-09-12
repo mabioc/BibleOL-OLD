@@ -685,7 +685,7 @@ class Ctrl_exams extends MY_Controller
             $numq = 10;
           }
 
-          $this->show_quiz_common($_GET['quiz'], 5, $_GET['examid'], $_GET['exercise_lst']);
+          $this->show_quiz_common($_GET['quiz'], $numq, $_GET['examid'], $_GET['exercise_lst']);
       }
 
     // Common code for show_quiz() and show_quiz_sel()
