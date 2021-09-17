@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questiontemplate version="6">
+  <desc><![CDATA[<p>test2</p>
+]]></desc>
+  <database>ETCBC4</database>
+  <properties>ETCBC4</properties>
+  <path>Genesis</path>
+  <sentenceselection version="1">
+    <questionobject>word</questionobject>
+    <featurehandlers version="3">
+      <enumfeature version="1">
+        <name>sp</name>
+        <comparator>equals</comparator>
+        <value>intj</value>
+        <value>inrg</value>
+      </enumfeature>
+    </featurehandlers>
+    <useforquizobjects>true</useforquizobjects>
+  </sentenceselection>
+  <quizfeatures version="4">
+    <show>g_nme_utf8</show>
+    <show>g_nme_cons_utf8</show>
+    <request>g_uvf_cons_utf8</request>
+    <request>g_vbs_utf8</request>
+  </quizfeatures>
+  <maylocate>true</maylocate>
+  <sentbefore>0</sentbefore>
+  <sentafter>0</sentafter>
+  <fixedquestions>0</fixedquestions>
+</questiontemplate>

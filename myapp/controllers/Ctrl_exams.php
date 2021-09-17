@@ -576,10 +576,34 @@ class Ctrl_exams extends MY_Controller
       try {
         $this->mod_users->is_logged_in();
 
+        $user_id = $this->mod_users->my_id();
 
         $query = $this->db->get_where('bol_exam_active', array('id' => $_GET['exam']));
         $row = $query->row();
         $exam_id = $row->exam_id;
+
+        $now = time();
+        if ($row->exam_length == 0) {
+          $deadline = $row->exam_end_time;
+        }
+        else {
+          $deadline = $now + ($row->exam_length * 60);
+        }
+
+        $query_status = $this->db->get_where('bol_exam_status', array('userid' => $user_id, 'examid' => $_GET['exam']));
+        $status_row = $query_status->row();
+        if ($status_row) {
+          $deadline = $status_row->deadline;
+        }
+        else {
+          $data = array(
+            'userid' => $user_id,
+            'examid' => $_GET['exam'],
+            'start_time' => $now,
+            'deadline' => $deadline
+          );
+          $this->db->insert('bol_exam_status', $data);
+        }
 
         $query2 = $this->db->get_where('bol_exam', array('id' => $exam_id));
         $row2 = $query2->row();
@@ -625,6 +649,7 @@ class Ctrl_exams extends MY_Controller
           'view_take_exam',
           array(
             //'quiz_data_help' => $quiz_data_help,
+            'deadline' => $deadline,
             'exam_id' => $exam_id,
             'exercises' => $exercises,
             'exercise_parameters' => $exercise_parameters,
