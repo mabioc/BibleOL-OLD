@@ -14,6 +14,9 @@
 var deadline = <?= $deadline ?>;
 setInterval(function(){
     timeLeft= deadline - new Date().getTime() / 1000;
+    if (timeLeft < 0) {
+      document.getElementById('quiz_frame').contentWindow.document.getElementById('finish').click();
+    }
     var hours = Math.floor(timeLeft / 60 / 60);
     var minutes = Math.floor((timeLeft % (60 * 60)) / 60);
     var seconds = Math.floor((timeLeft % (60)));

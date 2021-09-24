@@ -7569,3 +7569,1892 @@ ERROR - 2021-09-17 08:28:24 --> Could not find the language line "toggle_mql"
 INFO - 2021-09-17 08:28:24 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_display.php
 INFO - 2021-09-17 08:28:24 --> Final output sent to browser
 DEBUG - 2021-09-17 08:28:24 --> Total execution time: 1.0251
+INFO - 2021-09-17 09:10:30 --> Config Class Initialized
+INFO - 2021-09-17 09:10:30 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:10:30 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:10:30 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:10:30 --> URI Class Initialized
+INFO - 2021-09-17 09:10:30 --> Router Class Initialized
+INFO - 2021-09-17 09:10:30 --> Output Class Initialized
+INFO - 2021-09-17 09:10:30 --> Security Class Initialized
+INFO - 2021-09-17 09:10:30 --> Config Class Initialized
+INFO - 2021-09-17 09:10:30 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:10:30 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:10:30 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:10:30 --> URI Class Initialized
+INFO - 2021-09-17 09:10:30 --> Router Class Initialized
+INFO - 2021-09-17 09:10:30 --> Output Class Initialized
+INFO - 2021-09-17 09:10:30 --> Security Class Initialized
+DEBUG - 2021-09-17 09:10:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:10:30 --> Input Class Initialized
+INFO - 2021-09-17 09:10:30 --> Language Class Initialized
+INFO - 2021-09-17 09:10:30 --> Loader Class Initialized
+INFO - 2021-09-17 09:10:30 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:10:30 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:10:30 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:10:30 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:10:30 --> Database Driver Class Initialized
+DEBUG - 2021-09-17 09:10:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:10:30 --> Input Class Initialized
+INFO - 2021-09-17 09:10:30 --> Language Class Initialized
+INFO - 2021-09-17 09:10:30 --> Loader Class Initialized
+INFO - 2021-09-17 09:10:30 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:10:30 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:10:30 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:10:30 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:10:30 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:10:30 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:10:30 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:10:30 --> Final output sent to browser
+DEBUG - 2021-09-17 09:10:30 --> Total execution time: 0.1171
+INFO - 2021-09-17 09:10:30 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:10:30 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:10:30 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:10:30 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:10:30 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:10:30 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:10:30 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:10:30 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:10:30 --> Final output sent to browser
+DEBUG - 2021-09-17 09:10:30 --> Total execution time: 0.1102
+INFO - 2021-09-17 09:10:30 --> Config Class Initialized
+INFO - 2021-09-17 09:10:30 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:10:30 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:10:30 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:10:30 --> URI Class Initialized
+INFO - 2021-09-17 09:10:30 --> Router Class Initialized
+INFO - 2021-09-17 09:10:30 --> Output Class Initialized
+INFO - 2021-09-17 09:10:30 --> Security Class Initialized
+DEBUG - 2021-09-17 09:10:30 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:10:30 --> Input Class Initialized
+INFO - 2021-09-17 09:10:30 --> Language Class Initialized
+INFO - 2021-09-17 09:10:30 --> Loader Class Initialized
+INFO - 2021-09-17 09:10:30 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:10:30 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:10:30 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:10:30 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:10:30 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:10:30 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:10:30 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:10:30 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:10:30 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:10:30 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:10:30 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:10:30 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:10:30 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:10:30 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:10:30 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:10:30 --> Model "Mod_classdir" initialized
+INFO - 2021-09-17 09:10:30 --> Helper loaded: file_helper
+INFO - 2021-09-17 09:10:30 --> Helper loaded: directory_helper
+INFO - 2021-09-17 09:10:30 --> Helper loaded: xmlhandler_helper
+INFO - 2021-09-17 09:10:30 --> Helper loaded: quiztemplate_helper
+INFO - 2021-09-17 09:10:30 --> Helper loaded: sheaf_helper
+DEBUG - 2021-09-17 09:10:30 --> Db_config class already loaded. Second attempt ignored.
+INFO - 2021-09-17 09:10:30 --> Helper loaded: create_lexicon_helper
+INFO - 2021-09-17 09:10:30 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:10:30 --> Model "Mod_localize" initialized
+ERROR - 2021-09-17 09:10:30 --> Could not find the language line "quiz"
+INFO - 2021-09-17 09:10:30 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:10:30 --> File loaded: /var/www/BibleOL/myapp/views/view_font_css.php
+INFO - 2021-09-17 09:10:30 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+ERROR - 2021-09-17 09:10:30 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:10:30 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:10:30 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:10:30 --> Could not find the language line "finish_no_grading"
+ERROR - 2021-09-17 09:10:30 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:10:30 --> Helper loaded: icon_helper
+ERROR - 2021-09-17 09:10:30 --> Could not find the language line "locate"
+ERROR - 2021-09-17 09:10:30 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:10:30 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:10:30 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:10:30 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:10:30 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_display.php
+INFO - 2021-09-17 09:10:30 --> Final output sent to browser
+DEBUG - 2021-09-17 09:10:30 --> Total execution time: 0.7064
+INFO - 2021-09-17 09:10:58 --> Config Class Initialized
+INFO - 2021-09-17 09:10:58 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:10:58 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:10:58 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:10:58 --> URI Class Initialized
+INFO - 2021-09-17 09:10:58 --> Router Class Initialized
+INFO - 2021-09-17 09:10:58 --> Output Class Initialized
+INFO - 2021-09-17 09:10:58 --> Security Class Initialized
+DEBUG - 2021-09-17 09:10:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:10:58 --> Input Class Initialized
+INFO - 2021-09-17 09:10:58 --> Language Class Initialized
+INFO - 2021-09-17 09:10:58 --> Loader Class Initialized
+INFO - 2021-09-17 09:10:58 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:10:58 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:10:58 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:10:58 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:10:58 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:10:58 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:10:58 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:10:58 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:10:58 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:10:58 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:10:58 --> Config Class Initialized
+INFO - 2021-09-17 09:10:58 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:10:58 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:10:58 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:10:58 --> URI Class Initialized
+INFO - 2021-09-17 09:10:58 --> Router Class Initialized
+INFO - 2021-09-17 09:10:58 --> Output Class Initialized
+INFO - 2021-09-17 09:10:58 --> Security Class Initialized
+DEBUG - 2021-09-17 09:10:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:10:58 --> Input Class Initialized
+INFO - 2021-09-17 09:10:58 --> Language Class Initialized
+INFO - 2021-09-17 09:10:58 --> Loader Class Initialized
+INFO - 2021-09-17 09:10:58 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:10:58 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:10:58 --> Final output sent to browser
+DEBUG - 2021-09-17 09:10:58 --> Total execution time: 0.0543
+INFO - 2021-09-17 09:10:58 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:10:58 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:10:58 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:10:58 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:10:58 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:10:58 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:10:58 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:10:58 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:10:58 --> Final output sent to browser
+DEBUG - 2021-09-17 09:10:58 --> Total execution time: 0.0935
+INFO - 2021-09-17 09:10:58 --> Config Class Initialized
+INFO - 2021-09-17 09:10:58 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:10:58 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:10:58 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:10:58 --> URI Class Initialized
+INFO - 2021-09-17 09:10:58 --> Router Class Initialized
+INFO - 2021-09-17 09:10:58 --> Output Class Initialized
+INFO - 2021-09-17 09:10:58 --> Security Class Initialized
+DEBUG - 2021-09-17 09:10:58 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:10:58 --> Input Class Initialized
+INFO - 2021-09-17 09:10:58 --> Language Class Initialized
+INFO - 2021-09-17 09:10:58 --> Loader Class Initialized
+INFO - 2021-09-17 09:10:58 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:10:58 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:10:58 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:10:58 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:10:58 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:10:58 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:10:58 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:10:58 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:10:58 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:10:58 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:10:58 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:10:58 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:10:58 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:10:58 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:10:58 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_done.php
+INFO - 2021-09-17 09:10:58 --> Final output sent to browser
+DEBUG - 2021-09-17 09:10:58 --> Total execution time: 0.0099
+INFO - 2021-09-17 09:25:09 --> Config Class Initialized
+INFO - 2021-09-17 09:25:09 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:25:09 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:25:09 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:25:09 --> URI Class Initialized
+INFO - 2021-09-17 09:25:09 --> Router Class Initialized
+INFO - 2021-09-17 09:25:09 --> Output Class Initialized
+INFO - 2021-09-17 09:25:09 --> Security Class Initialized
+DEBUG - 2021-09-17 09:25:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:25:09 --> Input Class Initialized
+INFO - 2021-09-17 09:25:09 --> Language Class Initialized
+INFO - 2021-09-17 09:25:09 --> Loader Class Initialized
+INFO - 2021-09-17 09:25:09 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:25:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:25:09 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:25:09 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:25:09 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:25:09 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:25:09 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:25:09 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:25:09 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:25:09 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:25:09 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:25:09 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:25:09 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:25:09 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:25:09 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:25:09 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:25:09 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+INFO - 2021-09-17 09:25:09 --> File loaded: /var/www/BibleOL/myapp/views/view_menu_bar.php
+INFO - 2021-09-17 09:25:09 --> File loaded: /var/www/BibleOL/myapp/views/view_confirm_dialog.php
+INFO - 2021-09-17 09:25:09 --> File loaded: /var/www/BibleOL/myapp/views/view_alert_dialog.php
+INFO - 2021-09-17 09:25:09 --> File loaded: /var/www/BibleOL/myapp/views/view_take_exam.php
+ERROR - 2021-09-17 09:25:09 --> Could not find the language line "take_exam_description"
+INFO - 2021-09-17 09:25:09 --> File loaded: /var/www/BibleOL/myapp/views/view_main_page.php
+INFO - 2021-09-17 09:25:09 --> File loaded: /var/www/BibleOL/myapp/views/view_bottom.php
+INFO - 2021-09-17 09:25:09 --> Final output sent to browser
+DEBUG - 2021-09-17 09:25:09 --> Total execution time: 0.0584
+INFO - 2021-09-17 09:25:10 --> Config Class Initialized
+INFO - 2021-09-17 09:25:10 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:25:10 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:25:10 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:25:10 --> URI Class Initialized
+INFO - 2021-09-17 09:25:10 --> Router Class Initialized
+INFO - 2021-09-17 09:25:10 --> Output Class Initialized
+INFO - 2021-09-17 09:25:10 --> Security Class Initialized
+DEBUG - 2021-09-17 09:25:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:25:10 --> Input Class Initialized
+INFO - 2021-09-17 09:25:10 --> Language Class Initialized
+INFO - 2021-09-17 09:25:10 --> Loader Class Initialized
+INFO - 2021-09-17 09:25:10 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:25:10 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:25:10 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:25:10 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:25:10 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:25:10 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:25:10 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:25:10 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:25:10 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:25:10 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:25:10 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:25:10 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:25:10 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:25:10 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:25:10 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:25:10 --> Model "Mod_classdir" initialized
+INFO - 2021-09-17 09:25:10 --> Helper loaded: file_helper
+INFO - 2021-09-17 09:25:10 --> Helper loaded: directory_helper
+INFO - 2021-09-17 09:25:10 --> Helper loaded: xmlhandler_helper
+INFO - 2021-09-17 09:25:10 --> Helper loaded: quiztemplate_helper
+INFO - 2021-09-17 09:25:10 --> Helper loaded: sheaf_helper
+DEBUG - 2021-09-17 09:25:10 --> Db_config class already loaded. Second attempt ignored.
+INFO - 2021-09-17 09:25:10 --> Helper loaded: create_lexicon_helper
+INFO - 2021-09-17 09:25:10 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:25:11 --> Model "Mod_localize" initialized
+ERROR - 2021-09-17 09:25:11 --> Could not find the language line "quiz"
+INFO - 2021-09-17 09:25:11 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:25:11 --> File loaded: /var/www/BibleOL/myapp/views/view_font_css.php
+INFO - 2021-09-17 09:25:11 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+ERROR - 2021-09-17 09:25:11 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:25:11 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:25:11 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:25:11 --> Could not find the language line "finish_no_grading"
+ERROR - 2021-09-17 09:25:11 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:25:11 --> Helper loaded: icon_helper
+ERROR - 2021-09-17 09:25:11 --> Could not find the language line "locate"
+ERROR - 2021-09-17 09:25:11 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:25:11 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:25:11 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:25:11 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:25:11 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_display.php
+INFO - 2021-09-17 09:25:11 --> Final output sent to browser
+DEBUG - 2021-09-17 09:25:11 --> Total execution time: 1.1955
+INFO - 2021-09-17 09:25:28 --> Config Class Initialized
+INFO - 2021-09-17 09:25:28 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:25:28 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:25:28 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:25:28 --> URI Class Initialized
+INFO - 2021-09-17 09:25:28 --> Router Class Initialized
+INFO - 2021-09-17 09:25:28 --> Output Class Initialized
+INFO - 2021-09-17 09:25:28 --> Security Class Initialized
+DEBUG - 2021-09-17 09:25:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:25:28 --> Input Class Initialized
+INFO - 2021-09-17 09:25:28 --> Language Class Initialized
+INFO - 2021-09-17 09:25:28 --> Config Class Initialized
+INFO - 2021-09-17 09:25:28 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:25:28 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:25:28 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:25:28 --> URI Class Initialized
+INFO - 2021-09-17 09:25:28 --> Router Class Initialized
+INFO - 2021-09-17 09:25:28 --> Output Class Initialized
+INFO - 2021-09-17 09:25:28 --> Security Class Initialized
+DEBUG - 2021-09-17 09:25:28 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:25:28 --> Input Class Initialized
+INFO - 2021-09-17 09:25:28 --> Language Class Initialized
+INFO - 2021-09-17 09:25:29 --> Loader Class Initialized
+INFO - 2021-09-17 09:25:29 --> Loader Class Initialized
+INFO - 2021-09-17 09:25:29 --> Controller Class Initialized
+INFO - 2021-09-17 09:25:29 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:25:29 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2021-09-17 09:25:29 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:25:29 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:25:29 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:25:29 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:25:29 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:25:29 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:25:29 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:25:29 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:25:29 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:25:29 --> Final output sent to browser
+DEBUG - 2021-09-17 09:25:29 --> Total execution time: 0.0842
+INFO - 2021-09-17 09:25:29 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:25:29 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:25:29 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:25:29 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:25:29 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:25:29 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:25:29 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:25:29 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:25:29 --> Final output sent to browser
+DEBUG - 2021-09-17 09:25:29 --> Total execution time: 0.1970
+INFO - 2021-09-17 09:25:29 --> Config Class Initialized
+INFO - 2021-09-17 09:25:29 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:25:29 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:25:29 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:25:29 --> URI Class Initialized
+INFO - 2021-09-17 09:25:29 --> Router Class Initialized
+INFO - 2021-09-17 09:25:29 --> Output Class Initialized
+INFO - 2021-09-17 09:25:29 --> Security Class Initialized
+DEBUG - 2021-09-17 09:25:29 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:25:29 --> Input Class Initialized
+INFO - 2021-09-17 09:25:29 --> Language Class Initialized
+INFO - 2021-09-17 09:25:29 --> Loader Class Initialized
+INFO - 2021-09-17 09:25:29 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:25:29 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:25:29 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:25:29 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:25:29 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:25:29 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:25:29 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:25:29 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:25:29 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:25:29 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:25:29 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:25:29 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:25:29 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:25:29 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:25:29 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:25:29 --> Model "Mod_classdir" initialized
+INFO - 2021-09-17 09:25:29 --> Helper loaded: file_helper
+INFO - 2021-09-17 09:25:29 --> Helper loaded: directory_helper
+INFO - 2021-09-17 09:25:29 --> Helper loaded: xmlhandler_helper
+INFO - 2021-09-17 09:25:29 --> Helper loaded: quiztemplate_helper
+INFO - 2021-09-17 09:25:29 --> Helper loaded: sheaf_helper
+DEBUG - 2021-09-17 09:25:29 --> Db_config class already loaded. Second attempt ignored.
+INFO - 2021-09-17 09:25:29 --> Helper loaded: create_lexicon_helper
+INFO - 2021-09-17 09:25:29 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:25:29 --> Model "Mod_localize" initialized
+ERROR - 2021-09-17 09:25:29 --> Could not find the language line "quiz"
+INFO - 2021-09-17 09:25:29 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:25:29 --> File loaded: /var/www/BibleOL/myapp/views/view_font_css.php
+INFO - 2021-09-17 09:25:29 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+ERROR - 2021-09-17 09:25:29 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:25:29 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:25:29 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:25:29 --> Could not find the language line "finish_no_grading"
+ERROR - 2021-09-17 09:25:29 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:25:29 --> Helper loaded: icon_helper
+ERROR - 2021-09-17 09:25:29 --> Could not find the language line "locate"
+ERROR - 2021-09-17 09:25:29 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:25:29 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:25:29 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:25:29 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:25:29 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_display.php
+INFO - 2021-09-17 09:25:29 --> Final output sent to browser
+DEBUG - 2021-09-17 09:25:29 --> Total execution time: 0.6898
+INFO - 2021-09-17 09:33:26 --> Config Class Initialized
+INFO - 2021-09-17 09:33:26 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:33:26 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:33:26 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:33:26 --> URI Class Initialized
+INFO - 2021-09-17 09:33:26 --> Router Class Initialized
+INFO - 2021-09-17 09:33:26 --> Output Class Initialized
+INFO - 2021-09-17 09:33:26 --> Security Class Initialized
+DEBUG - 2021-09-17 09:33:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:33:26 --> Input Class Initialized
+INFO - 2021-09-17 09:33:26 --> Language Class Initialized
+INFO - 2021-09-17 09:33:26 --> Loader Class Initialized
+INFO - 2021-09-17 09:33:26 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:33:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:33:26 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:33:26 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:33:26 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:33:26 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:33:26 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:33:26 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:33:26 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:33:26 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:33:26 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:33:26 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:33:26 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:33:26 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:33:26 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:33:26 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:33:26 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+INFO - 2021-09-17 09:33:26 --> File loaded: /var/www/BibleOL/myapp/views/view_menu_bar.php
+INFO - 2021-09-17 09:33:26 --> File loaded: /var/www/BibleOL/myapp/views/view_confirm_dialog.php
+INFO - 2021-09-17 09:33:26 --> File loaded: /var/www/BibleOL/myapp/views/view_alert_dialog.php
+INFO - 2021-09-17 09:33:26 --> File loaded: /var/www/BibleOL/myapp/views/view_take_exam.php
+ERROR - 2021-09-17 09:33:26 --> Could not find the language line "take_exam_description"
+INFO - 2021-09-17 09:33:26 --> File loaded: /var/www/BibleOL/myapp/views/view_main_page.php
+INFO - 2021-09-17 09:33:26 --> File loaded: /var/www/BibleOL/myapp/views/view_bottom.php
+INFO - 2021-09-17 09:33:26 --> Final output sent to browser
+DEBUG - 2021-09-17 09:33:26 --> Total execution time: 0.0625
+INFO - 2021-09-17 09:33:26 --> Config Class Initialized
+INFO - 2021-09-17 09:33:26 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:33:26 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:33:26 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:33:26 --> URI Class Initialized
+INFO - 2021-09-17 09:33:26 --> Router Class Initialized
+INFO - 2021-09-17 09:33:26 --> Output Class Initialized
+INFO - 2021-09-17 09:33:26 --> Security Class Initialized
+DEBUG - 2021-09-17 09:33:26 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:33:26 --> Input Class Initialized
+INFO - 2021-09-17 09:33:26 --> Language Class Initialized
+INFO - 2021-09-17 09:33:26 --> Loader Class Initialized
+INFO - 2021-09-17 09:33:26 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:33:26 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:33:26 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:33:26 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:33:26 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:33:26 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:33:26 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:33:26 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:33:26 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:33:26 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:33:26 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:33:26 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:33:26 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:33:26 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:33:26 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:33:26 --> Model "Mod_classdir" initialized
+INFO - 2021-09-17 09:33:26 --> Helper loaded: file_helper
+INFO - 2021-09-17 09:33:26 --> Helper loaded: directory_helper
+INFO - 2021-09-17 09:33:26 --> Helper loaded: xmlhandler_helper
+INFO - 2021-09-17 09:33:26 --> Helper loaded: quiztemplate_helper
+INFO - 2021-09-17 09:33:26 --> Helper loaded: sheaf_helper
+DEBUG - 2021-09-17 09:33:26 --> Db_config class already loaded. Second attempt ignored.
+INFO - 2021-09-17 09:33:26 --> Helper loaded: create_lexicon_helper
+INFO - 2021-09-17 09:33:26 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:33:27 --> Model "Mod_localize" initialized
+ERROR - 2021-09-17 09:33:27 --> Could not find the language line "quiz"
+INFO - 2021-09-17 09:33:27 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:33:27 --> File loaded: /var/www/BibleOL/myapp/views/view_font_css.php
+INFO - 2021-09-17 09:33:27 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+ERROR - 2021-09-17 09:33:27 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:33:27 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:33:27 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:33:27 --> Could not find the language line "finish_no_grading"
+ERROR - 2021-09-17 09:33:27 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:33:27 --> Helper loaded: icon_helper
+ERROR - 2021-09-17 09:33:27 --> Could not find the language line "locate"
+ERROR - 2021-09-17 09:33:27 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:33:27 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:33:27 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:33:27 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:33:27 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_display.php
+INFO - 2021-09-17 09:33:27 --> Final output sent to browser
+DEBUG - 2021-09-17 09:33:27 --> Total execution time: 1.0202
+INFO - 2021-09-17 09:33:34 --> Config Class Initialized
+INFO - 2021-09-17 09:33:34 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:33:34 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:33:34 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:33:34 --> URI Class Initialized
+INFO - 2021-09-17 09:33:34 --> Router Class Initialized
+INFO - 2021-09-17 09:33:34 --> Output Class Initialized
+INFO - 2021-09-17 09:33:34 --> Security Class Initialized
+DEBUG - 2021-09-17 09:33:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:33:34 --> Input Class Initialized
+INFO - 2021-09-17 09:33:34 --> Language Class Initialized
+INFO - 2021-09-17 09:33:34 --> Config Class Initialized
+INFO - 2021-09-17 09:33:34 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:33:34 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:33:34 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:33:34 --> URI Class Initialized
+INFO - 2021-09-17 09:33:34 --> Router Class Initialized
+INFO - 2021-09-17 09:33:34 --> Output Class Initialized
+INFO - 2021-09-17 09:33:34 --> Security Class Initialized
+DEBUG - 2021-09-17 09:33:34 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:33:34 --> Input Class Initialized
+INFO - 2021-09-17 09:33:34 --> Language Class Initialized
+ERROR - 2021-09-17 09:33:34 --> Severity: error --> Exception: syntax error, unexpected '->' (T_OBJECT_OPERATOR) /var/www/BibleOL/myapp/controllers/Ctrl_statistics.php 70
+ERROR - 2021-09-17 09:33:34 --> Severity: error --> Exception: syntax error, unexpected '->' (T_OBJECT_OPERATOR) /var/www/BibleOL/myapp/controllers/Ctrl_statistics.php 70
+INFO - 2021-09-17 09:34:03 --> Config Class Initialized
+INFO - 2021-09-17 09:34:03 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:34:03 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:34:03 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:34:03 --> URI Class Initialized
+INFO - 2021-09-17 09:34:03 --> Router Class Initialized
+INFO - 2021-09-17 09:34:03 --> Output Class Initialized
+INFO - 2021-09-17 09:34:03 --> Security Class Initialized
+DEBUG - 2021-09-17 09:34:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:34:03 --> Input Class Initialized
+INFO - 2021-09-17 09:34:03 --> Language Class Initialized
+INFO - 2021-09-17 09:34:03 --> Loader Class Initialized
+INFO - 2021-09-17 09:34:03 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:34:03 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:34:03 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:34:03 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:34:03 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:34:03 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:34:03 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:34:03 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:34:03 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:34:03 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:34:03 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:34:03 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:34:03 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:34:03 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:34:03 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:34:03 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:34:03 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+INFO - 2021-09-17 09:34:03 --> File loaded: /var/www/BibleOL/myapp/views/view_menu_bar.php
+INFO - 2021-09-17 09:34:03 --> File loaded: /var/www/BibleOL/myapp/views/view_confirm_dialog.php
+INFO - 2021-09-17 09:34:03 --> File loaded: /var/www/BibleOL/myapp/views/view_alert_dialog.php
+INFO - 2021-09-17 09:34:03 --> File loaded: /var/www/BibleOL/myapp/views/view_take_exam.php
+ERROR - 2021-09-17 09:34:03 --> Could not find the language line "take_exam_description"
+INFO - 2021-09-17 09:34:03 --> File loaded: /var/www/BibleOL/myapp/views/view_main_page.php
+INFO - 2021-09-17 09:34:03 --> File loaded: /var/www/BibleOL/myapp/views/view_bottom.php
+INFO - 2021-09-17 09:34:03 --> Final output sent to browser
+DEBUG - 2021-09-17 09:34:03 --> Total execution time: 0.0122
+INFO - 2021-09-17 09:34:03 --> Config Class Initialized
+INFO - 2021-09-17 09:34:03 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:34:03 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:34:03 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:34:03 --> URI Class Initialized
+INFO - 2021-09-17 09:34:03 --> Router Class Initialized
+INFO - 2021-09-17 09:34:03 --> Output Class Initialized
+INFO - 2021-09-17 09:34:03 --> Security Class Initialized
+DEBUG - 2021-09-17 09:34:03 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:34:03 --> Input Class Initialized
+INFO - 2021-09-17 09:34:03 --> Language Class Initialized
+INFO - 2021-09-17 09:34:03 --> Loader Class Initialized
+INFO - 2021-09-17 09:34:03 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:34:03 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:34:03 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:34:03 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:34:03 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:34:03 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:34:03 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:34:03 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:34:03 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:34:03 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:34:03 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:34:03 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:34:03 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:34:03 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:34:03 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:34:03 --> Model "Mod_classdir" initialized
+INFO - 2021-09-17 09:34:03 --> Helper loaded: file_helper
+INFO - 2021-09-17 09:34:03 --> Helper loaded: directory_helper
+INFO - 2021-09-17 09:34:03 --> Helper loaded: xmlhandler_helper
+INFO - 2021-09-17 09:34:03 --> Helper loaded: quiztemplate_helper
+INFO - 2021-09-17 09:34:03 --> Helper loaded: sheaf_helper
+DEBUG - 2021-09-17 09:34:03 --> Db_config class already loaded. Second attempt ignored.
+INFO - 2021-09-17 09:34:03 --> Helper loaded: create_lexicon_helper
+INFO - 2021-09-17 09:34:03 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:34:04 --> Model "Mod_localize" initialized
+ERROR - 2021-09-17 09:34:04 --> Could not find the language line "quiz"
+INFO - 2021-09-17 09:34:04 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:34:04 --> File loaded: /var/www/BibleOL/myapp/views/view_font_css.php
+INFO - 2021-09-17 09:34:04 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+ERROR - 2021-09-17 09:34:04 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:34:04 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:34:04 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:34:04 --> Could not find the language line "finish_no_grading"
+ERROR - 2021-09-17 09:34:04 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:34:04 --> Helper loaded: icon_helper
+ERROR - 2021-09-17 09:34:04 --> Could not find the language line "locate"
+ERROR - 2021-09-17 09:34:04 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:34:04 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:34:04 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:34:04 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:34:04 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_display.php
+INFO - 2021-09-17 09:34:04 --> Final output sent to browser
+DEBUG - 2021-09-17 09:34:04 --> Total execution time: 1.2311
+INFO - 2021-09-17 09:34:09 --> Config Class Initialized
+INFO - 2021-09-17 09:34:09 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:34:09 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:34:09 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:34:09 --> URI Class Initialized
+INFO - 2021-09-17 09:34:09 --> Router Class Initialized
+INFO - 2021-09-17 09:34:09 --> Output Class Initialized
+INFO - 2021-09-17 09:34:09 --> Security Class Initialized
+DEBUG - 2021-09-17 09:34:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:34:09 --> Input Class Initialized
+INFO - 2021-09-17 09:34:09 --> Language Class Initialized
+INFO - 2021-09-17 09:34:09 --> Loader Class Initialized
+INFO - 2021-09-17 09:34:09 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:34:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:34:09 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:34:09 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:34:09 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:34:09 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:34:09 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:34:09 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:34:09 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:34:09 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:34:09 --> Config Class Initialized
+INFO - 2021-09-17 09:34:09 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:34:09 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:34:09 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:34:09 --> URI Class Initialized
+INFO - 2021-09-17 09:34:09 --> Router Class Initialized
+INFO - 2021-09-17 09:34:09 --> Output Class Initialized
+INFO - 2021-09-17 09:34:09 --> Security Class Initialized
+DEBUG - 2021-09-17 09:34:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:34:09 --> Input Class Initialized
+INFO - 2021-09-17 09:34:09 --> Language Class Initialized
+INFO - 2021-09-17 09:34:09 --> Loader Class Initialized
+INFO - 2021-09-17 09:34:09 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:34:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:34:09 --> Final output sent to browser
+DEBUG - 2021-09-17 09:34:09 --> Total execution time: 0.1288
+INFO - 2021-09-17 09:34:09 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:34:09 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:34:09 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:34:09 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:34:09 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:34:09 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:34:09 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:34:09 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:34:09 --> Final output sent to browser
+DEBUG - 2021-09-17 09:34:09 --> Total execution time: 0.1073
+INFO - 2021-09-17 09:34:09 --> Config Class Initialized
+INFO - 2021-09-17 09:34:09 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:34:09 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:34:09 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:34:09 --> URI Class Initialized
+INFO - 2021-09-17 09:34:09 --> Router Class Initialized
+INFO - 2021-09-17 09:34:09 --> Output Class Initialized
+INFO - 2021-09-17 09:34:09 --> Security Class Initialized
+DEBUG - 2021-09-17 09:34:09 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:34:09 --> Input Class Initialized
+INFO - 2021-09-17 09:34:09 --> Language Class Initialized
+INFO - 2021-09-17 09:34:09 --> Loader Class Initialized
+INFO - 2021-09-17 09:34:09 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:34:09 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:34:09 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:34:09 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:34:09 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:34:09 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:34:09 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:34:09 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:34:09 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:34:09 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:34:09 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:34:09 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:34:09 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:34:09 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:34:09 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:34:09 --> Model "Mod_classdir" initialized
+INFO - 2021-09-17 09:34:09 --> Helper loaded: file_helper
+INFO - 2021-09-17 09:34:09 --> Helper loaded: directory_helper
+INFO - 2021-09-17 09:34:09 --> Helper loaded: xmlhandler_helper
+INFO - 2021-09-17 09:34:09 --> Helper loaded: quiztemplate_helper
+INFO - 2021-09-17 09:34:09 --> Helper loaded: sheaf_helper
+DEBUG - 2021-09-17 09:34:09 --> Db_config class already loaded. Second attempt ignored.
+INFO - 2021-09-17 09:34:09 --> Helper loaded: create_lexicon_helper
+INFO - 2021-09-17 09:34:09 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:34:10 --> Model "Mod_localize" initialized
+ERROR - 2021-09-17 09:34:10 --> Could not find the language line "quiz"
+INFO - 2021-09-17 09:34:10 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:34:10 --> File loaded: /var/www/BibleOL/myapp/views/view_font_css.php
+INFO - 2021-09-17 09:34:10 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+ERROR - 2021-09-17 09:34:10 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:34:10 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:34:10 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:34:10 --> Could not find the language line "finish_no_grading"
+ERROR - 2021-09-17 09:34:10 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:34:10 --> Helper loaded: icon_helper
+ERROR - 2021-09-17 09:34:10 --> Could not find the language line "locate"
+ERROR - 2021-09-17 09:34:10 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:34:10 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:34:10 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:34:10 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:34:10 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_display.php
+INFO - 2021-09-17 09:34:10 --> Final output sent to browser
+DEBUG - 2021-09-17 09:34:10 --> Total execution time: 0.6633
+INFO - 2021-09-17 09:34:24 --> Config Class Initialized
+INFO - 2021-09-17 09:34:24 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:34:24 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:34:24 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:34:24 --> URI Class Initialized
+INFO - 2021-09-17 09:34:24 --> Router Class Initialized
+INFO - 2021-09-17 09:34:24 --> Output Class Initialized
+INFO - 2021-09-17 09:34:24 --> Security Class Initialized
+DEBUG - 2021-09-17 09:34:24 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:34:24 --> Input Class Initialized
+INFO - 2021-09-17 09:34:24 --> Language Class Initialized
+INFO - 2021-09-17 09:34:24 --> Loader Class Initialized
+INFO - 2021-09-17 09:34:24 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:34:24 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:34:24 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:34:24 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:34:24 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:34:24 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:34:24 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:34:24 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:34:24 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:34:24 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:34:24 --> Config Class Initialized
+INFO - 2021-09-17 09:34:24 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:34:24 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:34:24 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:34:24 --> URI Class Initialized
+INFO - 2021-09-17 09:34:24 --> Router Class Initialized
+INFO - 2021-09-17 09:34:24 --> Output Class Initialized
+INFO - 2021-09-17 09:34:24 --> Security Class Initialized
+DEBUG - 2021-09-17 09:34:24 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:34:24 --> Input Class Initialized
+INFO - 2021-09-17 09:34:24 --> Language Class Initialized
+INFO - 2021-09-17 09:34:24 --> Loader Class Initialized
+INFO - 2021-09-17 09:34:24 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:34:24 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:34:24 --> Final output sent to browser
+DEBUG - 2021-09-17 09:34:24 --> Total execution time: 0.0865
+INFO - 2021-09-17 09:34:24 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:34:24 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:34:24 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:34:24 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:34:24 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:34:24 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:34:24 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:34:24 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:34:24 --> Final output sent to browser
+DEBUG - 2021-09-17 09:34:24 --> Total execution time: 0.0875
+INFO - 2021-09-17 09:34:24 --> Config Class Initialized
+INFO - 2021-09-17 09:34:24 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:34:24 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:34:24 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:34:24 --> URI Class Initialized
+INFO - 2021-09-17 09:34:24 --> Router Class Initialized
+INFO - 2021-09-17 09:34:24 --> Output Class Initialized
+INFO - 2021-09-17 09:34:24 --> Security Class Initialized
+DEBUG - 2021-09-17 09:34:24 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:34:24 --> Input Class Initialized
+INFO - 2021-09-17 09:34:24 --> Language Class Initialized
+INFO - 2021-09-17 09:34:24 --> Loader Class Initialized
+INFO - 2021-09-17 09:34:24 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:34:24 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:34:24 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:34:24 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:34:24 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:34:24 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:34:24 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:34:24 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:34:24 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:34:24 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:34:24 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:34:24 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:34:24 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:34:24 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:34:24 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_done.php
+INFO - 2021-09-17 09:34:24 --> Final output sent to browser
+DEBUG - 2021-09-17 09:34:24 --> Total execution time: 0.0066
+INFO - 2021-09-17 09:36:21 --> Config Class Initialized
+INFO - 2021-09-17 09:36:21 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:36:21 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:36:21 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:36:21 --> URI Class Initialized
+INFO - 2021-09-17 09:36:21 --> Router Class Initialized
+INFO - 2021-09-17 09:36:21 --> Output Class Initialized
+INFO - 2021-09-17 09:36:21 --> Security Class Initialized
+DEBUG - 2021-09-17 09:36:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:36:21 --> Input Class Initialized
+INFO - 2021-09-17 09:36:21 --> Language Class Initialized
+INFO - 2021-09-17 09:36:21 --> Loader Class Initialized
+INFO - 2021-09-17 09:36:21 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:36:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:36:21 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:36:21 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:36:21 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:36:21 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:36:21 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:36:21 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:36:21 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:36:21 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:36:21 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:36:21 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:36:21 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:36:21 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:36:21 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:36:21 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:36:21 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+INFO - 2021-09-17 09:36:21 --> File loaded: /var/www/BibleOL/myapp/views/view_menu_bar.php
+INFO - 2021-09-17 09:36:21 --> File loaded: /var/www/BibleOL/myapp/views/view_confirm_dialog.php
+INFO - 2021-09-17 09:36:21 --> File loaded: /var/www/BibleOL/myapp/views/view_alert_dialog.php
+INFO - 2021-09-17 09:36:21 --> File loaded: /var/www/BibleOL/myapp/views/view_take_exam.php
+ERROR - 2021-09-17 09:36:21 --> Could not find the language line "take_exam_description"
+INFO - 2021-09-17 09:36:21 --> File loaded: /var/www/BibleOL/myapp/views/view_main_page.php
+INFO - 2021-09-17 09:36:21 --> File loaded: /var/www/BibleOL/myapp/views/view_bottom.php
+INFO - 2021-09-17 09:36:21 --> Final output sent to browser
+DEBUG - 2021-09-17 09:36:21 --> Total execution time: 0.0128
+INFO - 2021-09-17 09:36:21 --> Config Class Initialized
+INFO - 2021-09-17 09:36:21 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:36:21 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:36:21 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:36:21 --> URI Class Initialized
+INFO - 2021-09-17 09:36:21 --> Router Class Initialized
+INFO - 2021-09-17 09:36:21 --> Output Class Initialized
+INFO - 2021-09-17 09:36:21 --> Security Class Initialized
+DEBUG - 2021-09-17 09:36:21 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:36:21 --> Input Class Initialized
+INFO - 2021-09-17 09:36:21 --> Language Class Initialized
+INFO - 2021-09-17 09:36:21 --> Loader Class Initialized
+INFO - 2021-09-17 09:36:21 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:36:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:36:21 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:36:21 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:36:21 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:36:21 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:36:21 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:36:21 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:36:21 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:36:21 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:36:21 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:36:21 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:36:21 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:36:21 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:36:21 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:36:21 --> Model "Mod_classdir" initialized
+INFO - 2021-09-17 09:36:21 --> Helper loaded: file_helper
+INFO - 2021-09-17 09:36:21 --> Helper loaded: directory_helper
+INFO - 2021-09-17 09:36:21 --> Helper loaded: xmlhandler_helper
+INFO - 2021-09-17 09:36:21 --> Helper loaded: quiztemplate_helper
+INFO - 2021-09-17 09:36:21 --> Helper loaded: sheaf_helper
+DEBUG - 2021-09-17 09:36:21 --> Db_config class already loaded. Second attempt ignored.
+INFO - 2021-09-17 09:36:21 --> Helper loaded: create_lexicon_helper
+INFO - 2021-09-17 09:36:21 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:36:22 --> Model "Mod_localize" initialized
+ERROR - 2021-09-17 09:36:22 --> Could not find the language line "quiz"
+INFO - 2021-09-17 09:36:22 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:36:22 --> File loaded: /var/www/BibleOL/myapp/views/view_font_css.php
+INFO - 2021-09-17 09:36:22 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+ERROR - 2021-09-17 09:36:22 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:36:22 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:36:22 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:36:22 --> Could not find the language line "finish_no_grading"
+ERROR - 2021-09-17 09:36:22 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:36:22 --> Helper loaded: icon_helper
+ERROR - 2021-09-17 09:36:22 --> Could not find the language line "locate"
+ERROR - 2021-09-17 09:36:22 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:36:22 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:36:22 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:36:22 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:36:22 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_display.php
+INFO - 2021-09-17 09:36:22 --> Final output sent to browser
+DEBUG - 2021-09-17 09:36:22 --> Total execution time: 1.2983
+INFO - 2021-09-17 09:36:25 --> Config Class Initialized
+INFO - 2021-09-17 09:36:25 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:36:25 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:36:25 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:36:25 --> URI Class Initialized
+INFO - 2021-09-17 09:36:25 --> Router Class Initialized
+INFO - 2021-09-17 09:36:25 --> Output Class Initialized
+INFO - 2021-09-17 09:36:25 --> Security Class Initialized
+DEBUG - 2021-09-17 09:36:25 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:36:25 --> Input Class Initialized
+INFO - 2021-09-17 09:36:25 --> Language Class Initialized
+INFO - 2021-09-17 09:36:25 --> Loader Class Initialized
+INFO - 2021-09-17 09:36:25 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:36:25 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:36:25 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:36:25 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:36:25 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:36:25 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:36:25 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:36:25 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:36:25 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:36:25 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:36:25 --> Final output sent to browser
+DEBUG - 2021-09-17 09:36:25 --> Total execution time: 0.0198
+INFO - 2021-09-17 09:36:25 --> Config Class Initialized
+INFO - 2021-09-17 09:36:25 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:36:25 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:36:25 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:36:25 --> URI Class Initialized
+INFO - 2021-09-17 09:36:25 --> Router Class Initialized
+INFO - 2021-09-17 09:36:25 --> Output Class Initialized
+INFO - 2021-09-17 09:36:25 --> Security Class Initialized
+DEBUG - 2021-09-17 09:36:25 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:36:25 --> Input Class Initialized
+INFO - 2021-09-17 09:36:25 --> Language Class Initialized
+INFO - 2021-09-17 09:36:25 --> Loader Class Initialized
+INFO - 2021-09-17 09:36:25 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:36:25 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:36:25 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:36:25 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:36:25 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:36:25 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:36:25 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:36:25 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:36:25 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:36:25 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:36:25 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:36:25 --> Final output sent to browser
+DEBUG - 2021-09-17 09:36:25 --> Total execution time: 0.0083
+INFO - 2021-09-17 09:36:25 --> Config Class Initialized
+INFO - 2021-09-17 09:36:25 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:36:25 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:36:25 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:36:25 --> URI Class Initialized
+INFO - 2021-09-17 09:36:25 --> Router Class Initialized
+INFO - 2021-09-17 09:36:25 --> Output Class Initialized
+INFO - 2021-09-17 09:36:25 --> Security Class Initialized
+DEBUG - 2021-09-17 09:36:25 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:36:25 --> Input Class Initialized
+INFO - 2021-09-17 09:36:25 --> Language Class Initialized
+INFO - 2021-09-17 09:36:25 --> Loader Class Initialized
+INFO - 2021-09-17 09:36:25 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:36:25 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:36:25 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:36:25 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:36:25 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:36:25 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:36:25 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:36:25 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:36:25 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:36:25 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:36:25 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:36:25 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:36:25 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:36:25 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:36:25 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:36:25 --> Model "Mod_classdir" initialized
+INFO - 2021-09-17 09:36:25 --> Helper loaded: file_helper
+INFO - 2021-09-17 09:36:25 --> Helper loaded: directory_helper
+INFO - 2021-09-17 09:36:25 --> Helper loaded: xmlhandler_helper
+INFO - 2021-09-17 09:36:25 --> Helper loaded: quiztemplate_helper
+INFO - 2021-09-17 09:36:25 --> Helper loaded: sheaf_helper
+DEBUG - 2021-09-17 09:36:25 --> Db_config class already loaded. Second attempt ignored.
+INFO - 2021-09-17 09:36:25 --> Helper loaded: create_lexicon_helper
+INFO - 2021-09-17 09:36:25 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:36:25 --> Model "Mod_localize" initialized
+ERROR - 2021-09-17 09:36:25 --> Could not find the language line "quiz"
+INFO - 2021-09-17 09:36:25 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:36:25 --> File loaded: /var/www/BibleOL/myapp/views/view_font_css.php
+INFO - 2021-09-17 09:36:25 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+ERROR - 2021-09-17 09:36:25 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:36:25 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:36:25 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:36:25 --> Could not find the language line "finish_no_grading"
+ERROR - 2021-09-17 09:36:25 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:36:25 --> Helper loaded: icon_helper
+ERROR - 2021-09-17 09:36:25 --> Could not find the language line "locate"
+ERROR - 2021-09-17 09:36:25 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:36:25 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:36:25 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:36:25 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:36:25 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_display.php
+INFO - 2021-09-17 09:36:25 --> Final output sent to browser
+DEBUG - 2021-09-17 09:36:25 --> Total execution time: 0.7333
+INFO - 2021-09-17 09:36:40 --> Config Class Initialized
+INFO - 2021-09-17 09:36:40 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:36:40 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:36:40 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:36:40 --> URI Class Initialized
+INFO - 2021-09-17 09:36:40 --> Router Class Initialized
+INFO - 2021-09-17 09:36:40 --> Output Class Initialized
+INFO - 2021-09-17 09:36:40 --> Security Class Initialized
+DEBUG - 2021-09-17 09:36:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:36:40 --> Input Class Initialized
+INFO - 2021-09-17 09:36:40 --> Language Class Initialized
+INFO - 2021-09-17 09:36:40 --> Loader Class Initialized
+INFO - 2021-09-17 09:36:40 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:36:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:36:40 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:36:40 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:36:40 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:36:40 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:36:40 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:36:40 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:36:40 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:36:40 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:36:40 --> Final output sent to browser
+DEBUG - 2021-09-17 09:36:40 --> Total execution time: 0.0611
+INFO - 2021-09-17 09:36:40 --> Config Class Initialized
+INFO - 2021-09-17 09:36:40 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:36:40 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:36:40 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:36:40 --> URI Class Initialized
+INFO - 2021-09-17 09:36:40 --> Router Class Initialized
+INFO - 2021-09-17 09:36:40 --> Output Class Initialized
+INFO - 2021-09-17 09:36:40 --> Security Class Initialized
+DEBUG - 2021-09-17 09:36:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:36:40 --> Input Class Initialized
+INFO - 2021-09-17 09:36:40 --> Language Class Initialized
+INFO - 2021-09-17 09:36:40 --> Loader Class Initialized
+INFO - 2021-09-17 09:36:40 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:36:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:36:40 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:36:40 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:36:40 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:36:40 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:36:40 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:36:40 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:36:40 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:36:40 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:36:40 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:36:40 --> Final output sent to browser
+DEBUG - 2021-09-17 09:36:40 --> Total execution time: 0.0092
+INFO - 2021-09-17 09:36:40 --> Config Class Initialized
+INFO - 2021-09-17 09:36:40 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:36:40 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:36:40 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:36:40 --> URI Class Initialized
+INFO - 2021-09-17 09:36:40 --> Router Class Initialized
+INFO - 2021-09-17 09:36:40 --> Output Class Initialized
+INFO - 2021-09-17 09:36:40 --> Security Class Initialized
+DEBUG - 2021-09-17 09:36:40 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:36:40 --> Input Class Initialized
+INFO - 2021-09-17 09:36:40 --> Language Class Initialized
+INFO - 2021-09-17 09:36:40 --> Loader Class Initialized
+INFO - 2021-09-17 09:36:40 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:36:40 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:36:40 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:36:40 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:36:40 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:36:40 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:36:40 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:36:40 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:36:40 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:36:40 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:36:40 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:36:40 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:36:40 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:36:40 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:36:40 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_done.php
+INFO - 2021-09-17 09:36:40 --> Final output sent to browser
+DEBUG - 2021-09-17 09:36:40 --> Total execution time: 0.0075
+INFO - 2021-09-17 09:37:17 --> Config Class Initialized
+INFO - 2021-09-17 09:37:17 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:37:17 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:37:17 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:37:17 --> URI Class Initialized
+INFO - 2021-09-17 09:37:17 --> Router Class Initialized
+INFO - 2021-09-17 09:37:17 --> Output Class Initialized
+INFO - 2021-09-17 09:37:17 --> Security Class Initialized
+DEBUG - 2021-09-17 09:37:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:37:17 --> Input Class Initialized
+INFO - 2021-09-17 09:37:17 --> Language Class Initialized
+INFO - 2021-09-17 09:37:17 --> Loader Class Initialized
+INFO - 2021-09-17 09:37:17 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:37:17 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:37:17 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:37:17 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:37:17 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:37:17 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:37:17 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:37:17 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:37:17 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:37:17 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:37:17 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:37:17 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:37:17 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:37:17 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:37:17 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:37:17 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:37:17 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+INFO - 2021-09-17 09:37:17 --> File loaded: /var/www/BibleOL/myapp/views/view_menu_bar.php
+INFO - 2021-09-17 09:37:17 --> File loaded: /var/www/BibleOL/myapp/views/view_confirm_dialog.php
+INFO - 2021-09-17 09:37:17 --> File loaded: /var/www/BibleOL/myapp/views/view_alert_dialog.php
+INFO - 2021-09-17 09:37:17 --> File loaded: /var/www/BibleOL/myapp/views/view_take_exam.php
+ERROR - 2021-09-17 09:37:17 --> Could not find the language line "take_exam_description"
+INFO - 2021-09-17 09:37:17 --> File loaded: /var/www/BibleOL/myapp/views/view_main_page.php
+INFO - 2021-09-17 09:37:17 --> File loaded: /var/www/BibleOL/myapp/views/view_bottom.php
+INFO - 2021-09-17 09:37:17 --> Final output sent to browser
+DEBUG - 2021-09-17 09:37:17 --> Total execution time: 0.0147
+INFO - 2021-09-17 09:37:18 --> Config Class Initialized
+INFO - 2021-09-17 09:37:18 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:37:18 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:37:18 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:37:18 --> URI Class Initialized
+INFO - 2021-09-17 09:37:18 --> Router Class Initialized
+INFO - 2021-09-17 09:37:18 --> Output Class Initialized
+INFO - 2021-09-17 09:37:18 --> Security Class Initialized
+DEBUG - 2021-09-17 09:37:18 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:37:18 --> Input Class Initialized
+INFO - 2021-09-17 09:37:18 --> Language Class Initialized
+INFO - 2021-09-17 09:37:18 --> Loader Class Initialized
+INFO - 2021-09-17 09:37:18 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:37:18 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:37:18 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:37:18 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:37:18 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:37:18 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:37:18 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:37:18 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:37:18 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:37:18 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:37:18 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:37:18 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:37:18 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:37:18 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:37:18 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:37:18 --> Model "Mod_classdir" initialized
+INFO - 2021-09-17 09:37:18 --> Helper loaded: file_helper
+INFO - 2021-09-17 09:37:18 --> Helper loaded: directory_helper
+INFO - 2021-09-17 09:37:18 --> Helper loaded: xmlhandler_helper
+INFO - 2021-09-17 09:37:18 --> Helper loaded: quiztemplate_helper
+INFO - 2021-09-17 09:37:18 --> Helper loaded: sheaf_helper
+DEBUG - 2021-09-17 09:37:18 --> Db_config class already loaded. Second attempt ignored.
+INFO - 2021-09-17 09:37:18 --> Helper loaded: create_lexicon_helper
+INFO - 2021-09-17 09:37:18 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:37:19 --> Model "Mod_localize" initialized
+ERROR - 2021-09-17 09:37:19 --> Could not find the language line "quiz"
+INFO - 2021-09-17 09:37:19 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:37:19 --> File loaded: /var/www/BibleOL/myapp/views/view_font_css.php
+INFO - 2021-09-17 09:37:19 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+ERROR - 2021-09-17 09:37:19 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:37:19 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:37:19 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:37:19 --> Could not find the language line "finish_no_grading"
+ERROR - 2021-09-17 09:37:19 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:37:19 --> Helper loaded: icon_helper
+ERROR - 2021-09-17 09:37:19 --> Could not find the language line "locate"
+ERROR - 2021-09-17 09:37:19 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:37:19 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:37:19 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:37:19 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:37:19 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_display.php
+INFO - 2021-09-17 09:37:19 --> Final output sent to browser
+DEBUG - 2021-09-17 09:37:19 --> Total execution time: 1.1959
+INFO - 2021-09-17 09:37:23 --> Config Class Initialized
+INFO - 2021-09-17 09:37:23 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:37:23 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:37:23 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:37:23 --> URI Class Initialized
+INFO - 2021-09-17 09:37:23 --> Router Class Initialized
+INFO - 2021-09-17 09:37:23 --> Output Class Initialized
+INFO - 2021-09-17 09:37:23 --> Security Class Initialized
+DEBUG - 2021-09-17 09:37:23 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:37:23 --> Input Class Initialized
+INFO - 2021-09-17 09:37:23 --> Language Class Initialized
+INFO - 2021-09-17 09:37:23 --> Loader Class Initialized
+INFO - 2021-09-17 09:37:23 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:37:23 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:37:23 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:37:23 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:37:23 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:37:23 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:37:23 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:37:23 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:37:23 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:37:23 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:37:23 --> Final output sent to browser
+DEBUG - 2021-09-17 09:37:23 --> Total execution time: 0.0302
+INFO - 2021-09-17 09:37:23 --> Config Class Initialized
+INFO - 2021-09-17 09:37:23 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:37:23 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:37:23 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:37:23 --> URI Class Initialized
+INFO - 2021-09-17 09:37:23 --> Router Class Initialized
+INFO - 2021-09-17 09:37:23 --> Output Class Initialized
+INFO - 2021-09-17 09:37:23 --> Security Class Initialized
+DEBUG - 2021-09-17 09:37:23 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:37:23 --> Input Class Initialized
+INFO - 2021-09-17 09:37:23 --> Language Class Initialized
+INFO - 2021-09-17 09:37:23 --> Loader Class Initialized
+INFO - 2021-09-17 09:37:23 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:37:23 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:37:23 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:37:23 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:37:23 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:37:23 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:37:23 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:37:23 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:37:23 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:37:23 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:37:23 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:37:23 --> Final output sent to browser
+DEBUG - 2021-09-17 09:37:23 --> Total execution time: 0.0129
+INFO - 2021-09-17 09:37:23 --> Config Class Initialized
+INFO - 2021-09-17 09:37:23 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:37:23 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:37:23 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:37:23 --> URI Class Initialized
+INFO - 2021-09-17 09:37:23 --> Router Class Initialized
+INFO - 2021-09-17 09:37:23 --> Output Class Initialized
+INFO - 2021-09-17 09:37:23 --> Security Class Initialized
+DEBUG - 2021-09-17 09:37:23 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:37:23 --> Input Class Initialized
+INFO - 2021-09-17 09:37:23 --> Language Class Initialized
+INFO - 2021-09-17 09:37:23 --> Loader Class Initialized
+INFO - 2021-09-17 09:37:23 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:37:23 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:37:23 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:37:23 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:37:23 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:37:23 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:37:23 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:37:23 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:37:23 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:37:23 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:37:23 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:37:23 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:37:23 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:37:23 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:37:23 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:37:23 --> Model "Mod_classdir" initialized
+INFO - 2021-09-17 09:37:23 --> Helper loaded: file_helper
+INFO - 2021-09-17 09:37:23 --> Helper loaded: directory_helper
+INFO - 2021-09-17 09:37:23 --> Helper loaded: xmlhandler_helper
+INFO - 2021-09-17 09:37:23 --> Helper loaded: quiztemplate_helper
+INFO - 2021-09-17 09:37:23 --> Helper loaded: sheaf_helper
+DEBUG - 2021-09-17 09:37:23 --> Db_config class already loaded. Second attempt ignored.
+INFO - 2021-09-17 09:37:23 --> Helper loaded: create_lexicon_helper
+INFO - 2021-09-17 09:37:23 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:37:23 --> Model "Mod_localize" initialized
+ERROR - 2021-09-17 09:37:23 --> Could not find the language line "quiz"
+INFO - 2021-09-17 09:37:23 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:37:23 --> File loaded: /var/www/BibleOL/myapp/views/view_font_css.php
+INFO - 2021-09-17 09:37:23 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+ERROR - 2021-09-17 09:37:23 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:37:23 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:37:23 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:37:23 --> Could not find the language line "finish_no_grading"
+ERROR - 2021-09-17 09:37:23 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:37:23 --> Helper loaded: icon_helper
+ERROR - 2021-09-17 09:37:23 --> Could not find the language line "locate"
+ERROR - 2021-09-17 09:37:23 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:37:23 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:37:23 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:37:23 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:37:23 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_display.php
+INFO - 2021-09-17 09:37:23 --> Final output sent to browser
+DEBUG - 2021-09-17 09:37:23 --> Total execution time: 0.5935
+INFO - 2021-09-17 09:44:22 --> Config Class Initialized
+INFO - 2021-09-17 09:44:23 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:44:23 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:44:23 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:44:23 --> URI Class Initialized
+INFO - 2021-09-17 09:44:23 --> Router Class Initialized
+INFO - 2021-09-17 09:44:23 --> Output Class Initialized
+INFO - 2021-09-17 09:44:23 --> Security Class Initialized
+DEBUG - 2021-09-17 09:44:23 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:44:23 --> Input Class Initialized
+INFO - 2021-09-17 09:44:23 --> Language Class Initialized
+INFO - 2021-09-17 09:44:23 --> Loader Class Initialized
+INFO - 2021-09-17 09:44:23 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:44:23 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:44:23 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:44:23 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:44:23 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:44:23 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:44:23 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:44:23 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:44:23 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:44:23 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:44:23 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:44:23 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:44:23 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:44:23 --> Helper loaded: varset_helper
+ERROR - 2021-09-17 09:44:23 --> Severity: Notice --> Undefined variable: row /var/www/BibleOL/myapp/controllers/Ctrl_exams.php 585
+ERROR - 2021-09-17 09:44:23 --> Severity: Notice --> Trying to get property 'exam_length' of non-object /var/www/BibleOL/myapp/controllers/Ctrl_exams.php 585
+ERROR - 2021-09-17 09:44:23 --> Severity: Notice --> Undefined variable: row /var/www/BibleOL/myapp/controllers/Ctrl_exams.php 586
+ERROR - 2021-09-17 09:44:23 --> Severity: Notice --> Trying to get property 'exam_end_time' of non-object /var/www/BibleOL/myapp/controllers/Ctrl_exams.php 586
+INFO - 2021-09-17 09:44:23 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:44:23 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:44:23 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+INFO - 2021-09-17 09:44:23 --> File loaded: /var/www/BibleOL/myapp/views/view_menu_bar.php
+INFO - 2021-09-17 09:44:23 --> File loaded: /var/www/BibleOL/myapp/views/view_confirm_dialog.php
+INFO - 2021-09-17 09:44:23 --> File loaded: /var/www/BibleOL/myapp/views/view_alert_dialog.php
+INFO - 2021-09-17 09:44:23 --> File loaded: /var/www/BibleOL/myapp/views/view_take_exam.php
+ERROR - 2021-09-17 09:44:23 --> Could not find the language line "take_exam_description"
+INFO - 2021-09-17 09:44:23 --> File loaded: /var/www/BibleOL/myapp/views/view_main_page.php
+INFO - 2021-09-17 09:44:23 --> File loaded: /var/www/BibleOL/myapp/views/view_bottom.php
+INFO - 2021-09-17 09:44:23 --> Final output sent to browser
+DEBUG - 2021-09-17 09:44:23 --> Total execution time: 0.2881
+INFO - 2021-09-17 09:44:23 --> Config Class Initialized
+INFO - 2021-09-17 09:44:23 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:44:23 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:44:23 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:44:23 --> URI Class Initialized
+INFO - 2021-09-17 09:44:23 --> Router Class Initialized
+INFO - 2021-09-17 09:44:23 --> Output Class Initialized
+INFO - 2021-09-17 09:44:23 --> Security Class Initialized
+DEBUG - 2021-09-17 09:44:23 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:44:23 --> Input Class Initialized
+INFO - 2021-09-17 09:44:23 --> Language Class Initialized
+INFO - 2021-09-17 09:44:23 --> Loader Class Initialized
+INFO - 2021-09-17 09:44:23 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:44:23 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:44:23 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:44:23 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:44:23 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:44:23 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:44:23 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:44:23 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:44:23 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:44:23 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:44:23 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:44:23 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:44:23 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:44:23 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:44:23 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:44:23 --> Model "Mod_classdir" initialized
+INFO - 2021-09-17 09:44:23 --> Helper loaded: file_helper
+INFO - 2021-09-17 09:44:23 --> Helper loaded: directory_helper
+INFO - 2021-09-17 09:44:23 --> Helper loaded: xmlhandler_helper
+INFO - 2021-09-17 09:44:23 --> Helper loaded: quiztemplate_helper
+INFO - 2021-09-17 09:44:23 --> Helper loaded: sheaf_helper
+DEBUG - 2021-09-17 09:44:23 --> Db_config class already loaded. Second attempt ignored.
+INFO - 2021-09-17 09:44:23 --> Helper loaded: create_lexicon_helper
+INFO - 2021-09-17 09:44:23 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:44:24 --> Model "Mod_localize" initialized
+ERROR - 2021-09-17 09:44:24 --> Could not find the language line "quiz"
+INFO - 2021-09-17 09:44:24 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:44:24 --> File loaded: /var/www/BibleOL/myapp/views/view_font_css.php
+INFO - 2021-09-17 09:44:24 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+ERROR - 2021-09-17 09:44:24 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:44:24 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:44:24 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:44:24 --> Could not find the language line "finish_no_grading"
+ERROR - 2021-09-17 09:44:24 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:44:24 --> Helper loaded: icon_helper
+ERROR - 2021-09-17 09:44:24 --> Could not find the language line "locate"
+ERROR - 2021-09-17 09:44:24 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:44:24 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:44:24 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:44:24 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:44:24 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_display.php
+INFO - 2021-09-17 09:44:24 --> Final output sent to browser
+DEBUG - 2021-09-17 09:44:24 --> Total execution time: 1.0524
+INFO - 2021-09-17 09:45:10 --> Config Class Initialized
+INFO - 2021-09-17 09:45:10 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:45:10 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:45:10 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:45:10 --> URI Class Initialized
+INFO - 2021-09-17 09:45:10 --> Router Class Initialized
+INFO - 2021-09-17 09:45:10 --> Output Class Initialized
+INFO - 2021-09-17 09:45:10 --> Security Class Initialized
+DEBUG - 2021-09-17 09:45:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:45:10 --> Input Class Initialized
+INFO - 2021-09-17 09:45:10 --> Language Class Initialized
+INFO - 2021-09-17 09:45:10 --> Loader Class Initialized
+INFO - 2021-09-17 09:45:10 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:45:10 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:45:10 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:45:10 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:45:10 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:45:10 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:45:10 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:45:10 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:45:10 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:45:10 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:45:10 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:45:10 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:45:10 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:45:10 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:45:10 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:45:10 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:45:10 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+INFO - 2021-09-17 09:45:10 --> File loaded: /var/www/BibleOL/myapp/views/view_menu_bar.php
+INFO - 2021-09-17 09:45:10 --> File loaded: /var/www/BibleOL/myapp/views/view_confirm_dialog.php
+INFO - 2021-09-17 09:45:10 --> File loaded: /var/www/BibleOL/myapp/views/view_alert_dialog.php
+INFO - 2021-09-17 09:45:10 --> File loaded: /var/www/BibleOL/myapp/views/view_take_exam.php
+ERROR - 2021-09-17 09:45:10 --> Could not find the language line "take_exam_description"
+INFO - 2021-09-17 09:45:10 --> File loaded: /var/www/BibleOL/myapp/views/view_main_page.php
+INFO - 2021-09-17 09:45:10 --> File loaded: /var/www/BibleOL/myapp/views/view_bottom.php
+INFO - 2021-09-17 09:45:10 --> Final output sent to browser
+DEBUG - 2021-09-17 09:45:10 --> Total execution time: 0.0143
+INFO - 2021-09-17 09:45:10 --> Config Class Initialized
+INFO - 2021-09-17 09:45:10 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:45:10 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:45:10 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:45:10 --> URI Class Initialized
+INFO - 2021-09-17 09:45:10 --> Router Class Initialized
+INFO - 2021-09-17 09:45:10 --> Output Class Initialized
+INFO - 2021-09-17 09:45:10 --> Security Class Initialized
+DEBUG - 2021-09-17 09:45:10 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:45:10 --> Input Class Initialized
+INFO - 2021-09-17 09:45:10 --> Language Class Initialized
+INFO - 2021-09-17 09:45:10 --> Loader Class Initialized
+INFO - 2021-09-17 09:45:10 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:45:10 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:45:10 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:45:10 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:45:10 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:45:10 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:45:10 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:45:10 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:45:10 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:45:10 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:45:10 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:45:10 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:45:10 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:45:10 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:45:10 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:45:10 --> Model "Mod_classdir" initialized
+INFO - 2021-09-17 09:45:10 --> Helper loaded: file_helper
+INFO - 2021-09-17 09:45:10 --> Helper loaded: directory_helper
+INFO - 2021-09-17 09:45:10 --> Helper loaded: xmlhandler_helper
+INFO - 2021-09-17 09:45:10 --> Helper loaded: quiztemplate_helper
+INFO - 2021-09-17 09:45:10 --> Helper loaded: sheaf_helper
+DEBUG - 2021-09-17 09:45:10 --> Db_config class already loaded. Second attempt ignored.
+INFO - 2021-09-17 09:45:10 --> Helper loaded: create_lexicon_helper
+INFO - 2021-09-17 09:45:10 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:45:11 --> Model "Mod_localize" initialized
+ERROR - 2021-09-17 09:45:11 --> Could not find the language line "quiz"
+INFO - 2021-09-17 09:45:11 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:45:11 --> File loaded: /var/www/BibleOL/myapp/views/view_font_css.php
+INFO - 2021-09-17 09:45:11 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+ERROR - 2021-09-17 09:45:11 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:45:11 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:45:11 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:45:11 --> Could not find the language line "finish_no_grading"
+ERROR - 2021-09-17 09:45:11 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:45:11 --> Helper loaded: icon_helper
+ERROR - 2021-09-17 09:45:11 --> Could not find the language line "locate"
+ERROR - 2021-09-17 09:45:11 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:45:11 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:45:11 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:45:11 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:45:11 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_display.php
+INFO - 2021-09-17 09:45:11 --> Final output sent to browser
+DEBUG - 2021-09-17 09:45:11 --> Total execution time: 1.1308
+INFO - 2021-09-17 09:45:17 --> Config Class Initialized
+INFO - 2021-09-17 09:45:17 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:45:17 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:45:17 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:45:17 --> URI Class Initialized
+INFO - 2021-09-17 09:45:17 --> Router Class Initialized
+INFO - 2021-09-17 09:45:17 --> Output Class Initialized
+INFO - 2021-09-17 09:45:17 --> Security Class Initialized
+DEBUG - 2021-09-17 09:45:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:45:17 --> Input Class Initialized
+INFO - 2021-09-17 09:45:17 --> Language Class Initialized
+INFO - 2021-09-17 09:45:17 --> Loader Class Initialized
+INFO - 2021-09-17 09:45:17 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:45:17 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:45:17 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:45:17 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:45:17 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:45:17 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:45:17 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:45:17 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:45:17 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:45:17 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:45:17 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:45:17 --> Final output sent to browser
+DEBUG - 2021-09-17 09:45:17 --> Total execution time: 0.0650
+INFO - 2021-09-17 09:45:17 --> Config Class Initialized
+INFO - 2021-09-17 09:45:17 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:45:17 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:45:17 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:45:17 --> URI Class Initialized
+INFO - 2021-09-17 09:45:17 --> Router Class Initialized
+INFO - 2021-09-17 09:45:17 --> Output Class Initialized
+INFO - 2021-09-17 09:45:17 --> Security Class Initialized
+DEBUG - 2021-09-17 09:45:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:45:17 --> Input Class Initialized
+INFO - 2021-09-17 09:45:17 --> Language Class Initialized
+INFO - 2021-09-17 09:45:17 --> Loader Class Initialized
+INFO - 2021-09-17 09:45:17 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:45:17 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:45:17 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:45:17 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:45:17 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:45:17 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:45:17 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:45:17 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:45:17 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:45:17 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:45:17 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:45:17 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:45:17 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:45:17 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:45:17 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:45:17 --> Model "Mod_classdir" initialized
+INFO - 2021-09-17 09:45:17 --> Helper loaded: file_helper
+INFO - 2021-09-17 09:45:17 --> Helper loaded: directory_helper
+INFO - 2021-09-17 09:45:17 --> Helper loaded: xmlhandler_helper
+INFO - 2021-09-17 09:45:17 --> Helper loaded: quiztemplate_helper
+INFO - 2021-09-17 09:45:17 --> Helper loaded: sheaf_helper
+DEBUG - 2021-09-17 09:45:17 --> Db_config class already loaded. Second attempt ignored.
+INFO - 2021-09-17 09:45:17 --> Helper loaded: create_lexicon_helper
+INFO - 2021-09-17 09:45:17 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:45:17 --> Config Class Initialized
+INFO - 2021-09-17 09:45:17 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:45:17 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:45:17 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:45:17 --> URI Class Initialized
+INFO - 2021-09-17 09:45:17 --> Router Class Initialized
+INFO - 2021-09-17 09:45:17 --> Output Class Initialized
+INFO - 2021-09-17 09:45:17 --> Security Class Initialized
+DEBUG - 2021-09-17 09:45:17 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:45:17 --> Input Class Initialized
+INFO - 2021-09-17 09:45:17 --> Language Class Initialized
+INFO - 2021-09-17 09:45:17 --> Loader Class Initialized
+INFO - 2021-09-17 09:45:17 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:45:17 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:45:17 --> Model "Mod_localize" initialized
+ERROR - 2021-09-17 09:45:17 --> Could not find the language line "quiz"
+INFO - 2021-09-17 09:45:17 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:45:17 --> File loaded: /var/www/BibleOL/myapp/views/view_font_css.php
+INFO - 2021-09-17 09:45:17 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+ERROR - 2021-09-17 09:45:17 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:45:17 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:45:17 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:45:17 --> Could not find the language line "finish_no_grading"
+ERROR - 2021-09-17 09:45:17 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:45:17 --> Helper loaded: icon_helper
+ERROR - 2021-09-17 09:45:17 --> Could not find the language line "locate"
+ERROR - 2021-09-17 09:45:17 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:45:17 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:45:17 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:45:17 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:45:17 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_display.php
+INFO - 2021-09-17 09:45:17 --> Final output sent to browser
+DEBUG - 2021-09-17 09:45:17 --> Total execution time: 0.6217
+INFO - 2021-09-17 09:45:17 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:45:17 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:45:17 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:45:18 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:45:18 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:45:18 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:45:18 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:45:18 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:45:18 --> Final output sent to browser
+DEBUG - 2021-09-17 09:45:18 --> Total execution time: 0.8863
+INFO - 2021-09-17 09:48:45 --> Config Class Initialized
+INFO - 2021-09-17 09:48:45 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:48:45 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:48:45 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:48:45 --> URI Class Initialized
+INFO - 2021-09-17 09:48:45 --> Router Class Initialized
+INFO - 2021-09-17 09:48:45 --> Output Class Initialized
+INFO - 2021-09-17 09:48:45 --> Security Class Initialized
+DEBUG - 2021-09-17 09:48:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:48:45 --> Input Class Initialized
+INFO - 2021-09-17 09:48:45 --> Language Class Initialized
+INFO - 2021-09-17 09:48:45 --> Loader Class Initialized
+INFO - 2021-09-17 09:48:45 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:48:45 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:48:45 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:48:45 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:48:45 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:48:45 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:48:45 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:48:45 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:48:45 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:48:45 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:48:45 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:48:45 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:48:45 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:48:45 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:48:45 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:48:45 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:48:45 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+INFO - 2021-09-17 09:48:45 --> File loaded: /var/www/BibleOL/myapp/views/view_menu_bar.php
+INFO - 2021-09-17 09:48:45 --> File loaded: /var/www/BibleOL/myapp/views/view_confirm_dialog.php
+INFO - 2021-09-17 09:48:45 --> File loaded: /var/www/BibleOL/myapp/views/view_alert_dialog.php
+INFO - 2021-09-17 09:48:45 --> File loaded: /var/www/BibleOL/myapp/views/view_take_exam.php
+ERROR - 2021-09-17 09:48:45 --> Could not find the language line "take_exam_description"
+INFO - 2021-09-17 09:48:45 --> File loaded: /var/www/BibleOL/myapp/views/view_main_page.php
+INFO - 2021-09-17 09:48:45 --> File loaded: /var/www/BibleOL/myapp/views/view_bottom.php
+INFO - 2021-09-17 09:48:45 --> Final output sent to browser
+DEBUG - 2021-09-17 09:48:45 --> Total execution time: 0.0160
+INFO - 2021-09-17 09:48:45 --> Config Class Initialized
+INFO - 2021-09-17 09:48:45 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:48:45 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:48:45 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:48:45 --> URI Class Initialized
+INFO - 2021-09-17 09:48:45 --> Router Class Initialized
+INFO - 2021-09-17 09:48:45 --> Output Class Initialized
+INFO - 2021-09-17 09:48:45 --> Security Class Initialized
+DEBUG - 2021-09-17 09:48:45 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:48:45 --> Input Class Initialized
+INFO - 2021-09-17 09:48:45 --> Language Class Initialized
+INFO - 2021-09-17 09:48:45 --> Loader Class Initialized
+INFO - 2021-09-17 09:48:45 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:48:45 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:48:45 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:48:45 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:48:45 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:48:45 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:48:45 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:48:45 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:48:45 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:48:45 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:48:45 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:48:45 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:48:45 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:48:45 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:48:45 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:48:45 --> Model "Mod_classdir" initialized
+INFO - 2021-09-17 09:48:45 --> Helper loaded: file_helper
+INFO - 2021-09-17 09:48:45 --> Helper loaded: directory_helper
+INFO - 2021-09-17 09:48:45 --> Helper loaded: xmlhandler_helper
+INFO - 2021-09-17 09:48:45 --> Helper loaded: quiztemplate_helper
+INFO - 2021-09-17 09:48:45 --> Helper loaded: sheaf_helper
+DEBUG - 2021-09-17 09:48:45 --> Db_config class already loaded. Second attempt ignored.
+INFO - 2021-09-17 09:48:45 --> Helper loaded: create_lexicon_helper
+INFO - 2021-09-17 09:48:45 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:48:46 --> Model "Mod_localize" initialized
+ERROR - 2021-09-17 09:48:46 --> Could not find the language line "quiz"
+INFO - 2021-09-17 09:48:46 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:48:46 --> File loaded: /var/www/BibleOL/myapp/views/view_font_css.php
+INFO - 2021-09-17 09:48:46 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+ERROR - 2021-09-17 09:48:46 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:48:46 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:48:46 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:48:46 --> Could not find the language line "finish_no_grading"
+ERROR - 2021-09-17 09:48:46 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:48:46 --> Helper loaded: icon_helper
+ERROR - 2021-09-17 09:48:46 --> Could not find the language line "locate"
+ERROR - 2021-09-17 09:48:46 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:48:46 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:48:46 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:48:46 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:48:46 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_display.php
+INFO - 2021-09-17 09:48:46 --> Final output sent to browser
+DEBUG - 2021-09-17 09:48:46 --> Total execution time: 1.0703
+INFO - 2021-09-17 09:48:49 --> Config Class Initialized
+INFO - 2021-09-17 09:48:49 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:48:49 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:48:49 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:48:49 --> URI Class Initialized
+INFO - 2021-09-17 09:48:49 --> Router Class Initialized
+INFO - 2021-09-17 09:48:49 --> Output Class Initialized
+INFO - 2021-09-17 09:48:49 --> Security Class Initialized
+DEBUG - 2021-09-17 09:48:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:48:49 --> Input Class Initialized
+INFO - 2021-09-17 09:48:49 --> Language Class Initialized
+INFO - 2021-09-17 09:48:49 --> Loader Class Initialized
+INFO - 2021-09-17 09:48:49 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:48:49 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:48:49 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:48:49 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:48:49 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:48:49 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:48:49 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:48:49 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:48:49 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:48:49 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:48:49 --> Config Class Initialized
+INFO - 2021-09-17 09:48:49 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:48:49 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:48:49 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:48:49 --> URI Class Initialized
+INFO - 2021-09-17 09:48:49 --> Router Class Initialized
+INFO - 2021-09-17 09:48:49 --> Output Class Initialized
+INFO - 2021-09-17 09:48:49 --> Security Class Initialized
+DEBUG - 2021-09-17 09:48:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:48:49 --> Input Class Initialized
+INFO - 2021-09-17 09:48:49 --> Language Class Initialized
+INFO - 2021-09-17 09:48:49 --> Loader Class Initialized
+INFO - 2021-09-17 09:48:49 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:48:49 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:48:49 --> Final output sent to browser
+DEBUG - 2021-09-17 09:48:49 --> Total execution time: 0.0327
+INFO - 2021-09-17 09:48:49 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:48:49 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:48:49 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:48:49 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:48:49 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:48:49 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:48:49 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:48:49 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:48:49 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:48:49 --> Final output sent to browser
+DEBUG - 2021-09-17 09:48:49 --> Total execution time: 0.0332
+INFO - 2021-09-17 09:48:49 --> Config Class Initialized
+INFO - 2021-09-17 09:48:49 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:48:49 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:48:49 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:48:49 --> URI Class Initialized
+INFO - 2021-09-17 09:48:49 --> Router Class Initialized
+INFO - 2021-09-17 09:48:49 --> Output Class Initialized
+INFO - 2021-09-17 09:48:49 --> Security Class Initialized
+DEBUG - 2021-09-17 09:48:49 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:48:49 --> Input Class Initialized
+INFO - 2021-09-17 09:48:49 --> Language Class Initialized
+INFO - 2021-09-17 09:48:49 --> Loader Class Initialized
+INFO - 2021-09-17 09:48:49 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:48:49 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:48:49 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:48:49 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:48:49 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:48:49 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:48:49 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:48:49 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:48:49 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:48:49 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:48:49 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:48:49 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:48:49 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:48:49 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:48:49 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:48:49 --> Model "Mod_classdir" initialized
+INFO - 2021-09-17 09:48:49 --> Helper loaded: file_helper
+INFO - 2021-09-17 09:48:49 --> Helper loaded: directory_helper
+INFO - 2021-09-17 09:48:49 --> Helper loaded: xmlhandler_helper
+INFO - 2021-09-17 09:48:49 --> Helper loaded: quiztemplate_helper
+INFO - 2021-09-17 09:48:49 --> Helper loaded: sheaf_helper
+DEBUG - 2021-09-17 09:48:49 --> Db_config class already loaded. Second attempt ignored.
+INFO - 2021-09-17 09:48:49 --> Helper loaded: create_lexicon_helper
+INFO - 2021-09-17 09:48:49 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:48:49 --> Model "Mod_localize" initialized
+ERROR - 2021-09-17 09:48:49 --> Could not find the language line "quiz"
+INFO - 2021-09-17 09:48:49 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:48:49 --> File loaded: /var/www/BibleOL/myapp/views/view_font_css.php
+INFO - 2021-09-17 09:48:49 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+ERROR - 2021-09-17 09:48:49 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:48:49 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:48:49 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:48:49 --> Could not find the language line "finish_no_grading"
+ERROR - 2021-09-17 09:48:49 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:48:49 --> Helper loaded: icon_helper
+ERROR - 2021-09-17 09:48:49 --> Could not find the language line "locate"
+ERROR - 2021-09-17 09:48:49 --> Could not find the language line "progress"
+ERROR - 2021-09-17 09:48:49 --> Could not find the language line "next"
+ERROR - 2021-09-17 09:48:49 --> Could not find the language line "finish"
+ERROR - 2021-09-17 09:48:49 --> Could not find the language line "toggle_mql"
+INFO - 2021-09-17 09:48:49 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_display.php
+INFO - 2021-09-17 09:48:49 --> Final output sent to browser
+DEBUG - 2021-09-17 09:48:49 --> Total execution time: 0.6592
+INFO - 2021-09-17 09:49:00 --> Config Class Initialized
+INFO - 2021-09-17 09:49:00 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:49:00 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:49:00 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:49:00 --> URI Class Initialized
+INFO - 2021-09-17 09:49:00 --> Router Class Initialized
+INFO - 2021-09-17 09:49:00 --> Output Class Initialized
+INFO - 2021-09-17 09:49:00 --> Security Class Initialized
+DEBUG - 2021-09-17 09:49:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:49:00 --> Input Class Initialized
+INFO - 2021-09-17 09:49:00 --> Language Class Initialized
+INFO - 2021-09-17 09:49:00 --> Loader Class Initialized
+INFO - 2021-09-17 09:49:00 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:49:00 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:49:00 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:49:00 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:49:00 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:49:00 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:49:00 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:49:00 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:49:00 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:49:00 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:49:00 --> Config Class Initialized
+INFO - 2021-09-17 09:49:00 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:49:00 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:49:00 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:49:00 --> URI Class Initialized
+INFO - 2021-09-17 09:49:00 --> Router Class Initialized
+INFO - 2021-09-17 09:49:00 --> Output Class Initialized
+INFO - 2021-09-17 09:49:00 --> Security Class Initialized
+DEBUG - 2021-09-17 09:49:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:49:00 --> Input Class Initialized
+INFO - 2021-09-17 09:49:00 --> Language Class Initialized
+INFO - 2021-09-17 09:49:00 --> Loader Class Initialized
+INFO - 2021-09-17 09:49:00 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:49:00 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:49:00 --> Final output sent to browser
+DEBUG - 2021-09-17 09:49:00 --> Total execution time: 0.0472
+INFO - 2021-09-17 09:49:00 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:49:00 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:49:00 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:49:00 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:49:00 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:49:00 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:49:00 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:49:00 --> Model "Mod_statistics" initialized
+INFO - 2021-09-17 09:49:00 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:49:00 --> Final output sent to browser
+DEBUG - 2021-09-17 09:49:00 --> Total execution time: 0.0439
+INFO - 2021-09-17 09:49:00 --> Config Class Initialized
+INFO - 2021-09-17 09:49:00 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:49:00 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:49:00 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:49:00 --> URI Class Initialized
+INFO - 2021-09-17 09:49:00 --> Router Class Initialized
+INFO - 2021-09-17 09:49:00 --> Output Class Initialized
+INFO - 2021-09-17 09:49:00 --> Security Class Initialized
+DEBUG - 2021-09-17 09:49:00 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:49:00 --> Input Class Initialized
+INFO - 2021-09-17 09:49:00 --> Language Class Initialized
+INFO - 2021-09-17 09:49:00 --> Loader Class Initialized
+INFO - 2021-09-17 09:49:00 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:49:00 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:49:00 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:49:00 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:49:00 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:49:00 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:49:00 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:49:00 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:49:00 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:49:00 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:49:00 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:49:00 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:49:00 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:49:00 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:49:00 --> File loaded: /var/www/BibleOL/myapp/views/view_exam_done.php
+INFO - 2021-09-17 09:49:00 --> Final output sent to browser
+DEBUG - 2021-09-17 09:49:00 --> Total execution time: 0.0072
+INFO - 2021-09-17 09:55:08 --> Config Class Initialized
+INFO - 2021-09-17 09:55:08 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:55:08 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:55:08 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:55:08 --> URI Class Initialized
+INFO - 2021-09-17 09:55:08 --> Router Class Initialized
+INFO - 2021-09-17 09:55:08 --> Output Class Initialized
+INFO - 2021-09-17 09:55:08 --> Security Class Initialized
+DEBUG - 2021-09-17 09:55:08 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:55:08 --> Input Class Initialized
+INFO - 2021-09-17 09:55:08 --> Language Class Initialized
+INFO - 2021-09-17 09:55:08 --> Loader Class Initialized
+INFO - 2021-09-17 09:55:08 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:55:08 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:55:08 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:55:08 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:55:08 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:55:08 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:55:08 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:55:08 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:55:08 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:55:08 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:55:08 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:55:08 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:55:08 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:55:08 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:55:09 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:55:09 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+INFO - 2021-09-17 09:55:09 --> File loaded: /var/www/BibleOL/myapp/views/view_menu_bar.php
+INFO - 2021-09-17 09:55:09 --> File loaded: /var/www/BibleOL/myapp/views/view_confirm_dialog.php
+INFO - 2021-09-17 09:55:09 --> File loaded: /var/www/BibleOL/myapp/views/view_alert_dialog.php
+ERROR - 2021-09-17 09:55:09 --> Could not find the language line "create_exam_instance"
+ERROR - 2021-09-17 09:55:09 --> Could not find the language line "create_exam_instance"
+ERROR - 2021-09-17 09:55:09 --> Could not find the language line "create_exam_instance"
+ERROR - 2021-09-17 09:55:09 --> Could not find the language line "create_exam_instance"
+ERROR - 2021-09-17 09:55:09 --> Could not find the language line "create_exam_instance"
+ERROR - 2021-09-17 09:55:09 --> Could not find the language line "timezone"
+INFO - 2021-09-17 09:55:09 --> File loaded: /var/www/BibleOL/myapp/views/view_manage_exams.php
+INFO - 2021-09-17 09:55:09 --> File loaded: /var/www/BibleOL/myapp/views/view_main_page.php
+INFO - 2021-09-17 09:55:09 --> File loaded: /var/www/BibleOL/myapp/views/view_bottom.php
+INFO - 2021-09-17 09:55:09 --> Final output sent to browser
+DEBUG - 2021-09-17 09:55:09 --> Total execution time: 0.2113
+INFO - 2021-09-17 09:55:22 --> Config Class Initialized
+INFO - 2021-09-17 09:55:22 --> Hooks Class Initialized
+DEBUG - 2021-09-17 09:55:22 --> UTF-8 Support Enabled
+INFO - 2021-09-17 09:55:22 --> Utf8 Class Initialized
+INFO - 2021-09-17 09:55:22 --> URI Class Initialized
+INFO - 2021-09-17 09:55:22 --> Router Class Initialized
+INFO - 2021-09-17 09:55:22 --> Output Class Initialized
+INFO - 2021-09-17 09:55:22 --> Security Class Initialized
+DEBUG - 2021-09-17 09:55:22 --> Global POST, GET and COOKIE data sanitized
+INFO - 2021-09-17 09:55:22 --> Input Class Initialized
+INFO - 2021-09-17 09:55:22 --> Language Class Initialized
+INFO - 2021-09-17 09:55:22 --> Loader Class Initialized
+INFO - 2021-09-17 09:55:22 --> Controller Class Initialized
+DEBUG - 2021-09-17 09:55:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+INFO - 2021-09-17 09:55:22 --> Session: Class initialized using 'files' driver.
+DEBUG - 2021-09-17 09:55:22 --> Config file loaded: /var/www/BibleOL/myapp/config/ol.php
+INFO - 2021-09-17 09:55:22 --> Database Driver Class Initialized
+INFO - 2021-09-17 09:55:22 --> Model "Mod_users" initialized
+INFO - 2021-09-17 09:55:22 --> Helper loaded: url_helper
+INFO - 2021-09-17 09:55:22 --> Helper loaded: myurl_helper
+INFO - 2021-09-17 09:55:22 --> Helper loaded: translation_helper
+INFO - 2021-09-17 09:55:22 --> Model "Mod_classes" initialized
+INFO - 2021-09-17 09:55:22 --> Model "Mod_exams" initialized
+INFO - 2021-09-17 09:55:22 --> Model "Mod_quizpath" initialized
+INFO - 2021-09-17 09:55:22 --> Model "Mod_userclass" initialized
+INFO - 2021-09-17 09:55:22 --> Helper loaded: varset_helper
+INFO - 2021-09-17 09:55:22 --> Model "Mod_askemdros" initialized
+INFO - 2021-09-17 09:55:22 --> Helper loaded: file_helper
+INFO - 2021-09-17 09:55:22 --> Helper loaded: directory_helper
+INFO - 2021-09-17 09:55:22 --> Helper loaded: create_lexicon_helper
+INFO - 2021-09-17 09:55:22 --> File loaded: /var/www/BibleOL/myapp/views/view_top1.php
+INFO - 2021-09-17 09:55:22 --> File loaded: /var/www/BibleOL/myapp/views/view_top2.php
+INFO - 2021-09-17 09:55:22 --> File loaded: /var/www/BibleOL/myapp/views/view_menu_bar.php
+INFO - 2021-09-17 09:55:22 --> File loaded: /var/www/BibleOL/myapp/views/view_confirm_dialog.php
+INFO - 2021-09-17 09:55:22 --> File loaded: /var/www/BibleOL/myapp/views/view_alert_dialog.php
+INFO - 2021-09-17 09:55:22 --> File loaded: /var/www/BibleOL/myapp/views/view_new_exam.php
+INFO - 2021-09-17 09:55:22 --> File loaded: /var/www/BibleOL/myapp/views/view_main_page.php
+INFO - 2021-09-17 09:55:22 --> File loaded: /var/www/BibleOL/myapp/views/view_bottom.php
+INFO - 2021-09-17 09:55:22 --> Final output sent to browser
+DEBUG - 2021-09-17 09:55:22 --> Total execution time: 0.1496

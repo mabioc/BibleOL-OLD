@@ -67,12 +67,23 @@ class Ctrl_statistics extends MY_Controller {
     }
 
     public function update_exam_quiz_stat() {
+      $this->load->model('mod_exams');
+
       $data = array(
         'userid' => $this->mod_users->my_id(),
-        'examid' => $this->input->get('examid'),
+        'activeexamid' => $this->input->get('examid'),
         'quizid' => $this->input->get('quizid'),
+        'quiztemplid' => $this->mod_exams->get_template_id($this->input->get('quizid')),
       );
       $this->db->insert('bol_exam_results', $data);
+
+      if (!$this->input->get('exercise_lst')) {
+        $data = array(
+          'userid' => $this->mod_users->my_id(),
+          'activeexamid' => $this->input->get('examid')
+        );
+        $this->db->insert('bol_exam_finished', $data);
+      }
     }
 
     public function student_time() {

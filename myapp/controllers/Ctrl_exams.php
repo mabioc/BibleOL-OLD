@@ -83,7 +83,8 @@ class Ctrl_exams extends MY_Controller
           foreach ($active_exam_query as $exam_row) {
             if ($exam_row->exam_end_time > time()){
               if ($exam_row->exam_start_time <= time()){
-                array_push($active_exams_list, $exam_row);
+                $exam_finished_query = $this->db->get_where('exam_finished', array('userid' => $user_id, 'activeexamid' => $exam_row->id));
+                if (!$exam_finished_query->row()) array_push($active_exams_list, $exam_row);
               } else {
                 array_push($future_exams_list, $exam_row);
               }
@@ -578,19 +579,19 @@ class Ctrl_exams extends MY_Controller
 
         $user_id = $this->mod_users->my_id();
 
-        $query = $this->db->get_where('bol_exam_active', array('id' => $_GET['exam']));
-        $row = $query->row();
-        $exam_id = $row->exam_id;
+        $active_exam_id = $_GET['exam'];
+        $active_exam = $this->mod_exams->get_active_exam($active_exam_id);
+        $exam_id = $active_exam->exam_id;
 
         $now = time();
-        if ($row->exam_length == 0) {
-          $deadline = $row->exam_end_time;
+        if ($active_exam->exam_length == 0) {
+          $deadline = $active_exam->exam_end_time;
         }
         else {
-          $deadline = $now + ($row->exam_length * 60);
+          $deadline = $now + ($active_exam->exam_length * 60);
         }
 
-        $query_status = $this->db->get_where('bol_exam_status', array('userid' => $user_id, 'examid' => $_GET['exam']));
+        $query_status = $this->db->get_where('bol_exam_status', array('userid' => $user_id, 'activeexamid' => $_GET['exam']));
         $status_row = $query_status->row();
         if ($status_row) {
           $deadline = $status_row->deadline;
@@ -598,38 +599,36 @@ class Ctrl_exams extends MY_Controller
         else {
           $data = array(
             'userid' => $user_id,
-            'examid' => $_GET['exam'],
+            'activeexamid' => $active_exam_id,
             'start_time' => $now,
             'deadline' => $deadline
           );
           $this->db->insert('bol_exam_status', $data);
         }
 
-        $query2 = $this->db->get_where('bol_exam', array('id' => $exam_id));
-        $row2 = $query2->row();
-        $examcode = $row2->examcode;
+        $completed = $this->mod_exams->get_completed_exam_exercises($user_id, $active_exam_id);
+
+        $examcode = $this->mod_exams->get_exam_by_id($exam_id)->examcode;
         $xml = simplexml_load_string($examcode);
 
         $exercise_parameters = array();
 
-        // $newdata = array(
-        //   'xml' => $xml
-        // );
-
         $exercises = array();
         foreach ($xml->exercise as $exercise) {
           $name = $exercise->exercisename;
-          $name = trim($name);
-          array_push($exercises, $name);
-            $exercise_parameters[$name] = array();
-          $array = json_decode(json_encode((array) $exercise), TRUE);
-          # Iterate through the features of the exercise.
-      		foreach ($array as $key => $value){
-      		# If the current feature is not exercisename.
-      		  if($key != "exercisename"){
-      				$exercise_parameters[$name][$key] = $value;
-      		 	}
-      		}
+          if (!in_array($name, $completed)) {
+            $name = trim($name);
+            array_push($exercises, $name);
+              $exercise_parameters[$name] = array();
+            $array = json_decode(json_encode((array) $exercise), TRUE);
+            # Iterate through the features of the exercise.
+        		foreach ($array as $key => $value){
+        		# If the current feature is not exercisename.
+        		  if($key != "exercisename"){
+        				$exercise_parameters[$name][$key] = $value;
+        		 	}
+        		}
+          }
         }
 
         $this->session->set_userdata('exam_parameters', $exercise_parameters);
@@ -645,18 +644,27 @@ class Ctrl_exams extends MY_Controller
         $this->load->view('view_confirm_dialog');
         $this->load->view('view_alert_dialog');
 
-        $center_text = $this->load->view(
-          'view_take_exam',
-          array(
-            //'quiz_data_help' => $quiz_data_help,
-            'deadline' => $deadline,
-            'exam_id' => $exam_id,
-            'exercises' => $exercises,
-            'exercise_parameters' => $exercise_parameters,
-            'xml' => $xml,
-          ),
-          true
-        );
+        if ($exercises) {
+          $center_text = $this->load->view(
+            'view_take_exam',
+            array(
+              //'quiz_data_help' => $quiz_data_help,
+              'deadline' => $deadline,
+              'exam_id' => $active_exam_id,
+              'exercises' => $exercises,
+              'exercise_parameters' => $exercise_parameters,
+              'xml' => $xml,
+            ),
+            true
+          );
+        }
+        else {
+          $center_text = $this->load->view(
+            'view_exam_done',
+            array(),
+            true
+          );
+        }
 
         $this->load->view(
           'view_main_page',
@@ -672,11 +680,6 @@ class Ctrl_exams extends MY_Controller
         $this->error_view($e->getMessage(), $this->lang->line('exam_mgmt'));
       }
     }
-
-    public function add_quiz_results(){
-
-    }
-
 
     public function show_files()
     {

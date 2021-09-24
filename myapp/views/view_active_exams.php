@@ -4,6 +4,7 @@
       Active
     </a>
   </li>
+  <!--
   <li class="nav-item">
     <a class="nav-link" id="future-tab" data-toggle="tab" href="#future_exams" role="tab" aria-controls="profile" aria-selected="false">
       Future
@@ -14,6 +15,7 @@
       Past
     </a>
   </li>
+-->
 </ul>
 
 
@@ -37,7 +39,9 @@
             <td class="leftalign"><?= $exam->exam_length ?></td>
             <td class="leftalign">
               <a class="badge badge-primary" href="/exams/take_exam?exam=<?= $exam->id ?>">Take Exam</a>
-              <a class="badge badge-danger" href="#" onclick="dltexam(<?= $exam->id ?>, '<?= $exam->exam_name ?>');"><?= $this->lang->line('delete_exam_instance') ?></a>
+              <?php if ($this->mod_users->is_teacher()): ?>
+                <a class="badge badge-danger" href="#" onclick="dltexam(<?= $exam->id ?>, '<?= $exam->exam_name ?>');"><?= $this->lang->line('delete_exam_instance') ?></a>
+              <?php endif; ?>
             </td>
           </tr>
         <?php endforeach; ?>
@@ -45,6 +49,7 @@
     </div>
   </div>
 
+<!--
   <div class="tab-pane fade" id="future_exams" role="tabpanel" aria-labelledby="profile-tab">
     <div class="table-responsive">
       <table class="type2 table table-striped">
@@ -97,6 +102,8 @@
     </div>
   </div>
 </div>
+-->
+
 
 <!-- Delete Exam Instance Modal -->
 <div class="modal fade" id="delete-exam-instance-dialog">

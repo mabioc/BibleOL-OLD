@@ -2028,12 +2028,8 @@ var PanelQuestion = (function () {
         }
         this.subQuizMax = quizCardNum;
         var quizCard = $('.quizcard');
-        quizCard.append('<div class="buttonlist1">'
-            + ("<button class=\"btn btn-quiz\" id=\"check_answer\" type=\"button\">" + localize('check_answer') + "</button>")
-            + ("<button class=\"btn btn-quiz\" id=\"show_answer\" type=\"button\">" + localize('show_answer') + "</button>")
-            + '</div>');
         if (quizCardNum > 1) {
-            quizContainer.prepend('<div class="prev-next-btn prev" id="prevsubquiz" style="visibility:hidden;">&#10094;</div>');
+            quizContainer.prepend('<div class="prev-next-btn prev" id="prevsubquiz">&#10094;</div>');
             quizContainer.append('<div class="prev-next-btn next" id="nextsubquiz">&#10095;</div>');
         }
         $('div.inputbutton').click(function () {
@@ -2315,7 +2311,7 @@ var Quiz = (function () {
                     .addClass('alert alert-danger')
                     .html("<h1>" + localize('error_response') + "</h1><p>" + errorThrow + "</p>");
             });
-            $.get(site_url + 'statistics/update_exam_quiz_stat?examid=' + $('#exam_id').html() + '&quizid=' + $('quiz_id') + '&exercise_lst=' + $('#exercise_lst'), this.quiz_statistics)
+            $.get(site_url + 'statistics/update_exam_quiz_stat?examid=' + $('#exam_id').html() + '&quizid=' + $('#quiz_id').html() + '&exercise_lst=' + $('#exercise_lst').html())
                .done(function () {
                  if($('#exercise_lst').html()){
                    var exercise_lst = $('#exercise_lst').html().split("~");
