@@ -20,6 +20,10 @@ $comment['create_exam_description'] = "";
 $format['create_exam_description'] = "";
 $use_textarea['create_exam_description'] = false;
 
+$comment['create_exam_instance'] = "";
+$format['create_exam_instance'] = "";
+$use_textarea['create_exam_instance'] = false;
+
 $comment['create_new_exam_button'] = "";
 $format['create_new_exam_button'] = "";
 $use_textarea['create_new_exam_button'] = false;
@@ -67,6 +71,18 @@ $use_textarea['exam_name'] = false;
 $comment['exams_per_page'] = "";
 $format['exams_per_page'] = "";
 $use_textarea['exams_per_page'] = false;
+
+$comment['finish'] = "";
+$format['finish'] = "";
+$use_textarea['finish'] = false;
+
+$comment['instance_name'] = "";
+$format['instance_name'] = "";
+$use_textarea['instance_name'] = false;
+
+$comment['next'] = "";
+$format['next'] = "";
+$use_textarea['next'] = false;
 
 $comment['number_of_exams'] = "";
 $format['number_of_exams'] = "";

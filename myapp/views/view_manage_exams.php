@@ -111,33 +111,8 @@ This button redirects to the exam creation page.
           </select>
           <br>
           <br>
-          <?= $this->lang->line('timezone') ?>: <select name="timezone_offset" id="timezone-offset" class="span5" required>
-            <option value="-12">GMT -12:00</option>
-            <option value="-11">GMT -11:00</option>
-            <option value="-10">GMT -10:00</option>
-            <option value="-9">GMT -9:00</option>
-            <option value="-8">GMT -8:00</option>
-            <option value="-7">GMT -7:00</option>
-            <option value="-6">GMT -6:00</option>
-            <option value="-5">GMT -5:00</option>
-            <option value="-4">GMT -4:00</option>
-            <option value="-3">GMT -3:00</option>
-            <option value="-2">GMT -2:00</option>
-            <option value="-1">GMT -1:00</option>
-            <option value="0">GMT</option>
-            <option value="1">GMT +1:00</option>
-            <option value="2">GMT +2:00</option>
-            <option value="3">GMT +3:00</option>
-            <option value="4">GMT +4:00</option>
-            <option value="5">GMT +5:00</option>
-            <option value="6">GMT +6:00</option>
-            <option value="7">GMT +7:00</option>
-            <option value="8">GMT +8:00</option>
-            <option value="9">GMT +9:00</option>
-            <option value="10">GMT +10:00</option>
-            <option value="11">GMT +11:00</option>
-            <option value="12">GMT +12:00</option>
-          </select>
+          <?= $this->lang->line('instance_name') ?>: <input type="text" id="instance_name" name="instance_name" required>
+          <br>
           <br>
           <?= $this->lang->line('start_date') ?>: <input type="date" id="date1" name="start_date" required>
           <br>
@@ -167,6 +142,7 @@ This button redirects to the exam creation page.
     $('#create-instance-error').hide();
     $('#create-instance-examname').attr('value', examname);
     $('#create-instance-examid').attr('value', examid);
+    document.getElementById('instance_name').placeholder = examname;
     let tomo = new Date();
     tomo.setDate(tomo.getDate() + 1);
     document.getElementById('date1').valueAsDate = tomo;

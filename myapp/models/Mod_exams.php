@@ -78,11 +78,8 @@ class Mod_exams extends CI_Model{
       $completed = array();
       $query = $this->db->get_where('bol_exam_results', array('userid' => $user_id, 'activeexamid' => $active_exam_id));
       $res = $query->result();
-      var_dump($res);
       foreach ($res as $row) {
-        var_dump($row);
         $template_id = $row->quiztemplid;
-        var_dump($template_id);
         $query2 = $this->db->get_where('bol_sta_quiztemplate', array('id' => $template_id));
         $path = str_replace('/var/www/BibleOL/quizzes/', '', $query2->row()->pathname);
         array_push($completed, $path);

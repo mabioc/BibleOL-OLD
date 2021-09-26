@@ -262,7 +262,7 @@ class Ctrl_exams extends MY_Controller
         $class_name = $_GET["class_select"];
         $query = $this->db->get_where('class', array('classname' => $class_name));
         $class_id = $query->row()->id;
-        $exam_timezone_offset = $_GET["timezone_offset"];
+        $instance_name = $_GET["instance_name"];
         $exam_start_date = $_GET["start_date"];
         $exam_end_date = $_GET["end_date"];
         $exam_length = $_GET["duration"];
@@ -276,6 +276,7 @@ class Ctrl_exams extends MY_Controller
           'exam_end_time' => strtotime("$exam_end_date $exam_end_time"),
           'exam_length' => $exam_length,
           'exam_id' => $exam_id,
+          'instance_name' => $instance_name
         );
 
 

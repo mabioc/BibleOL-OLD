@@ -34,7 +34,7 @@
         <?php foreach ($active_exams_list as $exam): ?>
           <tr>
             <td class="leftalign"><?= $exam->class_id ?></td>
-            <td class="leftalign"><?= $exam->exam_name ?></td>
+            <td class="leftalign"><?= $exam->instance_name ?></td>
             <td class="leftalign"><?= date("m-d-Y H:i", $exam->exam_end_time) ?></td>
             <td class="leftalign"><?= $exam->exam_length ?></td>
             <td class="leftalign">
